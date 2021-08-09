@@ -5,9 +5,7 @@
     <solid android:color="#ffffff" />
     <corners
         android:bottomLeftRadius="11dp"
-        android:bottomRightRadius="11dp"
-        android:topLeftRadius="11dp"
-        android:topRightRadius="11dp" />
+        android:bottomRightRadius="11dp"/>
     <stroke
         android:width="10dp"
         android:color="#ffffff" />

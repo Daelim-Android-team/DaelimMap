@@ -17,18 +17,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <SearchView
             android:id="@+id/mapSearch"
             android:layout_width="360dp"
             android:layout_height="45dp"
-            android:background="@drawable/round"
-            android:layout_marginTop="10dp"
-            app:iconifiedByDefault="false"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:queryBackground="@drawable/round"
+            app:iconifiedByDefault="false"
+            app:queryHint="검색어를 입력하세요"
+            tools:ignore="MissingConstraints">
 
-            tools:ignore="MissingConstraints" />
+        </SearchView>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

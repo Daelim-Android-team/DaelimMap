@@ -52,6 +52,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
 
+
+
+
         for(int idx =0; idx<wido.length;idx++) {
             MarkerOptions markerOptions = new MarkerOptions();         // 마커 생성
             markerOptions.position(wido[idx] );
@@ -69,5 +72,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);                           // 지도 유형 설정
 
     }
+
 
 }
