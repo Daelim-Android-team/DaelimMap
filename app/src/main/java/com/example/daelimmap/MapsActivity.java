@@ -65,11 +65,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
-        
         MarkerOptions markerOptions = new MarkerOptions();  // 마커 생성
+        markerOptions.visible(false);
+
         for(int idx =0; idx<wido.length;idx++) {
 
-            markerOptions.position(wido[idx] );
+
+
 
             mMap.addMarker(markerOptions.position(Toegyegwan).title("퇴계관"));
             mMap.addMarker(markerOptions.position(yulgoggwan).title("율곡관"));
@@ -85,28 +87,27 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             mMap.addMarker(markerOptions.position(imgoggwan).title("임곡관"));
             mMap.addMarker(markerOptions.position(hanlimgwan).title("한림관"));
 
+
+
+        }
+
             mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
                 @Override
                 public void onMapClick( LatLng latLng) {
 
-                    markerOptions.position(dasangwan);
+                    markerOptions.visible(true);
+                    markerOptions.position(latLng);
 
+                      mMap.clear();
+                      mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+                      mMap.addMarker(markerOptions);
 
-                    mMap.clear();
-
-                    mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-                    mMap.addMarker(markerOptions);
 
 
                 }
             });
 
 
-        }
-
-
-
-//        markerOptions.snippet("한국의 수도");         // 마커 설명
 
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(yulgoggwan));                 // 초기 위치
