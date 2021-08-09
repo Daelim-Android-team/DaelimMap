@@ -34,7 +34,6 @@
             tools:ignore="MissingConstraints" >
 
         </SearchView>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
