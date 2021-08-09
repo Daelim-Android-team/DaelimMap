@@ -71,13 +71,25 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
             markerOptions.position(wido[idx] );
 
-
+            mMap.addMarker(markerOptions.position(Toegyegwan).title("퇴계관"));
+            mMap.addMarker(markerOptions.position(yulgoggwan).title("율곡관"));
+            mMap.addMarker(markerOptions.position(UniversityHeadquarters).title("대학본부"));
+            mMap.addMarker(markerOptions.position(jeongbotongsingwan).title("정보통신관"));
+            mMap.addMarker(markerOptions.position(jeonsangwan).title("전산관"));
+            mMap.addMarker(markerOptions.position(saenghwalgwan).title("생활관"));
+            mMap.addMarker(markerOptions.position(hongjigwan).title("홍지관"));
+            mMap.addMarker(markerOptions.position(hagsaenghoegwan).title("학생회관"));
+            mMap.addMarker(markerOptions.position(jadongchagwan).title("자동차관"));
+            mMap.addMarker(markerOptions.position(suamgwan).title("수암관"));
+            mMap.addMarker(markerOptions.position(dasangwan).title("다산관"));
+            mMap.addMarker(markerOptions.position(imgoggwan).title("임곡관"));
+            mMap.addMarker(markerOptions.position(hanlimgwan).title("한림관"));
 
             mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
                 @Override
                 public void onMapClick( LatLng latLng) {
 
-                    markerOptions.position(latLng);
+                    markerOptions.position(dasangwan);
 
 
                     mMap.clear();
