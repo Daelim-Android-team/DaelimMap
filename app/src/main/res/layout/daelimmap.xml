@@ -23,10 +23,11 @@
             android:id="@+id/mapSearch"
             android:layout_width="360dp"
             android:layout_height="45dp"
-            android:background="@color/white"
+            android:background="@drawable/round"
             android:layout_marginTop="10dp"
             app:iconifiedByDefault="false"
             android:layout_gravity="center"
+
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 
