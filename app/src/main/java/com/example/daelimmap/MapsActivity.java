@@ -1,6 +1,7 @@
 package com.example.daelimmap;
 
 import android.os.Bundle;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,8 +38,24 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.daelimmap);
 
+        SearchView SV = findViewById(R.id.mapSearch); //서치뷰 네임은 SV
+
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        SV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+
+                return false;
+            }
+        });
     }
 
 
@@ -92,6 +109,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);                           // 지도 유형 설정
 
     }
+
 
 
 }
