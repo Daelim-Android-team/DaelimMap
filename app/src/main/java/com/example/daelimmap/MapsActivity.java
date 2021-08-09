@@ -32,6 +32,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng imgoggwan = new LatLng(37.40392495963885, 126.93109889545208); //임곡관
     LatLng hanlimgwan = new LatLng(37.402209544693086, 126.92890403822585); //한림관
 
+    LatLng [] wido = {Toegyegwan,yulgoggwan,UniversityHeadquarters,
+            jeongbotongsingwan,jeonsangwan,saenghwalgwan, hongjigwan, hagsaenghoegwan,jadongchagwan,suamgwan,dasangwan, imgoggwan,hanlimgwan};// 각 건물의 위도와 경도
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,42 +65,32 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
-
-
-        LatLng [] wido = {Toegyegwan,yulgoggwan,UniversityHeadquarters,
-                jeongbotongsingwan,jeonsangwan,saenghwalgwan, hongjigwan, hagsaenghoegwan,jadongchagwan,suamgwan,dasangwan, imgoggwan,hanlimgwan};// 각 건물의 위도와 경도
-
-
-
-
-
-
+        
+        MarkerOptions markerOptions = new MarkerOptions();  // 마커 생성
         for(int idx =0; idx<wido.length;idx++) {
-            MarkerOptions markerOptions = new MarkerOptions();         // 마커 생성
+
             markerOptions.position(wido[idx] );
 
 
-            mMap.addMarker(markerOptions.position(Toegyegwan).title("퇴계관"));
-            mMap.addMarker(markerOptions.position(yulgoggwan).title("율곡관"));
-            mMap.addMarker(markerOptions.position(UniversityHeadquarters).title("대학본부"));
-            mMap.addMarker(markerOptions.position(jeongbotongsingwan).title("정보통신관"));
-            mMap.addMarker(markerOptions.position(jeonsangwan).title("전산관"));
-            mMap.addMarker(markerOptions.position(saenghwalgwan).title("생활관"));
-            mMap.addMarker(markerOptions.position(hongjigwan).title("홍지관"));
-            mMap.addMarker(markerOptions.position(hagsaenghoegwan).title("학생회관"));
-            mMap.addMarker(markerOptions.position(jadongchagwan).title("자동차관"));
-            mMap.addMarker(markerOptions.position(suamgwan).title("수암관"));
-            mMap.addMarker(markerOptions.position(dasangwan).title("다산관"));
-            mMap.addMarker(markerOptions.position(imgoggwan).title("임곡관"));
-            mMap.addMarker(markerOptions.position(hanlimgwan).title("한림관"));
+
+            mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                @Override
+                public void onMapClick( LatLng latLng) {
+
+                    markerOptions.position(latLng);
+
+
+                    mMap.clear();
+
+                    mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+                    mMap.addMarker(markerOptions);
+
+
+                }
+            });
 
 
         }
-
-
-
-
-
 
 
 
