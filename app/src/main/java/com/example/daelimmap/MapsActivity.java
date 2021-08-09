@@ -48,7 +48,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
         LatLng [] wido = {DaelimUniversity,Toegyegwan,yulgoggwan,UniversityHeadquarters,
-                jeongbotongsingwan,jeonsangwan,saenghwalgwan, hongjigwan, hagsaenghoegwan,jadongchagwan,suamgwan,dasangwan, imgoggwan};// 각 건물의 위도와 경도
+                jeongbotongsingwan,jeonsangwan,saenghwalgwan, hongjigwan, hagsaenghoegwan,jadongchagwan,suamgwan,dasangwan, imgoggwan,hanlimgwan};// 각 건물의 위도와 경도
 
 
 
