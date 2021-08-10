@@ -1,13 +1,11 @@
 package com.example.daelimmap;
 
-import android.app.SearchManager;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.SearchView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -17,9 +15,13 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.example.daelimmap.Intenttt.*;
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback{
 
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener{
+
+    View v;
+    ImageView imageView;
     private GoogleMap mMap;
 
     LatLng Toegyegwan = new LatLng(37.403268056034186, 126.9306871521674); //퇴계관
@@ -57,72 +59,65 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
         MarkerOptions markerOptions = new MarkerOptions();  // 마커 생성
-        markerOptions.visible(false);
-
-        for(int idx =0; idx<wido.length;idx++) {
 
 
-
-
-            mMap.addMarker(markerOptions.position(Toegyegwan).title("퇴계관"));
-            mMap.addMarker(markerOptions.position(yulgoggwan).title("율곡관"));
-            mMap.addMarker(markerOptions.position(UniversityHeadquarters).title("대학본부"));
-            mMap.addMarker(markerOptions.position(jeongbotongsingwan).title("정보통신관"));
-            mMap.addMarker(markerOptions.position(jeonsangwan).title("전산관"));
-            mMap.addMarker(markerOptions.position(saenghwalgwan).title("생활관"));
-            mMap.addMarker(markerOptions.position(hongjigwan).title("홍지관"));
-            mMap.addMarker(markerOptions.position(hagsaenghoegwan).title("학생회관"));
-            mMap.addMarker(markerOptions.position(jadongchagwan).title("자동차관"));
-            mMap.addMarker(markerOptions.position(suamgwan).title("수암관"));
-            mMap.addMarker(markerOptions.position(dasangwan).title("다산관"));
-            mMap.addMarker(markerOptions.position(imgoggwan).title("임곡관"));
-            mMap.addMarker(markerOptions.position(hanlimgwan).title("한림관"));
-
-
-
-        }
-
-            mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-                @Override
-                public void onMapClick( LatLng latLng) {
-
-                    markerOptions.visible(true);
-                    markerOptions.position(latLng);
-
-                      mMap.clear();
-                      mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-                      mMap.addMarker(markerOptions);
-
-
-
-                }
-            });
-
-
-
+        mMap.addMarker(markerOptions.position(Toegyegwan).title("퇴계관"));
+        mMap.addMarker(markerOptions.position(yulgoggwan).title("율곡관"));
+        mMap.addMarker(markerOptions.position(UniversityHeadquarters).title("대학본부"));
+        mMap.addMarker(markerOptions.position(jeongbotongsingwan).title("정보통신관"));
+        mMap.addMarker(markerOptions.position(jeonsangwan).title("전산관"));
+        mMap.addMarker(markerOptions.position(saenghwalgwan).title("생활관"));
+        mMap.addMarker(markerOptions.position(hongjigwan).title("홍지관"));
+        mMap.addMarker(markerOptions.position(hagsaenghoegwan).title("학생회관"));
+        mMap.addMarker(markerOptions.position(jadongchagwan).title("자동차관"));
+        mMap.addMarker(markerOptions.position(suamgwan).title("수암관"));
+        mMap.addMarker(markerOptions.position(dasangwan).title("다산관"));
+        mMap.addMarker(markerOptions.position(imgoggwan).title("임곡관"));
+        mMap.addMarker(markerOptions.position(hanlimgwan).title("한림관"));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(yulgoggwan));                 // 초기 위치
         mMap.animateCamera(CameraUpdateFactory.zoomTo(17));                         // 줌의 정도
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);                           // 지도 유형 설정
 
+        mMap.setOnMarkerClickListener(this);
+
     }
+
+
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the options menu from XML
-        MenuInflater inflater = getMenuInflater();
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+    public boolean onMarkerClick(final Marker marker) {
 
-        // Get the SearchView and set the searchable configuration
-        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) menu.findItem(R.id.mapSearch).getActionView();
-        // Assumes current activity is the searchable activity
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
+        marker.setAlpha(1);
 
-        return true;
+
+        if(marker.getTitle().equals("한림관")){
+            Intent intent = new Intent(getApplicationContext(), hanlimgwan.class);
+            startActivity(intent);
+        }
+
+        return false;
+
+
     }
-
-
 
 
 }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the options menu from XML
+//        MenuInflater inflater = getMenuInflater();
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//
+//        // Get the SearchView and set the searchable configuration
+//        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+//        SearchView searchView = (SearchView) menu.findItem(R.id.mapSearch).getActionView();
+//        // Assumes current activity is the searchable activity
+//        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+//        searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
+//
+//        return true;
+//    }
+
+
+
+
