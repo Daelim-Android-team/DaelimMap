@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.SearchView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -17,8 +18,11 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.daelimmap.Intenttt.*;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener{
+
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener,GoogleMap.OnMapClickListener{
 
     View v;
     ImageView imageView;
@@ -38,8 +42,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng imgoggwan = new LatLng(37.40392495963885, 126.93109889545208); //임곡관
     LatLng hanlimgwan = new LatLng(37.402209544693086, 126.92890403822585); //한림관
 
-    LatLng [] wido = {Toegyegwan,yulgoggwan,UniversityHeadquarters,
-            jeongbotongsingwan,jeonsangwan,saenghwalgwan, hongjigwan, hagsaenghoegwan,jadongchagwan,suamgwan,dasangwan, imgoggwan,hanlimgwan};// 각 건물의 위도와 경도
+
 
 
     @Override
@@ -61,31 +64,37 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         MarkerOptions markerOptions = new MarkerOptions();  // 마커 생성
 
 
-        mMap.addMarker(markerOptions.position(Toegyegwan).title("퇴계관"));
-        mMap.addMarker(markerOptions.position(yulgoggwan).title("율곡관"));
-        mMap.addMarker(markerOptions.position(UniversityHeadquarters).title("대학본부"));
-        mMap.addMarker(markerOptions.position(jeongbotongsingwan).title("정보통신관"));
-        mMap.addMarker(markerOptions.position(jeonsangwan).title("전산관"));
-        mMap.addMarker(markerOptions.position(saenghwalgwan).title("생활관"));
-        mMap.addMarker(markerOptions.position(hongjigwan).title("홍지관"));
-        mMap.addMarker(markerOptions.position(hagsaenghoegwan).title("학생회관"));
-        mMap.addMarker(markerOptions.position(jadongchagwan).title("자동차관"));
-        mMap.addMarker(markerOptions.position(suamgwan).title("수암관"));
-        mMap.addMarker(markerOptions.position(dasangwan).title("다산관"));
-        mMap.addMarker(markerOptions.position(imgoggwan).title("임곡관"));
-        mMap.addMarker(markerOptions.position(hanlimgwan).title("한림관"));
+        mMap.addMarker(markerOptions.position(Toegyegwan).title("퇴계관").alpha(0));
+        mMap.addMarker(markerOptions.position(yulgoggwan).title("율곡관").alpha(0));
+        mMap.addMarker(markerOptions.position(UniversityHeadquarters).title("대학본부").alpha(0));
+        mMap.addMarker(markerOptions.position(jeongbotongsingwan).title("정보통신관").alpha(0));
+        mMap.addMarker(markerOptions.position(jeonsangwan).title("전산관").alpha(0));
+        mMap.addMarker(markerOptions.position(saenghwalgwan).title("생활관").alpha(0));
+        mMap.addMarker(markerOptions.position(hongjigwan).title("홍지관").alpha(0));
+        mMap.addMarker(markerOptions.position(hagsaenghoegwan).title("학생회관").alpha(0));
+        mMap.addMarker(markerOptions.position(jadongchagwan).title("자동차관").alpha(0));
+        mMap.addMarker(markerOptions.position(suamgwan).title("수암관").alpha(0));
+        mMap.addMarker(markerOptions.position(dasangwan).title("다산관").alpha(0));
+        mMap.addMarker(markerOptions.position(imgoggwan).title("임곡관").alpha(0));
+        mMap.addMarker(markerOptions.position(hanlimgwan).title("한림관").alpha(0));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(yulgoggwan));                 // 초기 위치
         mMap.animateCamera(CameraUpdateFactory.zoomTo(17));                         // 줌의 정도
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);                           // 지도 유형 설정
 
+
         mMap.setOnMarkerClickListener(this);
+        mMap.setOnMapClickListener(this);
+
 
     }
 
 
+
+
     @Override
     public boolean onMarkerClick(final Marker marker) {
+
 
         marker.setAlpha(1);
 
@@ -101,6 +110,28 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
+    @Override
+    public void onMapClick( LatLng latLng) {
+        ArrayList<LatLng> list = new ArrayList<LatLng>();
+
+        list.add(Toegyegwan);
+        list.add(yulgoggwan);
+        list.add(UniversityHeadquarters);
+        list.add(jeongbotongsingwan);
+        list.add(jeonsangwan);
+        list.add(saenghwalgwan);
+        list.add(hongjigwan );
+        list.add(hagsaenghoegwan);
+        list.add(jadongchagwan);
+        list.add(suamgwan);
+        list.add(dasangwan);
+        list.add(imgoggwan);
+        list.add(hanlimgwan);
+
+
+
+
+    }
 }
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
