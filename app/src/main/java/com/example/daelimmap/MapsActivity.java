@@ -1,6 +1,10 @@
 package com.example.daelimmap;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
@@ -32,6 +36,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng imgoggwan = new LatLng(37.40392495963885, 126.93109889545208); //임곡관
     LatLng hanlimgwan = new LatLng(37.402209544693086, 126.92890403822585); //한림관
 
+    LatLng [] wido = {Toegyegwan,yulgoggwan,UniversityHeadquarters,
+            jeongbotongsingwan,jeonsangwan,saenghwalgwan, hongjigwan, hagsaenghoegwan,jadongchagwan,suamgwan,dasangwan, imgoggwan,hanlimgwan};// 각 건물의 위도와 경도
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,38 +50,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        SV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-
-                return false;
-            }
-        });
     }
 
 
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
-
-
-        LatLng [] wido = {Toegyegwan,yulgoggwan,UniversityHeadquarters,
-                jeongbotongsingwan,jeonsangwan,saenghwalgwan, hongjigwan, hagsaenghoegwan,jadongchagwan,suamgwan,dasangwan, imgoggwan,hanlimgwan};// 각 건물의 위도와 경도
-
-
-
-
-
+        MarkerOptions markerOptions = new MarkerOptions();  // 마커 생성
+        markerOptions.visible(false);
 
         for(int idx =0; idx<wido.length;idx++) {
-            MarkerOptions markerOptions = new MarkerOptions();         // 마커 생성
-            markerOptions.position(wido[idx] );
+
+
 
 
             mMap.addMarker(markerOptions.position(Toegyegwan).title("퇴계관"));
@@ -92,16 +79,26 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             mMap.addMarker(markerOptions.position(hanlimgwan).title("한림관"));
 
 
+
         }
 
+            mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                @Override
+                public void onMapClick( LatLng latLng) {
+
+                    markerOptions.visible(true);
+                    markerOptions.position(latLng);
+
+                      mMap.clear();
+                      mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+                      mMap.addMarker(markerOptions);
 
 
 
+                }
+            });
 
 
-
-
-//        markerOptions.snippet("한국의 수도");         // 마커 설명
 
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(yulgoggwan));                 // 초기 위치
@@ -109,6 +106,22 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);                           // 지도 유형 설정
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the options menu from XML
+        MenuInflater inflater = getMenuInflater();
+
+
+        // Get the SearchView and set the searchable configuration
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.mapSearch).getActionView();
+        // Assumes current activity is the searchable activity
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
+
+        return true;
+    }
+
 
 
 
