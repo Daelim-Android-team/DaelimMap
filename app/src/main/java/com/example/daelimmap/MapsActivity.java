@@ -62,6 +62,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
+        SV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
     }
 
 
@@ -72,9 +84,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         markerOptions.visible(false);
 
         for(int idx =0; idx<wido.length;idx++) {
-
-
-
 
             mMap.addMarker(markerOptions.position(Toegyegwan).title("퇴계관"));
             mMap.addMarker(markerOptions.position(yulgoggwan).title("율곡관"));
