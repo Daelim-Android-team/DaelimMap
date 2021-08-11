@@ -22,12 +22,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMapClickListener {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener,GoogleMap.OnMapClickListener{
 
-
+    View v;
     ImageView imageView;
     private GoogleMap mMap;
-    ArrayList<Marker> markers = new ArrayList<>();
 
     LatLng Toegyegwan = new LatLng(37.403268056034186, 126.9306871521674); //퇴계관
     LatLng yulgoggwan = new LatLng(37.40350624040486, 126.93045325700982); //율곡관
@@ -71,58 +70,62 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
+        MarkerOptions markerOptions = new MarkerOptions();  // 마커 생성
 
 
-        markers.add(mMap.addMarker(new MarkerOptions().position(Toegyegwan).title("퇴계관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(yulgoggwan).title("율곡관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(UniversityHeadquarters).title("대학본부").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(jeongbotongsingwan).title("정보통신관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(jeonsangwan).title("전산관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(saenghwalgwan).title("생활관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(hongjigwan).title("홍지관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(hagsaenghoegwan).title("학생회관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(jadongchagwan).title("자동차관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(suamgwan).title("수암관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(dasangwan).title("다산관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(imgoggwan).title("임곡관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(hanlimgwan).title("한림관").alpha(0)));
+        mMap.addMarker(markerOptions.position(Toegyegwan).title("퇴계관").alpha(0));
+        mMap.addMarker(markerOptions.position(yulgoggwan).title("율곡관").alpha(0));
+        mMap.addMarker(markerOptions.position(UniversityHeadquarters).title("대학본부").alpha(0));
+        mMap.addMarker(markerOptions.position(jeongbotongsingwan).title("정보통신관").alpha(0));
+        mMap.addMarker(markerOptions.position(jeonsangwan).title("전산관").alpha(0));
+        mMap.addMarker(markerOptions.position(saenghwalgwan).title("생활관").alpha(0));
+        mMap.addMarker(markerOptions.position(hongjigwan).title("홍지관").alpha(0));
+        mMap.addMarker(markerOptions.position(hagsaenghoegwan).title("학생회관").alpha(0));
+        mMap.addMarker(markerOptions.position(jadongchagwan).title("자동차관").alpha(0));
+        mMap.addMarker(markerOptions.position(suamgwan).title("수암관").alpha(0));
+        mMap.addMarker(markerOptions.position(dasangwan).title("다산관").alpha(0));
+        mMap.addMarker(markerOptions.position(imgoggwan).title("임곡관").alpha(0));
+        mMap.addMarker(markerOptions.position(hanlimgwan).title("한림관").alpha(0));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(yulgoggwan));                 // 초기 위치
         mMap.animateCamera(CameraUpdateFactory.zoomTo(17));                         // 줌의 정도
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         // 지도 유형 설정
+        mMap.setOnMarkerClickListener(this);
         mMap.setOnMapClickListener(this);
+    }
+
+    @Override
+    public boolean onMarkerClick(final Marker marker) {
+        marker.setAlpha(1);
+
+        if(marker.getTitle().equals("한림관")){
+            Intent intent = new Intent(getApplicationContext(), hanlimgwan.class);
+            startActivity(intent);
+        }
+        return false;
 
     }
 
     @Override
-    public void onMapClick(LatLng latLng) {
+    public void onMapClick( LatLng latLng) {
+        ArrayList<LatLng> list = new ArrayList<LatLng>();
 
-        for (Marker marker : markers) {
-            if (marker.getPosition() == latLng) {
-                marker.setAlpha(1);
-                break;
-            }
-        }
-
-
+        list.add(Toegyegwan);
+        list.add(yulgoggwan);
+        list.add(UniversityHeadquarters);
+        list.add(jeongbotongsingwan);
+        list.add(jeonsangwan);
+        list.add(saenghwalgwan);
+        list.add(hongjigwan );
+        list.add(hagsaenghoegwan);
+        list.add(jadongchagwan);
+        list.add(suamgwan);
+        list.add(dasangwan);
+        list.add(imgoggwan);
+        list.add(hanlimgwan);
     }
 }
-
-//    @Override
-//    public boolean onMarkerClick(final Marker marker) {
-//
-//
-//        if(marker.getTitle().equals("한림관")){
-//            Intent intent = new Intent(getApplicationContext(), hanlimgwan.class);
-//            startActivity(intent);
-//        }
-//        return false;
-//
-//    }
-//
-//
-//}
 
 
 
