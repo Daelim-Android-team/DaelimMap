@@ -89,7 +89,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         markers.add(mMap.addMarker(new MarkerOptions().position(suamgwan).title("수암관").alpha(0)));
         markers.add(mMap.addMarker(new MarkerOptions().position(dasangwan).title("다산관").alpha(0)));
         markers.add(mMap.addMarker(new MarkerOptions().position(imgoggwan).title("임곡관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(hanlimgwan).title("한림관").icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlim_marker2))));
+        markers.add(mMap.addMarker(new MarkerOptions().position(hanlimgwan).title("한림관").alpha(0)));
 
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
 
