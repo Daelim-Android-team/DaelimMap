@@ -1,8 +1,10 @@
-package com.example.daelimmap;
+package com.example.daelimmap.building.Hagsaenghoegwan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.daelimmap.R;
 
 public class HagsaenghoegwanActivity extends AppCompatActivity {
 

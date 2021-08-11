@@ -46,10 +46,10 @@
             android:name=".ImgoggwanActivity"
             android:exported="true" />
         <activity
-            android:name=".HagsaenghoegwanActivity"
+            android:name=".building.Hagsaenghoegwan.HagsaenghoegwanActivity"
             android:exported="true" />
         <activity
-            android:name=".DasangwanActivity"
+            android:name=".building.Dasangwan.DasangwanActivity"
             android:exported="true" />
         <activity android:name=".Intenttt.hanlimgwan" />
         <!--
