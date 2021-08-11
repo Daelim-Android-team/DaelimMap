@@ -1,4 +1,4 @@
-package com.example.daelimmap.building.Hagsaenghoegwan;
+package com.example.daelimmap;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.daelimmap.R;
 
-public class HagsaenghoegwanActivity extends AppCompatActivity {
+public class DasangwanActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.hagsaenghoegwan);
+        setContentView(R.layout.dasangwan);
     }
 }

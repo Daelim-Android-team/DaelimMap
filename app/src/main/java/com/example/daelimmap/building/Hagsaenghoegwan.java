@@ -1,6 +1,7 @@
-package com.example.daelimmap.building.Dasangwan;
+package com.example.daelimmap.building;
 
-public class Dasangwan {
+public class Hagsaenghoegwan {
+//    String [] B_f {};
 //    String [] One_f {};
 //    String [] Two_f {};
 //    String [] Three_f {};
