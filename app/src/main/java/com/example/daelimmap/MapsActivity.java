@@ -124,10 +124,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         list.add(dasangwan);
         list.add(imgoggwan);
         list.add(hanlimgwan);
-
-
-
-
     }
 }
 
