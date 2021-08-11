@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -22,11 +25,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener,GoogleMap.OnMapClickListener{
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnInfoWindowClickListener,GoogleMap.OnMarkerClickListener,GoogleMap.OnMapClickListener{
 
     View v;
     ImageView imageView;
     private GoogleMap mMap;
+    private int markerclicked;
 
     LatLng Toegyegwan = new LatLng(37.403268056034186, 126.9306871521674); //퇴계관
     LatLng yulgoggwan = new LatLng(37.40350624040486, 126.93045325700982); //율곡관
@@ -85,7 +89,30 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.addMarker(markerOptions.position(suamgwan).title("수암관").alpha(0));
         mMap.addMarker(markerOptions.position(dasangwan).title("다산관").alpha(0));
         mMap.addMarker(markerOptions.position(imgoggwan).title("임곡관").alpha(0));
-        mMap.addMarker(markerOptions.position(hanlimgwan).title("한림관").alpha(0));
+        mMap.addMarker(markerOptions.position(hanlimgwan).title("한림관").icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlim_marker2)));
+
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker marker) {
+
+                View view = getLayoutInflater().inflate(R.layout.hanlimgwan, null);
+
+                LatLng latLng = marker.getPosition();
+
+                ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
+
+                if(onMarkerClick(marker)==true && markerclicked==1){
+                    imageView.setImageResource(R.drawable.hanlimgwan);
+                }
+                return view;
+            }
+        });
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(yulgoggwan));                 // 초기 위치
         mMap.animateCamera(CameraUpdateFactory.zoomTo(17));                         // 줌의 정도
@@ -96,15 +123,21 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     @Override
+    public void onInfoWindowClick(Marker marker) {
+
+    }
+
+    @Override
     public boolean onMarkerClick(final Marker marker) {
         marker.setAlpha(1);
 
-        if(marker.getTitle().equals("한림관")){
-            Intent intent = new Intent(getApplicationContext(), hanlimgwan.class);
-            startActivity(intent);
+        if(marker.equals(hanlimgwan)){
+            //Intent intent = new Intent(getApplicationContext(), hanlimgwan.class);
+            //startActivity(intent);
+            markerclicked = 1;
+            return true;
         }
         return false;
-
     }
 
     @Override
