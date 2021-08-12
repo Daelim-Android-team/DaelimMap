@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DaelimMap">
+        <activity android:name=".bottomsheet.bottomsheet"></activity>
         <activity
             android:name=".SuamgwanActivity"
             android:exported="true" />

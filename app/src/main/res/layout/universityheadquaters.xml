@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="221dp"
         android:src="@drawable/universityheadquarters" />
 
     <TextView
@@ -24,7 +24,44 @@
         android:text="복지시설 - INNO cafe" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/button13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="상세보기" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="상세보기" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="상세보기" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="상세보기" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="상세보기" />
+
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="상세보기" />
+
+    <Button
+        android:id="@+id/button19"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="상세보기" />

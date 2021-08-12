@@ -20,17 +20,19 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.daelimmap.Intenttt.*;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnInfoWindowClickListener,GoogleMap.OnMarkerClickListener,GoogleMap.OnMapClickListener{
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
 
 
+    View v;
     ImageView imageView;
     private GoogleMap mMap;
-    private int markerclicked;
+
     ArrayList<Marker> markers = new ArrayList<>();
 
     LatLng Toegyegwan = new LatLng(37.403268056034186, 126.9306871521674); //퇴계관
@@ -77,82 +79,86 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap = googleMap;
 
 
-        markers.add(mMap.addMarker(new MarkerOptions().position(Toegyegwan).title("퇴계관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(yulgoggwan).title("율곡관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(UniversityHeadquarters).title("대학본부").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(jeongbotongsingwan).title("정보통신관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(jeonsangwan).title("전산관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(saenghwalgwan).title("생활관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(hongjigwan).title("홍지관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(hagsaenghoegwan).title("학생회관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(jadongchagwan).title("자동차관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(suamgwan).title("수암관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(dasangwan).title("다산관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(imgoggwan).title("임곡관").alpha(0)));
-        markers.add(mMap.addMarker(new MarkerOptions().position(hanlimgwan).title("한림관").alpha(0)));
+        mMap.addMarker(new MarkerOptions().position(Toegyegwan).title("퇴계관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(yulgoggwan).title("율곡관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(UniversityHeadquarters).title("대학본부").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(jeongbotongsingwan).title("정보통신관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(jeonsangwan).title("전산관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(saenghwalgwan).title("생활관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(hongjigwan).title("홍지관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(hagsaenghoegwan).title("학생회관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(jadongchagwan).title("자동차관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(suamgwan).title("수암관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(dasangwan).title("다산관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(imgoggwan).title("임곡관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(hanlimgwan).title("한림관").alpha(0));
 
-        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
-
-            @Override
-            public View getInfoWindow(Marker marker) {
-                return null;
-            }
-
-            @Override
-            public View getInfoContents(Marker marker) {
-
-                View view = getLayoutInflater().inflate(R.layout.hanlimgwan, null);
-
-                LatLng latLng = marker.getPosition();
-
-                ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
-
-                if(onMarkerClick(marker)==true && markerclicked==1){
-                    imageView.setImageResource(R.drawable.hanlimgwan);
-                }
-                return view;
-            }
-        });
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(yulgoggwan));                 // 초기 위치
         mMap.animateCamera(CameraUpdateFactory.zoomTo(17));                         // 줌의 정도
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         // 지도 유형 설정
-        mMap.setOnMapClickListener(this);
+        mMap.setOnMarkerClickListener(this);
 
     }
 
-    @Override
-    public void onInfoWindowClick(Marker marker) {
-
-    }
 
     @Override
     public boolean onMarkerClick(final Marker marker) {
-        marker.setAlpha(1);
-
-        if(marker.equals(hanlimgwan)){
-            //Intent intent = new Intent(getApplicationContext(), hanlimgwan.class);
-            //startActivity(intent);
-            markerclicked = 1;
-            return true;
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+        if (marker.getTitle().equals("퇴계관")) {
+            v = getLayoutInflater().inflate(R.layout.universityheadquaters, null);
+            bottomSheetDialog.setContentView(v);
+        } else if (marker.getTitle().equals("대학본부")) {
+            v = getLayoutInflater().inflate(R.layout.universityheadquaters, null);
+            bottomSheetDialog.setContentView(v);
+        }else if (marker.getTitle().equals("정보통신관")) {
+            v = getLayoutInflater().inflate(R.layout.jeongbotongsingwan, null);
+            bottomSheetDialog.setContentView(v);
+        }else if (marker.getTitle().equals("전산관")) {
+            v = getLayoutInflater().inflate(R.layout.jeonsangwan, null);
+            bottomSheetDialog.setContentView(v);
+        }else if (marker.getTitle().equals("생활관")) {
+            v = getLayoutInflater().inflate(R.layout.saenghwalgwan, null);
+            bottomSheetDialog.setContentView(v);
+        }else if (marker.getTitle().equals("홍지관")) {
+            v = getLayoutInflater().inflate(R.layout.hongjigwan, null);
+            bottomSheetDialog.setContentView(v);
+        }else if (marker.getTitle().equals("학생회관")) {
+            v = getLayoutInflater().inflate(R.layout.hagsaenghoegwan, null);
+            bottomSheetDialog.setContentView(v);
+        }else if (marker.getTitle().equals("자동차관")) {
+            v = getLayoutInflater().inflate(R.layout.jadongchagwan, null);
+            bottomSheetDialog.setContentView(v);
+        }else if (marker.getTitle().equals("수암관")) {
+            v = getLayoutInflater().inflate(R.layout.suamgwan, null);
+            bottomSheetDialog.setContentView(v);
+        }else if (marker.getTitle().equals("다산관")) {
+            v = getLayoutInflater().inflate(R.layout.dasangwan, null);
+            bottomSheetDialog.setContentView(v);
+        }else if (marker.getTitle().equals("임곡관")) {
+            v = getLayoutInflater().inflate(R.layout.imgoggwan, null);
+            bottomSheetDialog.setContentView(v);
+        }else if (marker.getTitle().equals("한림관")) {
+            v = getLayoutInflater().inflate(R.layout.hanlimgwan, null);
+            bottomSheetDialog.setContentView(v);
+        }else if (marker.getTitle().equals("율곡관")) {
+            v = getLayoutInflater().inflate(R.layout.yulgoggwan, null);
+            bottomSheetDialog.setContentView(v);
         }
-        return false;
+
+            bottomSheetDialog.show();
+
+
+            marker.setAlpha(1);
+
+
+            return false;
+        }
+
+
     }
 
-    @Override
-    public void onMapClick(LatLng latLng) {
-
-        for (Marker marker : markers) {
-            if (marker.getPosition() == latLng) {
-                marker.setAlpha(1);
-                break;
-            }
-        }
-
-
-    }
-}
 
 //    @Override
 //    public boolean onMarkerClick(final Marker marker) {
