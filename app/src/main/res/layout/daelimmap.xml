@@ -13,7 +13,4 @@
         tools:context=".MapsActivity"
         tools:layout_editor_absoluteX="-50dp"
         tools:layout_editor_absoluteY="0dp" />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
