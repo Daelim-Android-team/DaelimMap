@@ -11,6 +11,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -58,29 +59,32 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.daelimmap);
 
+
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
 
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.search_menu,menu);
-        MapSearch=menu.findItem(R.id.search);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.search_menu, menu);
+        MapSearch = menu.findItem(R.id.search);
 
-        MapSearch.setOnActionExpandListener(new MenuItem.OnActionExpandListener(){
+        MapSearch.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
             //버튼설정시 에디트박스가 바로 펼쳐지는지 안펼쳐지느지 사용하게하는 메서드
             //근데 어케쓰는지 몰겟다
-            public boolean isIconified(MenuItem item){
+            public boolean isIconified(MenuItem item) {
                 return false;
             }
+
             //검색버튼 클릭시
             @Override
             public boolean onMenuItemActionExpand(MenuItem item) {
                 return true;
             }
+
             //검색 취소시
             @Override
             public boolean onMenuItemActionCollapse(MenuItem item) {
@@ -89,6 +93,31 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
         return true;
     }
+
+    SearchView SV = (SearchView) MapSearch.getActionView();
+
+        SV.setSubmitButtonEnabled(true);
+
+        SV.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+
+        //검색버튼을 눌렀을 경우
+        @Override
+        public boolean onQueryTextSubmit (String query){
+        TextView text = (TextView) findViewById(R.id.txtresult);
+        text.setText(query + "를 검색합니다.");
+        return true;
+    }
+        //텍스트가 바뀔때마다 호출
+        @Override
+        public boolean onQueryTextChange (String newText){
+        TextView text = (TextView) findViewById(R.id.txtsearch);
+        text.setText("검색식 : " + newText);
+        return true;
+    }
+    });
+        return true;
+}
+
 
     @Override
     public void onMapReady(final GoogleMap googleMap) {
