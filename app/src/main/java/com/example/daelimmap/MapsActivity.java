@@ -86,7 +86,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
-
         SearchView SV = (SearchView) MapSearch.getActionView();
 
         SV.setSubmitButtonEnabled(true);
