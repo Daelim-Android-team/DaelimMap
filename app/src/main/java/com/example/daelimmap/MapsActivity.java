@@ -72,6 +72,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         inflater.inflate(R.menu.search_menu, menu);
         MapSearch = menu.findItem(R.id.search);
 
+
         MapSearch.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
             //검색버튼 클릭시
             @Override
@@ -88,7 +89,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         SearchView SV = (SearchView) MapSearch.getActionView();
 
-        SV.setSubmitButtonEnabled(true);
+        SV.onActionViewExpanded();
 
         SV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
