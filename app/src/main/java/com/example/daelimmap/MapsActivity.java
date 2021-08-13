@@ -2,6 +2,9 @@ package com.example.daelimmap;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SearchView;
@@ -27,7 +30,7 @@ import java.util.List;
 
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
-
+    MenuItem MapSearch;
 
     View v;
     ImageView imageView;
@@ -55,23 +58,36 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.daelimmap);
 
-        SearchView SV = findViewById(R.id.mapSearch); //서치뷰 네임은 SV
-
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+    }
 
-        SV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        super.onCreateOptionsMenu(menu);
+
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.search_menu,menu);
+        MapSearch=menu.findItem(R.id.search);
+
+        MapSearch.setOnActionExpandListener(new MenuItem.OnActionExpandListener(){
+            //버튼설정시 에디트박스가 바로 펼쳐지는지 안펼쳐지느지 사용하게하는 메서드
+            //근데 어케쓰는지 몰겟다
+            public boolean isIconified(MenuItem item){
                 return false;
             }
-
+            //검색버튼 클릭시
             @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
+            public boolean onMenuItemActionExpand(MenuItem item) {
+                return true;
+            }
+            //검색 취소시
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
+                return true;
             }
         });
-
+        return true;
     }
 
     @Override
