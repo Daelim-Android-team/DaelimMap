@@ -65,7 +65,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.daelimmap);
 
-        ListView_adapter adapter = new ListView_adapter();
+
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
@@ -73,8 +73,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-
+        ListView_adapter adapter = new ListView_adapter();
         ListView SRV = findViewById(R.id.SearchListView);
+        SRV.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
