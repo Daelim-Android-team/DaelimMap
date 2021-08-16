@@ -40,6 +40,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     View v;
     ImageView imageView;
     private GoogleMap mMap;
+    private
 
 
     ArrayList<Marker> markers = new ArrayList<>();
