@@ -40,7 +40,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     View v;
     ImageView imageView;
     private GoogleMap mMap;
-    private
+    private ListView_adapter adapter;
+    private ListView SRV;
 
 
     ArrayList<Marker> markers = new ArrayList<>();
@@ -73,8 +74,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        ListView_adapter adapter = new ListView_adapter();
-        ListView SRV = findViewById(R.id.SearchListView);
+        adapter = new ListView_adapter();
+        SRV = findViewById(R.id.SearchListView);
         SRV.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
