@@ -13,5 +13,14 @@
         tools:context=".MapsActivity"
         tools:layout_editor_absoluteX="-50dp"
         tools:layout_editor_absoluteY="0dp" />
+    <ListView
+        android:id="@+id/SearchListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="invisible"
+        android:divider="#000000"
+        android:dividerHeight="1dp">
+    </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

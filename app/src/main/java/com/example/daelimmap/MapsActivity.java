@@ -7,6 +7,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
@@ -29,6 +30,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.daelimmap.building.*;
+
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
     MenuItem MapSearch;
@@ -36,6 +39,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     View v;
     ImageView imageView;
     private GoogleMap mMap;
+
 
     ArrayList<Marker> markers = new ArrayList<>();
 
@@ -68,6 +72,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
 
+        ListView SRV = findViewById(R.id.SearchListView);
+
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
         MapSearch = menu.findItem(R.id.search);
@@ -76,12 +82,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             //검색버튼 클릭시
             @Override
             public boolean onMenuItemActionExpand(MenuItem item) {
+                SRV.setVisibility(ListView.VISIBLE);
                 return true;
             }
 
             //검색 취소시
             @Override
             public boolean onMenuItemActionCollapse(MenuItem item) {
+                SRV.setVisibility(ListView.INVISIBLE);
                 return true;
             }
         });
@@ -100,7 +108,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             //텍스트가 바뀔때마다 호출
             @Override
             public boolean onQueryTextChange(String newText) {
-
+//                .setText((newText));
                 return true;
             }
         });
