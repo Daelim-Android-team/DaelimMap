@@ -30,6 +30,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import com.example.daelimmap.building.*;
 
@@ -40,8 +41,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     View v;
     ImageView imageView;
     private GoogleMap mMap;
-    private
-
+    private List<String> searchList;
+    private ArrayList<String> searchArray;
 
     ArrayList<Marker> markers = new ArrayList<>();
 
@@ -65,6 +66,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.daelimmap);
 
+        searchList = new ArrayList<String>();
+        searchArray = new ArrayList<String>();
+        searchArray.addAll(searchList);
         ListView_adapter adapter = new ListView_adapter();
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -96,6 +100,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
+
         SearchView SV = (SearchView) MapSearch.getActionView();
         SV.onActionViewExpanded();
         SV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -103,7 +108,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             //검색버튼을 눌렀을 경우
             @Override
             public boolean onQueryTextSubmit(String query) {
+                searchList.clear();
 
+                if (query.length() == 0) {
+                    searchList.addAll(searchArray);
+                }
+                else {
+                    for (int i = 0; i < searchArray.size(); i++) {
+                        if (searchArray.get(i).toLowerCase().contains(query)) {
+                            searchList.add(searchArray.get(i));
+                        }
+                    }
+                }
                 return true;
             }
 
@@ -116,7 +132,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
         return true;
     }
-
 
 
 
@@ -148,12 +163,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-
     @Override
     public boolean onMarkerClick(final Marker marker) {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
         if (marker.getTitle().equals("퇴계관")) {
-            v = getLayoutInflater().inflate(R.layout.universityheadquaters, null);
+            v = getLayoutInflater().inflate(R.layout.toegyegwan, null);
             bottomSheetDialog.setContentView(v);
         } else if (marker.getTitle().equals("대학본부")) {
             v = getLayoutInflater().inflate(R.layout.universityheadquaters, null);
