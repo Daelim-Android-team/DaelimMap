@@ -1,14 +1,13 @@
 package com.example.daelimmap.LV_Item;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
+public class ListView_item{
+    private String contentStr;
 
-import com.example.daelimmap.R;
-
-public class ListView_item extends AppCompatActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.listview_adapter);
+    public void setContent(String content){
+        contentStr = content;
     }
+    public String getContent(){
+        return this.contentStr;
+    }
+
 }

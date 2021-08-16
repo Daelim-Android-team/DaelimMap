@@ -21,7 +21,7 @@ public class ListView_adapter extends BaseAdapter {
     }
     @Override
     public int getCount(){
-        return listview_item.size();
+        return listView_itemList.size();
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
@@ -42,15 +42,18 @@ public class ListView_adapter extends BaseAdapter {
     }
     @Override
     public long getItemId(int position){
-
+        return position;
     }
     @Override
     public Object getItem(int postion){
-
+        return listView_itemList.get(postion);
     }
-    @Override
-    public void additems(String content){
+    public void addItem(String content){
         ListView_item item = new ListView_item();
+
+        item.setContent(content);
+
+        listView_itemList.add(item);
     }
 
 
