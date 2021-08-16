@@ -43,6 +43,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     private List<String> searchList;
     private ArrayList<String> searchArray;
+    private ListView_adapter adapter;
+    private ListView SRV;
+
 
     ArrayList<Marker> markers = new ArrayList<>();
 
@@ -77,8 +80,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-
-        ListView SRV = findViewById(R.id.SearchListView);
+        adapter = new ListView_adapter();
+        SRV = findViewById(R.id.SearchListView);
+        SRV.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
@@ -99,7 +104,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 return true;
             }
         });
-
 
         SearchView SV = (SearchView) MapSearch.getActionView();
         SV.onActionViewExpanded();
@@ -135,6 +139,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
 
+
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
@@ -162,6 +167,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.setOnMarkerClickListener(this);
 
     }
+
 
     @Override
     public boolean onMarkerClick(final Marker marker) {
