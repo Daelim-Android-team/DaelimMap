@@ -3,60 +3,82 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".YulgoggwanActivity">
-
-    <ImageView
-        android:id="@+id/daelim_mark"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/yulgoggwan" />
-
 
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="448dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/yulgoggwan" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="율곡관" />
 
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:textSize="15sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="학과 - 반도체과, 스마트 팩토리 학부, \n전기과, 호텔조리제과학부" />
 
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
+
         <Button
-            android:id="@+id/ViewDetails"
-            android:layout_width="wrap_content"
+            android:id="@+id/button26"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="상세보기" />
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="평면도 보기"
+            android:textColor="@color/black" />
 
         <View
-
-            android:layout_width="0dp"
-
-            android:layout_height="0dp"
-
-            android:layout_weight="1"
-
-            />
+            android:id="@+id/view22"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
 
         <Button
-            android:id="@+id/mapsee"
-            android:layout_width="wrap_content"
+            android:id="@+id/button27"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="지도보기" />
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="상세보기"
+            android:textColor="@color/black" />
 
     </LinearLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="30sp"
+        android:background="@color/black" />
 
 
 </LinearLayout>
