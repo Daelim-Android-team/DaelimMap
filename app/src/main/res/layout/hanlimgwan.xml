@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".Intenttt.hanlimgwan">
+    tools:context=".LV_Item.hanlimgwan">
 
     <LinearLayout
         android:layout_width="match_parent"

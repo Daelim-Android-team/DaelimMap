@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DaelimMap">
-        <activity android:name=".bottomsheet.bottomsheet"></activity>
+        <activity android:name=".floor.yulgoggwan_floor"></activity>
+        <activity android:name=".bottomsheet.bottomsheet" />
         <activity
             android:name=".SuamgwanActivity"
             android:exported="true" />
@@ -52,7 +53,7 @@
         <activity
             android:name=".DasangwanActivity"
             android:exported="true" />
-        <activity android:name=".Intenttt.hanlimgwan" />
+        <activity android:name=".LV_Item.hanlimgwan" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

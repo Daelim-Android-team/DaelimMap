@@ -1,4 +1,4 @@
-package com.example.daelimmap.Intenttt;
+package com.example.daelimmap.LV_Item;
 
 import androidx.appcompat.app.AppCompatActivity;
 
