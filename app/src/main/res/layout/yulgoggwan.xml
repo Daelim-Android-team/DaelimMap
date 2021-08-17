@@ -11,7 +11,7 @@
         android:id="@+id/daelim_mark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/daelim_mark" />
+        android:src="@drawable/yulgoggwan" />
 
 
 
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="448dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/hanlimgwan" />
+        android:src="@drawable/yulgoggwan" />
 
     <TextView
         android:id="@+id/text"
@@ -35,10 +35,10 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/button"
+            android:id="@+id/ViewDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="상세보기" />
 
         <View
 
@@ -51,11 +51,10 @@
             />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/mapsee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="Button" />
+            android:text="지도보기" />
 
     </LinearLayout>
 

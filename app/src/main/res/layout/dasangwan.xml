@@ -11,7 +11,7 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        android:src="@drawable/dasangwan" />
+        android:src="@drawable/dasangwan_2f_map" />
 
     <TextView
         android:id="@+id/textView3"
