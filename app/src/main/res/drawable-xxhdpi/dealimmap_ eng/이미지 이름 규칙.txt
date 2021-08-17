@@ -1,0 +1,13 @@
+daehagbonbu      -  대학본부
+dasangwan         -  다산관
+hagsaenghoegwan  -  학생회관
+hanlimgwan  - 한림관
+hongjigwan   - 홍지관
+imgoggwan  -  임곡관
+jadongchagwan - 자동차관
+jeongbotongsingwan  -  정보 통신관
+jeonsangwan    - 전산관
+suamgwan  -  수암관
+toegyegwan   - 퇴계관
+yulgoggwan   -  율곡관
+saenghwalgwan - 생활관
