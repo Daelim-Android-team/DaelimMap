@@ -69,9 +69,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.daelimmap);
 
-        searchList = new ArrayList<String>();
-        searchArray = new ArrayList<String>();
-        searchArray.addAll(searchList);
+
         ListView_adapter adapter = new ListView_adapter();
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -112,31 +110,25 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             //검색버튼을 눌렀을 경우
             @Override
             public boolean onQueryTextSubmit(String query) {
-                searchList.clear();
-
-                if (query.length() == 0) {
-                    searchList.addAll(searchArray);
-                }
-                else {
-                    for (int i = 0; i < searchArray.size(); i++) {
-                        if (searchArray.get(i).toLowerCase().contains(query)) {
-                            searchList.add(searchArray.get(i));
-                        }
-                    }
-                }
+                //검색버튼을 눌렀을 시 해당 텍스트와 관련된 내용으로 이동
                 return true;
             }
 
             //텍스트가 바뀔때마다 호출
             @Override
             public boolean onQueryTextChange(String newText) {
-//                .setText((newText));
+//                .setText(search(newText));
                 return true;
             }
         });
         return true;
     }
-
+    public void search(){
+        //검색기능 코드
+    }
+    public void building(){
+        //빌딩의 배열 정리하는 코드
+    }
 
 
 
