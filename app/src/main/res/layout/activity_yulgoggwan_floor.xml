@@ -6,14 +6,25 @@
     android:layout_height="wrap_content"
     tools:context=".floor.yulgoggwan_floor">
 
+
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="342dp"
-        android:layout_height="721dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="404dp"
+        android:layout_height="467dp"
+        android:layout_marginEnd="4dp"
         android:src="@drawable/yulgoggwan_1f_map"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1층"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="54dp"
         tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

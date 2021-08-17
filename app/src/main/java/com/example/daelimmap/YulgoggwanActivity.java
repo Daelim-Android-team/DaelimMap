@@ -8,19 +8,19 @@ import android.widget.Button;
 
 public class YulgoggwanActivity extends AppCompatActivity {
 
-    // Button mapsee;
+    Button mapsee;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.yulgoggwan);
 
-//        mapsee = findViewById(R.id.mapsee);
-//
-//        mapsee.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+        mapsee = findViewById(R.id.yulgoggwan_button2);
+
+        mapsee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }

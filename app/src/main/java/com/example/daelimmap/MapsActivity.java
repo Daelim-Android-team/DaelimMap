@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.daelimmap.LV_Item.hanlimgwan;
 import com.example.daelimmap.LV_adapter.ListView_adapter;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -165,47 +166,73 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public boolean onMarkerClick(final Marker marker) {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
         if (marker.getTitle().equals("퇴계관")) {
-            v = getLayoutInflater().inflate(R.layout.toegyegwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),ToegyegwanActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.toegyegwan, null);
+//            bottomSheetDialog.setContentView(v);
         } else if (marker.getTitle().equals("대학본부")) {
-            v = getLayoutInflater().inflate(R.layout.universityheadquaters, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),UniversityheadquatersActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.universityheadquaters, null);
+//            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("정보통신관")) {
-            v = getLayoutInflater().inflate(R.layout.jeongbotongsingwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),JeongbotongsingwanActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.jeongbotongsingwan, null);
+//            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("전산관")) {
-            v = getLayoutInflater().inflate(R.layout.jeonsangwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),JeonsangwanActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.jeonsangwan, null);
+//            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("생활관")) {
-            v = getLayoutInflater().inflate(R.layout.saenghwalgwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),SaenghwalgwanActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.saenghwalgwan, null);
+//            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("홍지관")) {
-            v = getLayoutInflater().inflate(R.layout.hongjigwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),HongjigwanActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.hongjigwan, null);
+//            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("학생회관")) {
-            v = getLayoutInflater().inflate(R.layout.hagsaenghoegwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),HagsaenghoegwanActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.hagsaenghoegwan, null);
+//            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("자동차관")) {
-            v = getLayoutInflater().inflate(R.layout.jadongchagwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),JadongchagwanActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.jadongchagwan, null);
+//            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("수암관")) {
-            v = getLayoutInflater().inflate(R.layout.suamgwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),SuamgwanActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.suamgwan, null);
+//            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("다산관")) {
-            v = getLayoutInflater().inflate(R.layout.dasangwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),DasangwanActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.dasangwan, null);
+//            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("임곡관")) {
-            v = getLayoutInflater().inflate(R.layout.imgoggwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),ImgoggwanActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.imgoggwan, null);
+//            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("한림관")) {
-            v = getLayoutInflater().inflate(R.layout.hanlimgwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(), com.example.daelimmap.LV_Item.hanlimgwan.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.hanlimgwan, null);
+//            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("율곡관")) {
-            v = getLayoutInflater().inflate(R.layout.yulgoggwan, null);
-            bottomSheetDialog.setContentView(v);
+            Intent intent = new Intent(getApplicationContext(),YulgoggwanActivity.class);
+            startActivity(intent);
+//            v = getLayoutInflater().inflate(R.layout.yulgoggwan, null);
+//            bottomSheetDialog.setContentView(v);
         }
 
-            bottomSheetDialog.show();
+//            bottomSheetDialog.show();
 
 
             marker.setAlpha(1);

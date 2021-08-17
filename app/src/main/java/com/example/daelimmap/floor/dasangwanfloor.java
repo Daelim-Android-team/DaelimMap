@@ -6,12 +6,11 @@ import android.os.Bundle;
 
 import com.example.daelimmap.R;
 
-public class yulgoggwan_floor extends AppCompatActivity {
+public class dasangwanfloor extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_yulgoggwan_floor);
-
+        setContentView(R.layout.activity_dasangwanfloor2);
     }
 }

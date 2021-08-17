@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/yulgoggwan" />
+        />
 
     <TextView
         android:id="@+id/textView13"
@@ -46,7 +46,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button26"
+            android:id="@+id/yulgoggwan_button1"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
             android:background="@color/black" />
 
         <Button
-            android:id="@+id/button27"
+            android:id="@+id/yulgoggwan_button2"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
