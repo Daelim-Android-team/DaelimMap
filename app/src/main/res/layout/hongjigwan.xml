@@ -3,29 +3,79 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".HongjigwanActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:src="@drawable/instant_image" />
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hongjigwan" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="홍지관"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
-        android:textSize="15sp"
-        android:text="학과 - 아동보육과, 언어치료과, 유아교육과,\n 항공서비스과, 호텔 관광과\n\n복지시설 - Cafe Bluepot, 글로벌 잡 스테이션, \n대림아트홀, 대림아트홀 갤러리(전시실), 원스톱지원실" />
+        android:gravity="center"
+        android:text="학과 - 아동보육과, 언어치료과, 유아교육과,\n 항공서비스과, 호텔 관광과\n\n복지시설 - Cafe Bluepot, 글로벌 잡 스테이션, \n대림아트홀, 대림아트홀 갤러리(전시실), 원스톱지원실"
+        android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/button4"
+    <View
+        android:id="@+id/view18"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="상세보기" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button23"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="평면도 보기"
+            android:textColor="@color/black" />
+
+        <View
+            android:id="@+id/view20"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="상세보기"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view19"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="30sp"
+        android:background="@color/black" />
 </LinearLayout>

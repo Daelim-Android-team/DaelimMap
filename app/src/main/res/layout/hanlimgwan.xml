@@ -7,40 +7,76 @@
     android:orientation="vertical"
     tools:context=".LV_Item.hanlimgwan">
 
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hanlimgwan_out" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginTop="30sp"
+        android:text="한림관" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="30sp"
+        android:textSize="15sp"
+        android:text="학과 - 스포츠지도과\n\n복지시설 - 실내 체육관" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imageview"
-            android:layout_width="199dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hanlimgwan" />
-
-        <LinearLayout
+        <Button
+            android:id="@+id/button26"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="평면도 보기"
+            android:textColor="@color/black" />
+
+        <View
+            android:id="@+id/view22"
+            android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:background="@color/black" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="126dp"
-                android:layout_margin="30sp"
-                android:gravity="center"
-                android:text="학과 - 스포츠지도과\n\n복지시설 - 실내 체육관"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="30sp"
-                android:gravity="center|bottom"
-                android:text="여기를 눌러 세부사항 보기" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/button27"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="상세보기"
+            android:textColor="@color/black" />
 
     </LinearLayout>
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="30sp"
+        android:background="@color/black" />
 
 </LinearLayout>

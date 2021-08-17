@@ -3,29 +3,79 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".ToegyegwanActivity">
 
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:src="@drawable/instant_image" />
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/toegyegwan" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="퇴계관"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
-        android:textSize="15sp"
-        android:text="학과 - 건축학과, 경영학부, 보건의료행정과, \n산업 경영과, 실내디자인학부, 토목환경과\n\n복지시설 - 에이스 스테이션, 학보사" />
+        android:gravity="center"
+        android:text="학과 - 건축학과, 경영학부, 보건의료행정과, \n산업 경영과, 실내디자인학부, 토목환경과\n\n복지시설 - 에이스 스테이션, 학보사"
+        android:textSize="15sp" />
 
-    <Button
-        android:id="@+id/button11"
+    <View
+        android:id="@+id/view28"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="상세보기" />
+        android:layout_height="1dp"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button26"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="평면도 보기"
+            android:textColor="@color/black" />
+
+        <View
+            android:id="@+id/view22"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/button27"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="상세보기"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view29"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="30sp"
+        android:background="@color/black" />
 </LinearLayout>

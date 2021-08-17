@@ -3,15 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".UniversityheadquatersActivity">
 
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="match_parent"
-        android:layout_height="221dp"
-        android:src="@drawable/universityheadquarters" />
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/universityheadquaters" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:text="대학본부"/>
 
     <TextView
         android:id="@+id/textView12"
@@ -23,46 +33,51 @@
         android:textSize="15sp"
         android:text="복지시설 - INNO cafe" />
 
-    <Button
-        android:id="@+id/button13"
+    <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="상세보기" />
+        android:layout_height="1dp"
+        android:background="@color/black" />
 
-    <Button
-        android:id="@+id/button14"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="상세보기" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button15"
+        <Button
+            android:id="@+id/button26"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="평면도 보기"
+            android:textColor="@color/black" />
+
+        <View
+            android:id="@+id/view22"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/button27"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="상세보기"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="상세보기" />
-
-    <Button
-        android:id="@+id/button16"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="상세보기" />
-
-    <Button
-        android:id="@+id/button17"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="상세보기" />
+        android:layout_height="1dp"
+        android:layout_marginBottom="30sp"
+        android:background="@color/black" />
 
 
-    <Button
-        android:id="@+id/button18"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="상세보기" />
-
-    <Button
-        android:id="@+id/button19"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="상세보기" />
 </LinearLayout>
