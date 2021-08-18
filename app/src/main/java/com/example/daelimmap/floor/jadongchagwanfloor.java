@@ -9,23 +9,22 @@ import android.widget.ImageView;
 
 import com.example.daelimmap.R;
 
-public class yulgoggwan_floor extends AppCompatActivity implements View.OnClickListener {
+public class jadongchagwanfloor extends AppCompatActivity implements View.OnClickListener{
+
     int currentIndex =0;
-    int [] imgs = {R.drawable.yulgoggwan_1f_map,
-            R.drawable.yulgoggwan_2f_map,R.drawable.yulgoggwan_3f_map,R.drawable.yulgoggwan_4f_map,
-            R.drawable.yulgoggwan_5f_map,R.drawable.yulgoggwan_6f_map,R.drawable.yulgoggwan_7f_map};
+    int [] imgs = {R.drawable.jadongchagwan_1f_map,
+            R.drawable.jadongchagwan_2f_map,R.drawable.jadongchagwan_3f_map,R.drawable.jadongchagwan_4f_map,
+            R.drawable.jadongchagwan_5f_map,R.drawable.jadongchagwan_6f_map,R.drawable.jadongchagwan_7f_map};
 
-    ImageView yulgoggwan_floor;
-
+    ImageView jadongchagwanfloor;
     ImageButton left,right;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_yulgoggwan_floor);
+        setContentView(R.layout.activity_jadongchagwanfloor);
 
-        yulgoggwan_floor= findViewById(R.id.yulgoggwanimage);
-
+        jadongchagwanfloor = findViewById(R.id.jadongchagwan_floor);
         left = findViewById(R.id.left);
         right = findViewById(R.id.right);
 
@@ -38,6 +37,7 @@ public class yulgoggwan_floor extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
+
         if(v.getId()==R.id.right){
             if(currentIndex == (imgs.length-1)) return;
             else currentIndex++;
@@ -50,6 +50,6 @@ public class yulgoggwan_floor extends AppCompatActivity implements View.OnClickL
     }
 
     public void setImage() {
-        yulgoggwan_floor.setImageResource(imgs[currentIndex]);
+        jadongchagwanfloor.setImageResource(imgs[currentIndex]);
     }
 }

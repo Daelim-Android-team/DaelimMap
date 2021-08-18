@@ -29,11 +29,25 @@ public class toegyegwanfloor extends AppCompatActivity implements View.OnClickLi
 
         left.setOnClickListener(this);
         right.setOnClickListener(this);
+
+        setImage();
     }
 
     @Override
     public void onClick(View v) {
+        if(v.getId()==R.id.right){
+            if(currentIndex == (imgs.length-1)) return;
+            else currentIndex++;
 
+        } else if (v.getId() == R.id.left){
+            if(currentIndex==0) return;
+            else currentIndex--;
+        }
+        setImage();
 
+    }
+
+    public void setImage() {
+        toegyegwanfloor.setImageResource(imgs[currentIndex]);
     }
 }
