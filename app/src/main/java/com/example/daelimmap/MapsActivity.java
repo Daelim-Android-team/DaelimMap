@@ -57,7 +57,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng UniversityHeadquarters = new LatLng(37.40362517255369, 126.9295991200578); //대학본부
     LatLng jeongbotongsingwan = new LatLng(37.40304502369558, 126.92952239412062); //정보통신관
     LatLng jeonsangwan = new LatLng(37.40408341926637, 126.93066191636484); //전산관
-    LatLng saenghwalgwan = new LatLng(37.40441525134493, 126.93077558442165); //생활관
+    LatLng saenghwalgwan = new LatLng(37.40452120987672, 126.93075649706715); //생활관
     LatLng hongjigwan = new LatLng(37.40231736619865, 126.9298564574061); //홍지관
     LatLng hagsaenghoegwan = new LatLng(37.403712438306705, 126.93131140849653); //학생회관
     LatLng jadongchagwan = new LatLng(37.403369316189355, 126.93177744753491); //자동차관
@@ -176,7 +176,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(UniversityHeadquarters).title("대학본부").alpha(0));
         mMap.addMarker(new MarkerOptions().position(jeongbotongsingwan).title("정보통신관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(jeonsangwan).title("전산관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(saenghwalgwan).title("생활관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(saenghwalgwan).title("생활관").alpha(1));
         mMap.addMarker(new MarkerOptions().position(hongjigwan).title("홍지관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(hagsaenghoegwan).title("학생회관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(jadongchagwan).title("자동차관").alpha(0));
@@ -186,7 +186,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(hanlimgwan).title("한림관").alpha(0));
 
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(yulgoggwan));                 // 초기 위치
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(saenghwalgwan));                 // 초기 위치
         mMap.animateCamera(CameraUpdateFactory.zoomTo(17));                         // 줌의 정도
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         // 지도 유형 설정

@@ -3,16 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".floor.yulgoggwan_floor">
-
+    tools:context=".floor.Suamgwanfloor">
 
     <ImageView
-        android:id="@+id/yulgoggwanfloor"
+        android:id="@+id/suamgwan_floor"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:src="@drawable/yulgoggwan_1f_map" />
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,15 +22,9 @@
             android:id="@+id/left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
+            android:layout_marginLeft="150dp"
+
             app:srcCompat="?attr/actionModeCloseDrawable" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,22 +33,14 @@
 
         </TextView>
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
         <ImageButton
             android:id="@+id/right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:rotation="180"
-            android:background="@android:color/transparent"
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>

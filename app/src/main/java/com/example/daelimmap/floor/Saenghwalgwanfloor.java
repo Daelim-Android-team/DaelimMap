@@ -9,23 +9,21 @@ import android.widget.ImageView;
 
 import com.example.daelimmap.R;
 
-public class yulgoggwan_floor extends AppCompatActivity implements View.OnClickListener {
+public class Saenghwalgwanfloor extends AppCompatActivity implements View.OnClickListener {
     int currentIndex =0;
-    int [] imgs = {R.drawable.yulgoggwan_1f_map,
-            R.drawable.yulgoggwan_2f_map,R.drawable.yulgoggwan_3f_map,R.drawable.yulgoggwan_4f_map,
-            R.drawable.yulgoggwan_5f_map,R.drawable.yulgoggwan_6f_map,R.drawable.yulgoggwan_7f_map};
+    int [] imgs = {R.drawable.saenghwalgwan_1f_map,
+            R.drawable.saenghwalgwan_2f_map};
 
-    ImageView yulgoggwanfloor;
-
+    ImageView saenghwalgwanfloor;
     ImageButton left,right;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_yulgoggwan_floor);
+        setContentView(R.layout.activity_saenghwalgwanfloor);
 
-        yulgoggwanfloor= findViewById(R.id.yulgoggwanfloor);
 
+        saenghwalgwanfloor = findViewById(R.id.saenghwalgwanfloor);
         left = findViewById(R.id.left);
         right = findViewById(R.id.right);
 
@@ -33,7 +31,6 @@ public class yulgoggwan_floor extends AppCompatActivity implements View.OnClickL
         right.setOnClickListener(this);
 
         setImage();
-
     }
 
     @Override
@@ -47,9 +44,10 @@ public class yulgoggwan_floor extends AppCompatActivity implements View.OnClickL
             else currentIndex--;
         }
         setImage();
+
     }
 
     public void setImage() {
-        yulgoggwanfloor.setImageResource(imgs[currentIndex]);
+        saenghwalgwanfloor.setImageResource(imgs[currentIndex]);
     }
 }

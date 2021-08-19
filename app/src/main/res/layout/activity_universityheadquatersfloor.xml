@@ -3,16 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".floor.yulgoggwan_floor">
-
+    tools:context=".floor.universityheadquatersfloor">
 
     <ImageView
-        android:id="@+id/yulgoggwanfloor"
+        android:id="@+id/universityheadquatersfloor"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:src="@drawable/yulgoggwan_1f_map" />
+        android:src="@drawable/daehagbonbu_1f_map" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,8 +53,5 @@
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
     </LinearLayout>
-
-
-
 
 </LinearLayout>

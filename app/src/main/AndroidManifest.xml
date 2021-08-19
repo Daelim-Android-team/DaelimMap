@@ -15,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DaelimMap">
-        <activity android:name=".floor.universityheadquatersActivity"></activity>
+        <activity android:name=".floor.Saenghwalgwanfloor"></activity>
+        <activity android:name=".floor.Suamgwanfloor" />
+        <activity android:name=".floor.universityheadquatersfloor" />
+        <activity android:name=".floor.universityheadquatersActivity" />
         <activity android:name=".floor.Jeonsangwanfloor" />
         <activity android:name=".floor.jeongbotongsingwanfloor" />
         <activity android:name=".floor.imgoggwanfloor" />

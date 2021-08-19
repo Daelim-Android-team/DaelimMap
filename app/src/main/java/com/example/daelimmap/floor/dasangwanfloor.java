@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.daelimmap.R;
+
+import org.w3c.dom.Text;
 
 public class dasangwanfloor extends AppCompatActivity  implements View.OnClickListener{
 
@@ -15,6 +18,7 @@ public class dasangwanfloor extends AppCompatActivity  implements View.OnClickLi
     int [] imgs = {R.drawable.dasangwan_1f_map,
             R.drawable.dasangwan_2f_map,R.drawable.dasangwan_3f_map,R.drawable.dasangwan_4f_map,
             R.drawable.dasangwan_5f_map};
+
 
     ImageView dasangwanfloor;
     ImageButton left,right;
@@ -37,7 +41,8 @@ public class dasangwanfloor extends AppCompatActivity  implements View.OnClickLi
     @Override
     public void onClick(View v) {
         if(v.getId()==R.id.right){
-            if(currentIndex == (imgs.length-1)) return;
+            if(currentIndex == (imgs.length-1))
+                return;
             else currentIndex++;
 
         } else if (v.getId() == R.id.left){
