@@ -9,10 +9,11 @@
 
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/yulgoggwanimage"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/yulgoggwan_out"
         />
 
     <TextView

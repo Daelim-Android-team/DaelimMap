@@ -5,27 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".floor.toegyegwanfloor">
+    tools:context=".floor.dasangwanfloor">
 
 
     <ImageView
-        android:id="@+id/toegyegwan_floor"
+        android:id="@+id/dasangwan_floor"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:src="@drawable/toegyegwan_1f_map" />
+        android:src="@drawable/dasangwan_1f_map" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
+        <ImageButton
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
 
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+            app:srcCompat="?attr/actionModeCloseDrawable" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,12 +34,12 @@
 
         </TextView>
 
-    <ImageButton
-        android:id="@+id/right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="180"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        <ImageButton
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="180"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
 
     </LinearLayout>
 

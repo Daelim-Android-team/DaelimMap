@@ -8,7 +8,7 @@
     tools:context=".ImgoggwanActivity">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imgoggwan_image"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:scaleType="centerCrop"
@@ -45,7 +45,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button26"
+            android:id="@+id/imgoggwan_button1"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             android:background="@color/black" />
 
         <Button
-            android:id="@+id/button27"
+            android:id="@+id/imgoggwan_button2"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
