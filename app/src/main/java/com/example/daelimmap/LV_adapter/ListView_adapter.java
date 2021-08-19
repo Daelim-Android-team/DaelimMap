@@ -14,8 +14,8 @@ import java.util.ArrayList;
 
 
 public class ListView_adapter extends BaseAdapter {
-    private TextView listview_item;
-    private ArrayList<ListView_item> listView_itemList = new ArrayList<ListView_item>();
+    public TextView listview_item;
+    public ArrayList<ListView_item> listView_itemList = new ArrayList<ListView_item>();
     public ListView_adapter(){
 
     }

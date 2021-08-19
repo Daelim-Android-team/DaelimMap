@@ -29,6 +29,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 //import com.example.daelimmap.Intenttt.*;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
+import java.io.CharArrayWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -42,11 +43,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     View v;
     ImageView imageView;
     private GoogleMap mMap;
-    private List<String> searchList;
-    private ArrayList<String> searchArray;
     private ListView_adapter adapter;
-    private ListView SRV;
+    private ListView SLV;
+    private List<String> listView_itemList;
+    private ArrayList<String> arraylist;
 
+    Dasangwan ds = new Dasangwan();
 
     ArrayList<Marker> markers = new ArrayList<>();
 
@@ -65,6 +67,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng hanlimgwan = new LatLng(37.402209544693086, 126.92890403822585); //한림관
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,9 +83,16 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         adapter = new ListView_adapter();
-        SRV = findViewById(R.id.SearchListView);
-        SRV.setAdapter(adapter);
+        SLV = findViewById(R.id.SearchListView);
+        SLV.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+        listView_itemList  = new ArrayList<String>();
+
+
+//        settingList();
+
+        arraylist = new ArrayList<String>();
+        arraylist.addAll(listView_itemList);
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
@@ -92,14 +102,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             //검색버튼 클릭시
             @Override
             public boolean onMenuItemActionExpand(MenuItem item) {
-                SRV.setVisibility(ListView.VISIBLE);
+                SLV.setVisibility(ListView.VISIBLE);
                 return true;
             }
 
             //검색 취소시
             @Override
             public boolean onMenuItemActionCollapse(MenuItem item) {
-                SRV.setVisibility(ListView.INVISIBLE);
+                SLV.setVisibility(ListView.INVISIBLE);
                 return true;
             }
         });
@@ -124,13 +134,36 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
         return true;
     }
-    public void search(){
+    public void search(String charText){
         //검색기능 코드
+        listView_itemList.clear();
+        if(charText.length() == 0){
+            listView_itemList.addAll(arraylist);
+        }
+        //문자입력시
+        else{
+            for(int i =0;i<arraylist.size(); i++){
+                if(arraylist.get(i).toLowerCase().contains(charText)){
+                    listView_itemList.add(arraylist.get(i));
+                }
+            }
+        }
     }
-    public void building(){
-        //빌딩의 배열 정리하는 코드
+    public void Dasangwan_floor (){
+        //건물의 배열 정리하는 코드
+            for (int i = 0; i < ds.dsOne_f.size(); i++) {
+                adapter.addItem(ds.dsOne_f.get(i));
+            }
+            for (int i = 0; i < ds.dsTwo_f.size(); i++) {
+                adapter.addItem(ds.dsTwo_f.get(i));
+            }
+            for (int i = 0; i < ds.dsThree_f.size(); i++){
+                adapter.addItem(ds.dsThree_f.get(i));
+            }
+            for (int i = 0; i < ds.dsFour_f.size(); i++){
+                adapter.addItem(ds.dsFive_f.get(i));
+            }
     }
-
 
 
     @Override
