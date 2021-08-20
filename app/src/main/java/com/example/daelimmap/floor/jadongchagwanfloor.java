@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.daelimmap.R;
 
 public class jadongchagwanfloor extends AppCompatActivity implements View.OnClickListener{
 
+    TextView text;
     int currentIndex =0;
     int [] imgs = {R.drawable.jadongchagwan_1f_map,
             R.drawable.jadongchagwan_2f_map,R.drawable.jadongchagwan_3f_map,R.drawable.jadongchagwan_4f_map,
@@ -25,6 +27,7 @@ public class jadongchagwanfloor extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_jadongchagwanfloor);
 
         jadongchagwanfloor = findViewById(R.id.jadongchagwan_floor);
+        text = findViewById(R.id.text);
         left = findViewById(R.id.left);
         right = findViewById(R.id.right);
 
@@ -50,6 +53,7 @@ public class jadongchagwanfloor extends AppCompatActivity implements View.OnClic
     }
 
     public void setImage() {
+        text.setText(String.format("%d층",currentIndex+1));
         jadongchagwanfloor.setImageResource(imgs[currentIndex]);
     }
 }

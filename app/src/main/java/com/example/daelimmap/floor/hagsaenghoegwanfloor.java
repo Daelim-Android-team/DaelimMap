@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.daelimmap.R;
 
 public class hagsaenghoegwanfloor extends AppCompatActivity implements View.OnClickListener {
 
+    TextView text;
 
     int currentIndex =0;
     int [] imgs = {R.drawable.hagsaenghoegwan_1f_map,
@@ -25,6 +27,7 @@ public class hagsaenghoegwanfloor extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_hagsaenghoegwanfloor);
 
         hagsaenghoegwanfloor = findViewById(R.id.hagsaenghoegwan_floor);
+        text=findViewById(R.id.text);
         left = findViewById(R.id.left);
         right = findViewById(R.id.right);
 
@@ -52,6 +55,8 @@ public class hagsaenghoegwanfloor extends AppCompatActivity implements View.OnCl
     }
 
     public void setImage() {
+
+        text.setText(String.format("%d층",currentIndex+1));
         hagsaenghoegwanfloor.setImageResource(imgs[currentIndex]);
     }
 }

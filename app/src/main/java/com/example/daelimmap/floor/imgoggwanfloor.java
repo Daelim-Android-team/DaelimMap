@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.daelimmap.R;
 
@@ -13,7 +14,7 @@ public class imgoggwanfloor extends AppCompatActivity implements View.OnClickLis
     int currentIndex =0;
     int [] imgs = {R.drawable.imgoggwan_1f_map,
             R.drawable.imgoggwan_2f_map};
-
+    TextView text;
     ImageView imgoggwanfloor;
     ImageButton left,right;
 
@@ -24,6 +25,7 @@ public class imgoggwanfloor extends AppCompatActivity implements View.OnClickLis
 
         imgoggwanfloor = findViewById(R.id.imgoggwanfloor);
 
+        text = findViewById(R.id.text);
         left = findViewById(R.id.left);
         right = findViewById(R.id.right);
 
@@ -50,6 +52,7 @@ public class imgoggwanfloor extends AppCompatActivity implements View.OnClickLis
     }
 
     public void setImage() {
+        text.setText(String.format("%d층",currentIndex+1));
         imgoggwanfloor.setImageResource(imgs[currentIndex]);
     }
 }

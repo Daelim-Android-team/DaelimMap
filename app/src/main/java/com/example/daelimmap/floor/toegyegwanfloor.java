@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.daelimmap.R;
 
@@ -17,6 +18,7 @@ public class toegyegwanfloor extends AppCompatActivity implements View.OnClickLi
             R.drawable.toegyegwan_5f_map,R.drawable.toegyegwan_6f_map};
     ImageView toegyegwanfloor;
 
+    TextView text;
     ImageButton left,right;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class toegyegwanfloor extends AppCompatActivity implements View.OnClickLi
         left = findViewById(R.id.left);
         right = findViewById(R.id.right);
 
+        text = findViewById(R.id.text);
         left.setOnClickListener(this);
         right.setOnClickListener(this);
 
@@ -48,6 +51,7 @@ public class toegyegwanfloor extends AppCompatActivity implements View.OnClickLi
     }
 
     public void setImage() {
+        text.setText(String.format("%d층",currentIndex+1));
         toegyegwanfloor.setImageResource(imgs[currentIndex]);
     }
 }
