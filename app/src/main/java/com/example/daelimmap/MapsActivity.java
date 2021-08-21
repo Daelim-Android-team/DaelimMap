@@ -87,7 +87,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SLV.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
-
         settingList();
 
         arraylist = new ArrayList<String>();
@@ -163,7 +162,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
 
-
         mMap.addMarker(new MarkerOptions().position(Toegyegwan).title("퇴계관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(yulgoggwan).title("율곡관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(UniversityHeadquarters).title("대학본부").alpha(0));
@@ -177,7 +175,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(dasangwan).title("다산관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(imgoggwan).title("임곡관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(hanlimgwan).title("한림관").alpha(0));
-
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(saenghwalgwan));                 // 초기 위치
         mMap.animateCamera(CameraUpdateFactory.zoomTo(17));                         // 줌의 정도
@@ -260,17 +257,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 //            bottomSheetDialog.show();
 
-
             marker.setAlpha(1);
-
 
             return false;
         }
-
-
     }
-
-
 //    @Override
 //    public boolean onMarkerClick(final Marker marker) {
 //
