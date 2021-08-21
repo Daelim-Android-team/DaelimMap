@@ -86,6 +86,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SLV = findViewById(R.id.SearchListView);
         SLV.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+        listView_itemList = new ArrayList<>();
 
         settingList();
 
