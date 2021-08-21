@@ -86,10 +86,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SLV = findViewById(R.id.SearchListView);
         SLV.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-        listView_itemList  = new ArrayList<String>();
 
 
-//        settingList();
+        settingList();
 
         arraylist = new ArrayList<String>();
         arraylist.addAll(listView_itemList);
@@ -128,6 +127,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             //텍스트가 바뀔때마다 호출
             @Override
             public boolean onQueryTextChange(String newText) {
+                search(newText);
 //                .setText(search(newText));
                 return true;
             }
@@ -135,7 +135,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return true;
     }
     public void search(String charText){
-        //검색기능 코드
+        //검색기능
         listView_itemList.clear();
         if(charText.length() == 0){
             listView_itemList.addAll(arraylist);
@@ -144,25 +144,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         else{
             for(int i =0;i<arraylist.size(); i++){
                 if(arraylist.get(i).toLowerCase().contains(charText)){
-                    listView_itemList.add(arraylist.get(i));
+                    adapter.addItem(arraylist.get(i));
                 }
             }
         }
     }
-    public void Dasangwan_floor (){
-        //건물의 배열 정리하는 코드
-            for (int i = 0; i < ds.dsOne_f.size(); i++) {
-                adapter.addItem(ds.dsOne_f.get(i));
+    public void settingList (){
+        //건물의 배열 정리
+        for (int i = 0; i < ds.dsflooer.size(); i++){
+            for(int j = 0; j <ds.dsflooer.get(i).size(); j++){
+            adapter.addItem(ds.dsflooer.get(i).get(j)) ;
             }
-            for (int i = 0; i < ds.dsTwo_f.size(); i++) {
-                adapter.addItem(ds.dsTwo_f.get(i));
-            }
-            for (int i = 0; i < ds.dsThree_f.size(); i++){
-                adapter.addItem(ds.dsThree_f.get(i));
-            }
-            for (int i = 0; i < ds.dsFour_f.size(); i++){
-                adapter.addItem(ds.dsFive_f.get(i));
-            }
+        }
     }
 
 

@@ -31,7 +31,6 @@ public class dasangwanfloor extends AppCompatActivity  implements View.OnClickLi
         dasangwanfloor = findViewById(R.id.dasangwan_floor);
         left = findViewById(R.id.left);
         right = findViewById(R.id.right);
-
         left.setOnClickListener(this);
         right.setOnClickListener(this);
 
