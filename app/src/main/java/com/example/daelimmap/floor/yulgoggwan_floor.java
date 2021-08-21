@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.daelimmap.R;
 
 public class yulgoggwan_floor extends AppCompatActivity implements View.OnClickListener {
+
+    TextView text;
     int currentIndex =0;
     int [] imgs = {R.drawable.yulgoggwan_1f_map,
             R.drawable.yulgoggwan_2f_map,R.drawable.yulgoggwan_3f_map,R.drawable.yulgoggwan_4f_map,
@@ -26,6 +29,7 @@ public class yulgoggwan_floor extends AppCompatActivity implements View.OnClickL
 
         yulgoggwanfloor= findViewById(R.id.yulgoggwanfloor);
 
+        text = findViewById(R.id.text);
         left = findViewById(R.id.left);
         right = findViewById(R.id.right);
 
@@ -50,6 +54,7 @@ public class yulgoggwan_floor extends AppCompatActivity implements View.OnClickL
     }
 
     public void setImage() {
+        text.setText(String.format("%d층",currentIndex+1));
         yulgoggwanfloor.setImageResource(imgs[currentIndex]);
     }
 }

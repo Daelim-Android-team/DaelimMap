@@ -14,6 +14,7 @@ import org.w3c.dom.Text;
 
 public class dasangwanfloor extends AppCompatActivity  implements View.OnClickListener{
 
+    TextView text;
     int currentIndex =0;
     int [] imgs = {R.drawable.dasangwan_1f_map,
             R.drawable.dasangwan_2f_map,R.drawable.dasangwan_3f_map,R.drawable.dasangwan_4f_map,
@@ -29,6 +30,8 @@ public class dasangwanfloor extends AppCompatActivity  implements View.OnClickLi
         setContentView(R.layout.activity_dasangwanfloor);
 
         dasangwanfloor = findViewById(R.id.dasangwan_floor);
+
+        text = findViewById(R.id.text);
         left = findViewById(R.id.left);
         right = findViewById(R.id.right);
         left.setOnClickListener(this);
@@ -52,6 +55,8 @@ public class dasangwanfloor extends AppCompatActivity  implements View.OnClickLi
     }
 
     public void setImage() {
+
+        text.setText(String.format("%d층",currentIndex+1));
         dasangwanfloor.setImageResource(imgs[currentIndex]);
     }
 }
