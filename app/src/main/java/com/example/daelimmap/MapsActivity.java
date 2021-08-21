@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.daelimmap.LV_Item.ListView_item;
 import com.example.daelimmap.LV_Item.hanlimgwan;
 import com.example.daelimmap.LV_adapter.ListView_adapter;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -86,7 +87,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SLV = findViewById(R.id.SearchListView);
         SLV.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-
+        listView_itemList = new ArrayList<>();
         settingList();
 
         arraylist = new ArrayList<String>();
