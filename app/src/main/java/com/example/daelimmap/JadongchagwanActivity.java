@@ -13,6 +13,7 @@ import com.example.daelimmap.floor.toegyegwanfloor;
 public class JadongchagwanActivity extends AppCompatActivity {
 
     Button jadongchagwan_button;
+    Button jadongchagwan_button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,15 @@ public class JadongchagwanActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), jadongchagwanfloor.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
+        jadongchagwan_button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), JadongchagwanDetailsActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
