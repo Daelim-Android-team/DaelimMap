@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView124"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="1층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view117"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="입학실, 당직실, 교육행정팀"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view118"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView126"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="2층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view119"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView127"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="사무 운영팀, 사무 처장실, 총장실, 부속실, 기획처장실, 정착기획팀"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view120"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView128"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="3층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view121"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView129"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="신학 협력 처장실, 신학 협력 부단장실, 특성화 협력단, 신혁협력단 (inno café), 대회의실, 소회의실, 창의 융합 우수 작품관"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view122"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView130"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="4층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view123"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView131"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="혁신 지원 사업단, 혁신 지원 부단장, 마이스터대 사업대, LINC+ 사업단, LINC+ 사업단장, 지식 정보 원장실, 지식 정보원"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

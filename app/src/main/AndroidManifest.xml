@@ -15,10 +15,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DaelimMap">
-        <activity android:name=".floor.Saenghwalgwanfloor"></activity>
+        <activity
+            android:name=".YulgoggwanDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UniversityheadquatersDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ToegyegwanDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SuamgwanDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SaenghwalgwanDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".JeonsangwanDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".JeongbotongsingwanDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".JadongchagwanDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ImgoggwanDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HongjigwanDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HanlimgwanDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HagsaenghoegwanDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DasangwanDetailsActivity"
+            android:exported="true" />
+        <activity android:name=".floor.Saenghwalgwanfloor" />
         <activity android:name=".floor.Suamgwanfloor" />
         <activity android:name=".floor.universityheadquatersfloor" />
-        <activity android:name=".floor.universityheadquatersActivity" />
         <activity android:name=".floor.Jeonsangwanfloor" />
         <activity android:name=".floor.jeongbotongsingwanfloor" />
         <activity android:name=".floor.imgoggwanfloor" />
