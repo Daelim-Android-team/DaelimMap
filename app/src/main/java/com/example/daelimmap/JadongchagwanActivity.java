@@ -21,6 +21,8 @@ public class JadongchagwanActivity extends AppCompatActivity {
         setContentView(R.layout.jadongchagwan);
 
         jadongchagwan_button = findViewById(R.id.jadongchagwan_button);
+        jadongchagwan_button2 =findViewById(R.id.jadongchagwan_button2);
+
         jadongchagwan_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
