@@ -28,7 +28,7 @@ public class Hongjigwanfloor extends AppCompatActivity  implements View.OnClickL
         setContentView(R.layout.activity_hongjigwanfloor);
 
         text = findViewById(R.id.text);
-        Hongjigwanfloor = findViewById(R.id.toegyegwan_floor);
+        Hongjigwanfloor = findViewById(R.id.hongjigwan_floor);
         left = findViewById(R.id.left);
         right = findViewById(R.id.right);
 

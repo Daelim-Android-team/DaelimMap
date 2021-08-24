@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView110"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="1층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view104"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView111"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="창고, ATM기, E0101 합동강의실, E0107 합동강의실, E0111 합동강의실, 대림 학보사, 반도체 부품 실슬실, 컴퓨터 유지 보수, 전원 EMC 실습실, UTM실"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view105"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView112"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="2층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view106"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView113"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="토목 제도실, 토목 CAD실, 측량 기자재실, 기자재 보관실, E0222 강의실, 토목 CAD실2, 학생회관, 이진형 교수님 연구실, 이주호 교수님 연구실, 이양규 교수님 연구실, 박준경 교수님 연구실, 김원일 교수님 연구실, 배상호 교수님 연구실, 토목 환경과 사무실, E0217 강의실, E0221 강의실, E0225 강의실, E0229 강의실"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view107"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView114"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="3층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view108"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView115"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="자료 분석실, 실습 자료실, 세미나실, 작업 관리실, E0318 강의실, 경영 전산 실습실, 교강사 휴게실, 커뮤니티 공간, 산업 경영학과 사무실, 김영선 교수님 연구실, 노경호 교수님 연구실, 조태연 교수님 연구실, 김승경 교수님 연구실, 이현창 교수님 연구실, 임경원 교수님 연구실, E0317 강의실, 경영 세미나실, 경영 비지니스실, PBL 강의실"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view109"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView116"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="4층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view110"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView117"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="E0402 강의실, E0410 강의실, 프레젠테이션 실습실, 비지니스 실습실, 경영 정보실, 출력실, 컴퓨터 실습실, 외래 강의실, 교양 기자재실, 직업 교육 혁신 센터장, 교양 학사, English Lounge 3, 창의 경영실, 주태욱 교수님 연구실, 김현석 교수님 연구실, 홍용기 교수님 연구실, 이지원 교수님 연구실, 경영학과 학과 사무실"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view111"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView118"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="5층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view112"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView119"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="컴퓨터 그래픽실 1, 컴퓨터 그래픽실 2, 출력실, 실습 자료실, ACE 스테이션, 전공 디자인실 1, 전공 디자인실 2, 실내 디자인과 사무실, 디자인 센터, 전공 디자인실 3, 전공 디자인실 4, 기초 디자인실 1"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view113"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView120"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="6층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view114"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView121"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="송지현 교수님 연구실, 권희경 교수님 연구실, 기초 디자인 3, E0610 강의실, E0614 강의실, 캐드실, 컴퓨터 디자인실 2, 모형 제작실, 이경화 교수님 연구실, 유수연 교수님 연구실, 권세훈 교수님 연구실, 조지연 교수님 연구실, 양영근 교수님 연구실, 하승범 교수님 연구실, 기초 디자인실 2, VR 영상 실습실, 의장실, 적산 강의실"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view115"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView122"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="7층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view116"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView123"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="박민석 교수님 연구실,김찬주 교수님 연구실, 장명호 교수님 연구실, 박진숙 교수님 연구실, 김철환 교수님 연구실, 출력실, 기자재 보관실, 사진 촬영실, 컴퓨터 디자인실1, Mock up실, E0730 강의실, 권오철 교수님 연구실,황민영 교수님 연구실, 서삼열 교수님 연구실, 신인중 교수님 연구실, 조광희 교수님 연구실, 프레젠테이션실, 건축학부 학과 사무실, 건축 설계 제도실 1, 건축 설계 제도실 2, E0729 강의실"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

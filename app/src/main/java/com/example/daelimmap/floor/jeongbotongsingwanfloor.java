@@ -23,7 +23,7 @@ public class jeongbotongsingwanfloor extends AppCompatActivity implements View.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hagsaenghoegwanfloor);
+        setContentView(R.layout.activity_jeongbotongsingwanfloor);
 
         jeongbotongsingwanfloor = findViewById(R.id.jeongbotongsingwanfloor);
         left = findViewById(R.id.left);

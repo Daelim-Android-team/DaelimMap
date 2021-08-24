@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView102"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="B1층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view97"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView103"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="소방 안전설비과 관리실, 설비시공 실습실"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view98"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView104"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="1층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view99"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView105"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="cafe Bene, 매점, 휴게 공간, 안경점, 구내 서점, 식사 공간"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view100"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView106"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="2층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view101"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView107"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="아이디어 박스"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView82"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="1층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view79"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView83"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="미화원 휴게실 (남), 키친 6, 조리 실습 준비실"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view80"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView92"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="2층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view88"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView93"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="류중경 교수님 연구실, 서버실, 프로그래밍 2실 J0226, 프로그래밍 1실 J0225"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view89"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView94"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="2.5층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view90"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView95"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="교양 강의실 J0211, 교양 강의실 J0212, 교양 강의실 J0213, 교양 강의실 J0214, 기자재 보관실, 김대정 교수님 연구실, 정호일 교수님 연구실, 박민재 교수님 연구실"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view91"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView96"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="3층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view92"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView97"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="소프트웨어 관리실, 소프트웨어 과 사무실, 프로젝트 3 J0326, 프로젝트 2 J0325"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view93"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView98"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="4층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view94"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView99"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="교직원 식당, 스마트 스테이션, 프로그래밍 실습실 2 J0407, 프로그래밍 실습실 1 J0403, 전공 세미나실"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/view95"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="5층"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view96"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView101"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/daelim_datails"
+                android:padding="20sp"
+                android:text="유현성 교수님 연구실, 최재덕 교수님 연구실, 김신택 교수님 연구실, 김지에 교수님 연구실, 박상윤 교수님 연구실, 모바일 실습실 2 J0506, 모바일 실습실 1 J0507, 디지털 미디어 실습실 J0508, 프로젝트 실습실 J0509, 모바일 인터넷과 사무실"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

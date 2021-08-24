@@ -167,7 +167,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(UniversityHeadquarters).title("대학본부").alpha(0));
         mMap.addMarker(new MarkerOptions().position(jeongbotongsingwan).title("정보통신관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(jeonsangwan).title("전산관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(saenghwalgwan).title("생활관").alpha(1));
+        mMap.addMarker(new MarkerOptions().position(saenghwalgwan).title("생활관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(hongjigwan).title("홍지관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(hagsaenghoegwan).title("학생회관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(jadongchagwan).title("자동차관").alpha(0));
@@ -258,6 +258,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //            bottomSheetDialog.show();
 
             marker.setAlpha(1);
+
 
             return false;
         }
