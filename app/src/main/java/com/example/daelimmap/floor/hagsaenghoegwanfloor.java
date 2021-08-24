@@ -1,9 +1,11 @@
 package com.example.daelimmap.floor;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,7 +26,15 @@ public class hagsaenghoegwanfloor extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        WindowManager.LayoutParams layoutParams= new WindowManager.LayoutParams();
+
+        layoutParams.flags= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+
+        layoutParams.dimAmount= 0.7f;getWindow().setAttributes(layoutParams);
         setContentView(R.layout.activity_hagsaenghoegwanfloor);
+
+        ActionBar actionBar = getSupportActionBar(); //액션바 가리기기
+       actionBar.hide();
 
         hagsaenghoegwanfloor = findViewById(R.id.hagsaenghoegwan_floor);
         text=findViewById(R.id.text);

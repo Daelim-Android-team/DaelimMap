@@ -7,6 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="daelim_main">#FF009FDB</color>
+    <color name="daelim_main">#009FDB</color>
+    <color name="daelim_main_settingbar">#007faf</color>
     <color name="daelim_datails">#FFEDF0F5</color>
+    <color name="transparent">#1A000000</color>
+    <color name="transparent100">#00000000</color>
 </resources>

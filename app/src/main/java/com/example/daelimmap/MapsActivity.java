@@ -11,30 +11,27 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.daelimmap.LV_Item.hanlimgwan;
+import com.example.daelimmap.LV_Item.ListView_item;
 import com.example.daelimmap.LV_adapter.ListView_adapter;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 //import com.example.daelimmap.Intenttt.*;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-import java.io.CharArrayWriter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import com.example.daelimmap.building.*;
+
+import org.w3c.dom.Text;
 
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
@@ -45,9 +42,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     private ListView_adapter adapter;
     private ListView SLV;
-    private List<String> listView_itemList;
+    private List<String> listView_itemList; //데이터 입력 배열
     private ArrayList<String> arraylist;
-
+    private TextView ListView_item;
     Dasangwan ds = new Dasangwan();
 
     ArrayList<Marker> markers = new ArrayList<>();
@@ -73,6 +70,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.daelimmap);
 
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.actionbar_layout);
 
         ListView_adapter adapter = new ListView_adapter();
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -86,6 +86,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SLV = findViewById(R.id.SearchListView);
         SLV.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+        listView_itemList = new ArrayList<>();
+        TextView listView_item = findViewById(R.id.content);
 
         settingList();
 
@@ -120,33 +122,35 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public boolean onQueryTextSubmit(String query) {
                 //검색버튼을 눌렀을 시 해당 텍스트와 관련된 내용으로 이동
+
                 return true;
             }
 
             //텍스트가 바뀔때마다 호출
             @Override
             public boolean onQueryTextChange(String newText) {
-                search(newText);
-//                .setText(search(newText));
+                listView_item.setText(search(newText));
                 return true;
             }
         });
         return true;
     }
-    public void search(String charText){
+    public String search(String query){
         //검색기능
         listView_itemList.clear();
-        if(charText.length() == 0){
+        if(query.length() == 0) {
             listView_itemList.addAll(arraylist);
         }
         //문자입력시
         else{
             for(int i =0;i<arraylist.size(); i++){
-                if(arraylist.get(i).toLowerCase().contains(charText)){
+                if(arraylist.get(i).toLowerCase().contains(query)){
                     adapter.addItem(arraylist.get(i));
                 }
             }
         }
+        adapter.notifyDataSetChanged();
+        return null;
     }
     public void settingList (){
         //건물의 배열 정리
@@ -156,6 +160,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         }
     }
+
+
 
 
     @Override
@@ -236,7 +242,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }else if (marker.getTitle().equals("다산관")) {
             Intent intent = new Intent(getApplicationContext(),DasangwanActivity.class);
             startActivity(intent);
-//            v = getLayoutInflater().inflate(R.layout.dasangwan, null);
+//            v = getLayou tInflater().inflate(R.layout.dasangwan, null);
 //            bottomSheetDialog.setContentView(v);
         }else if (marker.getTitle().equals("임곡관")) {
             Intent intent = new Intent(getApplicationContext(),ImgoggwanActivity.class);

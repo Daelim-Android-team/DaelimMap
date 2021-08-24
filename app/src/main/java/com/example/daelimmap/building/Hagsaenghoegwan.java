@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Hagsaenghoegwan {
-    List<String> B1_f = Arrays.asList("영선실", "차체 수리 실습실");
+    private List<String> B1_f = Arrays.asList("영선실", "차체 수리 실습실");
     List <String>  One_f = Arrays.asList("학생식당", "스넥코너", "매점");
     List <String> Two_f = Arrays.asList("음악 연습실", "CCC" , "RCY", "통키호테", "사진부", "암실", "다목적 회의실",
                             "민방위 창고", "기자재실", "B – Eagle", "창작곡 연구회", "T.I.P Soul", "농구부", "테니스부", "동아리 연합회");

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.daelimmap">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -54,17 +55,29 @@
         <activity
             android:name=".DasangwanDetailsActivity"
             android:exported="true" />
-        <activity android:name=".floor.Saenghwalgwanfloor" />
-        <activity android:name=".floor.Suamgwanfloor" />
-        <activity android:name=".floor.universityheadquatersfloor" />
-        <activity android:name=".floor.Jeonsangwanfloor" />
-        <activity android:name=".floor.jeongbotongsingwanfloor" />
-        <activity android:name=".floor.imgoggwanfloor" />
-        <activity android:name=".floor.hagsaenghoegwanfloor" />
-        <activity android:name=".floor.jadongchagwanfloor" />
-        <activity android:name=".floor.dasangwanfloor" />
-        <activity android:name=".floor.Hongjigwanfloor" />
-        <activity android:name=".floor.toegyegwanfloor" />
+        <activity
+            android:name=".floor.Saenghwalgwanfloor" />
+        <activity
+            android:name=".floor.Suamgwanfloor" />
+        <activity
+            android:name=".floor.universityheadquatersfloor" />
+        <activity
+            android:name=".floor.Jeonsangwanfloor" />
+        <activity
+            android:name=".floor.jeongbotongsingwanfloor" />
+        <activity
+            android:name=".floor.imgoggwanfloor" />
+        <activity
+            android:name=".floor.hagsaenghoegwanfloor"
+            android:theme="@style/Transparent"/>
+        <activity
+            android:name=".floor.jadongchagwanfloor" />
+        <activity
+            android:name=".floor.dasangwanfloor" />
+        <activity
+            android:name=".floor.Hongjigwanfloor" />
+        <activity
+            android:name=".floor.toegyegwanfloor" />
 
         <uses-library
             android:name="org.apache.http.legacy"

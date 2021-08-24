@@ -1,7 +1,9 @@
 package com.example.daelimmap.LV_adapter;
 
+import android.os.Bundle;
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -15,7 +17,7 @@ import java.util.ArrayList;
 
 public class ListView_adapter extends BaseAdapter {
     public TextView listview_item;
-    public ArrayList<ListView_item> listView_itemList = new ArrayList<ListView_item>();
+    public ArrayList<ListView_item> listView_itemList = new ArrayList<ListView_item>(); //데이터를 넣을 배열
     public ListView_adapter(){
 
     }
