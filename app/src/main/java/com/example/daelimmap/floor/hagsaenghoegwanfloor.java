@@ -32,7 +32,7 @@ public class hagsaenghoegwanfloor extends AppCompatActivity implements View.OnCl
 //        layoutParams.flags= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
 //
 //        layoutParams.dimAmount= 0.7f;getWindow().setAttributes(layoutParams);
-//        setContentView(R.layout.activity_hagsaenghoegwanfloor);
+        setContentView(R.layout.activity_hagsaenghoegwanfloor);
 //
 //        ActionBar actionBar = getSupportActionBar(); //액션바 가리기기
 //       actionBar.hide();

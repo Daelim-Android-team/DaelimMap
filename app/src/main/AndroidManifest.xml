@@ -63,8 +63,8 @@
         <activity android:name=".floor.jeongbotongsingwanfloor" />
         <activity android:name=".floor.imgoggwanfloor" />
         <activity
-            android:name=".floor.hagsaenghoegwanfloor"
-            android:theme="@style/Transparent" />
+            android:name=".floor.hagsaenghoegwanfloor"/>
+<!--            바탕투명하게 android:theme="@style/Transparent" />-->
         <activity android:name=".floor.jadongchagwanfloor" />
         <activity android:name=".floor.dasangwanfloor" />
         <activity android:name=".floor.Hongjigwanfloor" />

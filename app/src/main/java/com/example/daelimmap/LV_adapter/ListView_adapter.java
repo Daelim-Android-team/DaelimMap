@@ -1,29 +1,29 @@
 package com.example.daelimmap.LV_adapter;
 
-import android.os.Bundle;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.daelimmap.LV_Item.ListView_item;
 import com.example.daelimmap.R;
+import com.example.daelimmap.bottomsheet.result;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.List;
 
 
 public class ListView_adapter extends BaseAdapter implements Filterable {
+
     public TextView listview_item;
     public ArrayList<ListView_item> listView_itemList = new ArrayList<ListView_item>(); //데이터를 넣을 배열
-    public ListView_adapter(){
+    public String getdata;
+    public ListView_adapter(Context applicationContext, int listview_adapter, List<String> listView_itemList){
 
     }
     @Override
@@ -45,12 +45,18 @@ public class ListView_adapter extends BaseAdapter implements Filterable {
 
         contextTextView.setText(listView_item.getContent());
 
-/*        contextTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(v.getContext(), listView_itemList.get(pos).getContent(), Toast.LENGTH_SHORT).show();
-            }
-        });*/
+//        contextTextView.setOnClickListener(new View.OnClickListener() {
+//            private String getdata;
+//
+//            @Override
+//            public void onClick(View v) {
+//                 String  getdata=listView_itemList.get(pos).getContent();
+//                 this.getdata= getdata;
+//                Intent intent = new Intent(context, result.class);
+//
+//                v.getContext().startActivity(intent);
+//            }
+//        });
 
         return convertView;
     }

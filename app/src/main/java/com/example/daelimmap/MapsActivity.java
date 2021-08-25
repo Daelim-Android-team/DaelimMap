@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.daelimmap.LV_Item.ListView_item;
 import com.example.daelimmap.LV_adapter.ListView_adapter;
-import com.example.daelimmap.bottomsheet.result;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -28,13 +27,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import com.example.daelimmap.building.*;
-
-import org.w3c.dom.Text;
 
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
@@ -46,7 +41,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private ListView_adapter adapter;
     private ListView SLV;
     private List<String> listView_itemList; //데이터 입력 배열
-    private ArrayList<String> arraylist;
+    public ArrayList<String> arraylist;
     private ArrayList<ListView_item> ListView_item = new ArrayList<ListView_item>();
 
 
@@ -80,12 +75,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng imgoggwan = new LatLng(37.40392495963885, 126.93109889545208); //임곡관
     LatLng hanlimgwan = new LatLng(37.402209544693086, 126.92890403822585); //한림관
 
-    public void  searchIntent() {
-        Intent intent = new Intent(getApplicationContext(), result.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
 
-    }
+//    ListView_adapter adapterimg = new ListView_adapter
+//            (getApplicationContext(),R.layout.listview_adapter,listView_itemList);
+
+
 
 
 
@@ -98,7 +92,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar_layout);
 
-        ListView_adapter adapter = new ListView_adapter();
+        ListView_adapter adapter = new ListView_adapter(getApplicationContext(), R.layout.listview_adapter, listView_itemList);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
@@ -106,7 +100,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        adapter = new ListView_adapter();
+        adapter = new ListView_adapter(getApplicationContext(), R.layout.listview_adapter, listView_itemList);
         SLV = findViewById(R.id.SearchListView);
         SLV.setAdapter(adapter);
         adapter.notifyDataSetChanged();
@@ -236,10 +230,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         }for (int i = 0; i < Yg.Ygflooer.size(); i++){
             for(int j = 0; j < Yg.Ygflooer.get(i).size(); j++){
-                adapter.addItem(Yg.Ygflooer.get(i).get(j)) ;
-            }
-        }for (int i = 0; i < Yg.Ygflooer.size(); i++){
-            for(int j = 0; j <Yg.Ygflooer.get(i).size(); j++){
                 adapter.addItem(Yg.Ygflooer.get(i).get(j)) ;
             }
         }

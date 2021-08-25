@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="200dp"
-    android:layout_marginBottom="200dp"
-    android:orientation="vertical"
-    tools:context=".floor.hagsaenghoegwanfloor">
+    android:orientation="vertical">
+<!--    android:layout_marginTop="200dp"-->
+<!--    android:layout_marginBottom="200dp" 가운데로-->
+<!--    tools:context=".floor.hagsaenghoegwanfloor">-->
 
     <ImageView
         android:id="@+id/hagsaenghoegwan_floor"
