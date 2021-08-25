@@ -17,6 +17,6 @@ public class Saenghwalgwan {
     List<Integer> One_p = Arrays.asList(R.drawable.saenghwalgwan_1f_cafe, R.drawable.saenghwalgwan_1f_pyeonuijeom_k0107, R.drawable.saenghwalgwan_1f_cafelounge,
             R.drawable.saenghwalgwan_1f_angyeongjeom_k0110,R.drawable.saenghwalgwan_1f_gunaeseojeom_k0112,R.drawable.saenghwalgwan_1f_hyugegonggan);
     List<Integer> Two_p = Arrays.asList(R.drawable.saenghwalgwan_2f_ideabox);
-    public List<List<Integer>> Dspic = Arrays.asList(b1_p, One_p, Two_p);
+    public List<List<Integer>> shpic = Arrays.asList(b1_p, One_p, Two_p);
 }
 
