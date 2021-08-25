@@ -13,6 +13,9 @@ public class Jeongbotongsingwan {
     List <String>  Four_f  = Arrays.asList ( "집적 회로 실험실", "EDA 교육센터", "작업실", "Ham 동아리", "창고", "통신 과학 실험실", "통신 응용 실험실", "박정일 교수님 연구실", "김은원 교수님 연구실",
                                                 "전자 통신과 사무실", "김보연 교수님 연구실", "박병권 교수님 연구실", "안테나 실험실");
     public List<List<String>> Jbflooer = Arrays.asList(One_f, Two_f, Three_f, Four_f);
+
+
 }
+
 
 
