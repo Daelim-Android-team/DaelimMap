@@ -17,4 +17,5 @@ public class Hongjigwan {
             "P0508 강의실", "P0509 강의실");
     List <String> Six_f = Arrays.asList("허경표 교수님 연구실", "김현주 교수님 연구실", "송경애 교수님 연구실", "오연주 교수님 연구실", "유아교육과 학과 사무실", "멀티미디어 제작실",
             "P0611 강의실", "P0612 강의실", "P0609 강의실", "동작실", "모의 유치원", "유효인 교수님 연구실", "창고", "악기 연습실", "피아노실", "공예실", "재료 관리실");
+    public List<List<String>> Hjflooer = Arrays.asList(B1_f,One_f, Two_f, Three_f, Four_f, Five_f,Six_f);
 }

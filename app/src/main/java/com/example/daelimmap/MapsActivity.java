@@ -45,7 +45,20 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private List<String> listView_itemList; //데이터 입력 배열
     private ArrayList<String> arraylist;
     private TextView ListView_item;
-    Dasangwan ds = new Dasangwan();
+
+    Dasangwan Ds = new Dasangwan();
+    Hagsaenghoegwan Hs= new Hagsaenghoegwan();
+    Hanlimgwan Hl = new Hanlimgwan();
+    Hongjigwan Hj = new Hongjigwan();
+    Imgoggwan Ig = new Imgoggwan();
+    Jadongchagwan Jd = new Jadongchagwan();
+    Jeongbotongsingwan Jb = new Jeongbotongsingwan();
+    Jeonsangwan Js = new Jeonsangwan();
+    Saenghwalgwan Sh = new Saenghwalgwan();
+    Suamgwan Sa = new Suamgwan(); //공사중
+    Toegyegwan Tg = new Toegyegwan();
+    UniversityHeadquarters Uh = new UniversityHeadquarters();
+    Yulgoggwan Yg = new Yulgoggwan();
 
     ArrayList<Marker> markers = new ArrayList<>();
 
@@ -129,11 +142,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             //텍스트가 바뀔때마다 호출
             @Override
             public boolean onQueryTextChange(String newText) {
-                listView_item.setText(search(newText));
+//                listView_item.setText(search(newText));
                 return true;
             }
         });
         return true;
+
+
     }
     public String search(String query){
         //검색기능
@@ -154,14 +169,65 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
     public void settingList (){
         //건물의 배열 정리
-        for (int i = 0; i < ds.dsflooer.size(); i++){
-            for(int j = 0; j <ds.dsflooer.get(i).size(); j++){
-            adapter.addItem(ds.dsflooer.get(i).get(j)) ;
+        for (int i = 0; i < Ds.Dsflooer.size(); i++){
+            for(int j = 0; j <Ds.Dsflooer.get(i).size(); j++){
+                adapter.addItem(Ds.Dsflooer.get(i).get(j)) ;
+            }
+        }
+        for (int i = 0; i < Hs.Hsflooer.size(); i++){
+            for(int j = 0; j <Hs.Hsflooer.get(i).size(); j++){
+                adapter.addItem(Hs.Hsflooer.get(i).get(j)) ;
+            }
+        }
+        for (int i = 0; i < Hl.Hlflooer.size(); i++){
+            for(int j = 0; j <Hl.Hlflooer.get(i).size(); j++){
+                adapter.addItem(Hl.Hlflooer.get(i).get(j)) ;
+            }
+        }
+        for (int i = 0; i < Hj.Hjflooer.size(); i++){
+            for(int j = 0; j <Hj.Hjflooer.get(i).size(); j++){
+                adapter.addItem(Hj.Hjflooer.get(i).get(j)) ;
+            }
+        }
+        for (int i = 0; i < Ig.Igflooer.size(); i++){
+            for(int j = 0; j <Ig.Igflooer.get(i).size(); j++){
+                adapter.addItem(Ig.Igflooer.get(i).get(j)) ;
+            }
+        }
+        for (int i = 0; i < Jd.Jdflooer.size(); i++){
+            for(int j = 0; j <Jd.Jdflooer.get(i).size(); j++){
+                adapter.addItem(Jd.Jdflooer.get(i).get(j)) ;
+            }
+        }for (int i = 0; i < Jb.Jbflooer.size(); i++){
+            for(int j = 0; j <Jb.Jbflooer.get(i).size(); j++){
+                adapter.addItem(Jb.Jbflooer.get(i).get(j)) ;
+            }
+        }for (int i = 0; i < Js.Jsflooer.size(); i++){
+            for(int j = 0; j <Js.Jsflooer.get(i).size(); j++){
+                adapter.addItem(Js.Jsflooer.get(i).get(j)) ;
+            }
+        }for (int i = 0; i < Sh.Shflooer.size(); i++){
+            for(int j = 0; j <Sh.Shflooer.get(i).size(); j++){
+                adapter.addItem(Sh.Shflooer.get(i).get(j)) ;
+            }
+//        }for (int i = 0; i < Sa.Saflooer.size(); i++){
+//            for(int j = 0; j <Sa.Saflooer.get(i).size(); j++){
+//                adapter.addItem(Sa.Saflooer.get(i).get(j)) ;
+//            }
+        }for (int i = 0; i < Tg.Tgflooer.size(); i++){
+            for(int j = 0; j <Tg.Tgflooer.get(i).size(); j++){
+                adapter.addItem(Tg.Tgflooer.get(i).get(j)) ;
+            }
+        }for (int i = 0; i < Uh.Uhflooer.size(); i++){
+            for(int j = 0; j <Uh.Uhflooer.get(i).size(); j++){
+                adapter.addItem(Uh.Uhflooer.get(i).get(j)) ;
+            }
+        }for (int i = 0; i < Yg.Ygflooer.size(); i++){
+            for(int j = 0; j <Yg.Ygflooer.get(i).size(); j++){
+                adapter.addItem(Yg.Ygflooer.get(i).get(j)) ;
             }
         }
     }
-
-
 
 
     @Override

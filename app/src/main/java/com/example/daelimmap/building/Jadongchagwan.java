@@ -14,4 +14,5 @@ public class Jadongchagwan {
     List <String> Six_f = Arrays.asList("의전 경호 전공 학과 사무실", "L0610 강의실", "L0602 강의실", "학적 자료실", "진단 실습실", "섀시 실습실", "L0605 강의실", "L0601 강의실");
     List <String> Seven_f = Arrays.asList("상담실", "평생 교육 지원팀", "L0702 강의실", "학습자 휴게실", "평생 교육 원장실",
                                             "교강사 휴게실", "L0709 강의실", "L0705 강의실", "L0701 강의실");
+    public List<List<String>> Jdflooer = Arrays.asList(One_f, Two_f, Three_f, Four_f, Five_f,Six_f);
 }
