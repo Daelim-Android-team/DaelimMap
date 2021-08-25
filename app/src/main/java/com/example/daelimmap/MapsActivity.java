@@ -237,11 +237,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-    public static Comparator<ListView_item> textAsc = new Comparator<ListView_item>(){
-
-            @Override
-            public int compare(ListView_item item1, ListView_item item2) {
-                    return item1.getContent().compareTo(item2.getContent());
+//    public static Comparator<ListView_item> textAsc = new Comparator<ListView_item>(){
+//
+//            @Override
+//            public int compare(ListView_item item1, ListView_item item2) {
+//                    return item1.getContent().compareTo(item2.getContent());
 //                return item1.getContent().compareTo(item2.getContent());
 //                int ret;
 //
@@ -252,8 +252,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //                else                                                // item1이 큰 경우,
 //                    ret = 1;
 //                return ret;
-            }
-        };
+//            }
+//        };
 //        Collections.sort(ListView_item, textAsc);
 //        adapter.notifyDataSetChanged();
 //    }
