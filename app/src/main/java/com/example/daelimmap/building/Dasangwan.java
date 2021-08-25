@@ -3,6 +3,7 @@ package com.example.daelimmap.building;
 import android.media.Image;
 
 import com.example.daelimmap.LV_adapter.ListView_adapter;
+import com.example.daelimmap.R;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ArrayList;
 
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -22,5 +24,12 @@ public class Dasangwan {
     List<String> Five_f = Arrays.asList("교수연구실", "설비 CAD실", "설비 CED실", "M0517 강의실", "M0515 강의실", "이양창 교수님 연구실", "유진규 교수님 연구실", "김상진 교수님 연구실", "나두현 교수님 연구실", "유충현 교수님 연구실", "권준박 교수님 연구실");
     public List<List<String>> Dsflooer = Arrays.asList(One_f, Two_f, Three_f, Four_f, Five_f);
 
+    List<Integer> One_p = Arrays.asList(R.drawable.);
+    List<Integer> Two_p = Arrays.asList(R.drawable.);
+    List<Integer> Three_p = Arrays.asList(R.drawable.);
+    List<Integer> Four_p= Arrays.asList(R.drawable.);
+    List<Integer> Five_p = Arrays.asList(R.drawable.);
+
+    public List<List<Integer>> Dspic = Arrays.asList(One_p, Two_p, Three_p, Four_p, Five_p);
 }
 
