@@ -13,5 +13,4 @@ public class Imgoggwan {
             "보건실", "취업처장", "국제교류지원팀");
     public List<List<String>> Igflooer = Arrays.asList(One_f, Two_f);
 
-
 }
