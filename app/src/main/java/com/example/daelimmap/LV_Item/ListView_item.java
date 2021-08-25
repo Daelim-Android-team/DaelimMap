@@ -9,5 +9,4 @@ public class ListView_item{
     public String getContent(){
         return this.contentStr;
     }
-
 }
