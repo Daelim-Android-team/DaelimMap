@@ -59,6 +59,8 @@ public class ListView_adapter extends BaseAdapter {
 
         listView_itemList.add(item);
     }
-
+    public  ArrayList<ListView_item> getItemList() {
+        return listView_itemList;
+    }
 
 }

@@ -27,6 +27,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.example.daelimmap.building.*;
@@ -44,7 +46,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private ListView SLV;
     private List<String> listView_itemList; //데이터 입력 배열
     private ArrayList<String> arraylist;
-    private TextView ListView_item;
+    private ArrayList<ListView_item> ListView_item = new ArrayList<ListView_item>();
+
 
     Dasangwan Ds = new Dasangwan();
     Hagsaenghoegwan Hs= new Hagsaenghoegwan();
@@ -103,6 +106,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         TextView listView_item = findViewById(R.id.content);
 
         settingList();
+
 
         arraylist = new ArrayList<String>();
         arraylist.addAll(listView_itemList);
@@ -233,7 +237,26 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
+    public static Comparator<ListView_item> textAsc = new Comparator<ListView_item>(){
 
+            @Override
+            public int compare(ListView_item item1, ListView_item item2) {
+                    return item1.getContent().compareTo(item2.getContent());
+//                return item1.getContent().compareTo(item2.getContent());
+//                int ret;
+//
+//                if (item1.getContent().compareTo(item2.getContent()) < 0)     // item1이 작은 경우,
+//                    ret = -1;
+//                else if (item1.getContent().compareTo(item2.getContent()) == 0)
+//                    ret = 0;
+//                else                                                // item1이 큰 경우,
+//                    ret = 1;
+//                return ret;
+            }
+        };
+//        Collections.sort(ListView_item, textAsc);
+//        adapter.notifyDataSetChanged();
+//    }
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
