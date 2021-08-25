@@ -22,13 +22,5 @@ public class Dasangwan {
     List<String> Five_f = Arrays.asList("교수연구실", "설비 CAD실", "설비 CED실", "M0517 강의실", "M0515 강의실", "이양창 교수님 연구실", "유진규 교수님 연구실", "김상진 교수님 연구실", "나두현 교수님 연구실", "유충현 교수님 연구실", "권준박 교수님 연구실");
     public List<List<String>> Dsflooer = Arrays.asList(One_f, Two_f, Three_f, Four_f, Five_f);
 
-//    private void dsimage() {
-//        for (int i = 0; i < dsflooer.size(); i++)
-//            for (int j = 0; j < dsflooer.get(i).size(); j++) {
-//
-//                int resId = getResources().getIdentifier(
-//                        );
-//            }
-//    }
 }
 
