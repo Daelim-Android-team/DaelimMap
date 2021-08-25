@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +20,8 @@ import java.util.Collections;
 import java.util.Comparator;
 
 
-public class ListView_adapter extends BaseAdapter {
+public class ListView_adapter extends BaseAdapter implements Filterable {
+    public TextView listview_item;
     public ArrayList<ListView_item> listView_itemList = new ArrayList<ListView_item>(); //데이터를 넣을 배열
     public ListView_adapter(){
 
@@ -70,4 +73,8 @@ public class ListView_adapter extends BaseAdapter {
         return listView_itemList;
     }
 
+    @Override
+    public Filter getFilter() {
+        return null;
+    }
 }

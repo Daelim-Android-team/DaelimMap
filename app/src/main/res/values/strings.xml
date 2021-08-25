@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DaelimMap</string>
+    <string name="app_name">대림대학교 캠퍼스맵</string>
     <string name="title_activity_maps"></string>
     <string name="title_activity_main"></string>
     <!-- Strings used for fragments for navigation -->
