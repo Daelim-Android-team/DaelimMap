@@ -29,6 +29,5 @@ public class Hagsaenghoegwan {
     List<Integer> Four_p= Arrays.asList(R.drawable.hagsaenghoegwan_4f_gugjegyolyuwonjeondamgangsasil_g0406, R.drawable.hagsaenghoegwan_4f_gugjegyolyuwonsangdamsil_g0407,
             R.drawable.hagsaenghoegwan_4f_dodamsil_g0405, R.drawable.hagsaenghoegwan_4f_daeuiwonhoe_g0403);
     List<Integer> Five_p = Arrays.asList(R.drawable.hagsaenghoegwan_5f_hagsaengcheojang_g0505, R.drawable.hagsaenghoegwan_5f_hagsaengbogjitim_g0501);
-
     public List<List<Integer>> Dspic = Arrays.asList(B1_p, One_p, Two_p, Three_p, Four_p, Five_p);
 }

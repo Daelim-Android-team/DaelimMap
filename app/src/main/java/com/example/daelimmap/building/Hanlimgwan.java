@@ -21,6 +21,5 @@ public class Hanlimgwan {
             R.drawable.hanlimgwan_2f_undongcheobangsil_b0216);
     List<Integer> Three_p = Arrays.asList(R.drawable.hanlimgwan_3f_silnaecheyuggwan4, R.drawable.hanlimgwan_3f_silnaecheyuggwanchanggo);
     List<Integer> Four_p= Arrays.asList(R.drawable.hanlimgwan_4f_silnaecheyuggwangwanlamseog, R.drawable.hanlimgwan_4f_bangsonggug_b0401);
-
     public List<List<Integer>> Dspic = Arrays.asList(/*One_p,*/ Two_p, Three_p, Four_p);
 }
