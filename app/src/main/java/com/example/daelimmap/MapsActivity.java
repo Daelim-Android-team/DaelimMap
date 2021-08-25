@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.daelimmap.LV_Item.ListView_item;
 import com.example.daelimmap.LV_adapter.ListView_adapter;
+import com.example.daelimmap.bottomsheet.result;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -27,6 +28,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.example.daelimmap.building.*;
@@ -44,7 +47,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private ListView SLV;
     private List<String> listView_itemList; //데이터 입력 배열
     private ArrayList<String> arraylist;
-    private TextView ListView_item;
+    private ArrayList<ListView_item> ListView_item = new ArrayList<ListView_item>();
+
 
     Dasangwan Ds = new Dasangwan();
     Hagsaenghoegwan Hs= new Hagsaenghoegwan();
@@ -76,6 +80,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng imgoggwan = new LatLng(37.40392495963885, 126.93109889545208); //임곡관
     LatLng hanlimgwan = new LatLng(37.402209544693086, 126.92890403822585); //한림관
 
+    public void  searchIntent() {
+        Intent intent = new Intent(getApplicationContext(), result.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+
+    }
+
 
 
     @Override
@@ -103,6 +114,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         TextView listView_item = findViewById(R.id.content);
 
         settingList();
+
 
         arraylist = new ArrayList<String>();
         arraylist.addAll(listView_itemList);
@@ -233,7 +245,26 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-
+//    public static Comparator<ListView_item> textAsc = new Comparator<ListView_item>(){
+//
+//            @Override
+//            public int compare(ListView_item item1, ListView_item item2) {
+//                    return item1.getContent().compareTo(item2.getContent());
+//                return item1.getContent().compareTo(item2.getContent());
+//                int ret;
+//
+//                if (item1.getContent().compareTo(item2.getContent()) < 0)     // item1이 작은 경우,
+//                    ret = -1;
+//                else if (item1.getContent().compareTo(item2.getContent()) == 0)
+//                    ret = 0;
+//                else                                                // item1이 큰 경우,
+//                    ret = 1;
+//                return ret;
+//            }
+//        };
+//        Collections.sort(ListView_item, textAsc);
+//        adapter.notifyDataSetChanged();
+//    }
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
