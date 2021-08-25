@@ -24,17 +24,17 @@ public class Dasangwan {
     List<String> Five_f = Arrays.asList("교수연구실", "설비 CAD실", "설비 CAED실", "M0517 강의실", "M0515 강의실", "이양창 교수님 연구실", "유진규 교수님 연구실", "김상진 교수님 연구실", "나두현 교수님 연구실", "유충현 교수님 연구실", "권준박 교수님 연구실");
     public List<List<String>> Dsflooer = Arrays.asList(One_f, Two_f, Three_f, Four_f, Five_f);
 
+
     List<Integer> One_p = Arrays.asList(R.drawable.dasangwan_1f_gigyegongjagsil);
     List<Integer> Two_p = Arrays.asList(R.drawable.dasangwan_2f_ganguisil_m0217, R.drawable.dasangwan_2f_yugongabsil_m0210, R.drawable.dasangwan_2f_yeolsilheomsil_m0208, R.drawable.dasangwan_2f_geubbaesuwisaengsilheomsil_m0206,
             R.drawable.dasangwan_2f_ganguisil_m0202, R.drawable.dasangwan_2f_soganguisilseubsil_m0211, R.drawable.dasangwan_2f_yuchesilheomsil_m0209, R.drawable.dasangwan_2f_3dprinter_m0207, R.drawable.dasangwan_2f_hvavsil_m0205, R.drawable.dasangwan_2f_ganguisil_m0293_m0201);
     List<Integer> Three_p = Arrays.asList(R.drawable.dasangwan_3f_saengchesinhocheolisilseubsil_m0312, R.drawable.dasangwan_3f_saengchejaelyosilseubsil_m0308, R.drawable.dasangwan_3f_saengchejeoghabseongsilseubsil_m0306, R.drawable.dasangwan_3f_dasangwan_3f_bogeonuilyogigigwagwanlisil_m0304,
-                            R.drawable.dasangwan_3f_bogeonuilyogigigwasamusil_m0302, R.drawable.dasangwan_3f_uigongjeongijeonjasilseubsil_m0311, R.drawable.dasangwan_3f_uigongkeompyuteosil_m0307, R.drawable.dasangwan_3f_leedeukyonggyosuyeongusil_m0397,
-                            R.drawable.dasangwan_3f_yunyonghyeongyosuyeongusil_m0396,  R.drawable.dasangwan_3f_ganguisil_m0301,  R.drawable.dasangwan_3f_hwajangsil);
-    List<Integer> Four_p= Arrays.asList(R.drawable.dasangwan_4f_sobangsilheomsil_m0414, R.drawable.dasangwan_4f_seolbicadsil1_m0410, R.drawable.dasangwan_4f_seolbicadsil2_m0406, R.drawable.dasangwan_4f_ganguisil_m0417, R.drawable.dasangwan_4f_komyungjingyosuyeongusil_m0413,
-                             R.drawable.dasangwan_4f_munjunghwangyosuyeongusil_m0411, R.drawable.dasangwan_4f_okkyungjaegyosuyeongusil_m0409, R.drawable.dasangwan_4f_ganguisil_m0417, R.drawable.dasangwan_4f_kimdongwoogyosuyeongusil_m0405, R.drawable.dasangwan_4f_ohbyunggilgyosuyeongusil_m0403,R.drawable.dasangwan_4f_sobanganjeonseolbigwasamusil_m0401);
-    List<Integer> Five_p = Arrays.asList(R.drawable.dasangwan_5f_gyosuyeongusil_m0508, R.drawable.dasangwan_5f_dasangwan_5f_cadsil_m0510,R.drawable.dasangwan_5f_caesil_m0514, R.drawable.dasangwan_5f_ganguisil_m0517, R.drawable.dasangwan_5f_ganguisil_m0515, R.drawable.dasangwan_5f_leeyangchanggyosuyeongusil_m0513,
-                                        R.drawable.dasangwan_5f_yoojinkyugyosuyeongusil_m0511, R.drawable.dasangwan_5f_yoochunghyungyosuyeongusil_m0505, R.drawable.dasangwan_5f_kwonjunbakgyosuyeongusil_m0503);
+            R.drawable.dasangwan_3f_bogeonuilyogigigwasamusil_m0302, R.drawable.dasangwan_3f_uigongjeongijeonjasilseubsil_m0311, R.drawable.dasangwan_3f_uigongkeompyuteosil_m0307, R.drawable.dasangwan_3f_leedeukyonggyosuyeongusil_m0397,
+            R.drawable.dasangwan_3f_yunyonghyeongyosuyeongusil_m0396, R.drawable.dasangwan_3f_ganguisil_m0301, R.drawable.dasangwan_3f_hwajangsil);
+    List<Integer> Four_p = Arrays.asList(R.drawable.dasangwan_4f_sobangsilheomsil_m0414, R.drawable.dasangwan_4f_seolbicadsil1_m0410, R.drawable.dasangwan_4f_seolbicadsil2_m0406, R.drawable.dasangwan_4f_ganguisil_m0417, R.drawable.dasangwan_4f_komyungjingyosuyeongusil_m0413,
+            R.drawable.dasangwan_4f_munjunghwangyosuyeongusil_m0411, R.drawable.dasangwan_4f_okkyungjaegyosuyeongusil_m0409, R.drawable.dasangwan_4f_ganguisil_m0417, R.drawable.dasangwan_4f_kimdongwoogyosuyeongusil_m0405, R.drawable.dasangwan_4f_ohbyunggilgyosuyeongusil_m0403, R.drawable.dasangwan_4f_sobanganjeonseolbigwasamusil_m0401);
+    List<Integer> Five_p = Arrays.asList(R.drawable.dasangwan_5f_gyosuyeongusil_m0508, R.drawable.dasangwan_5f_dasangwan_5f_cadsil_m0510, R.drawable.dasangwan_5f_caesil_m0514, R.drawable.dasangwan_5f_ganguisil_m0517, R.drawable.dasangwan_5f_ganguisil_m0515, R.drawable.dasangwan_5f_leeyangchanggyosuyeongusil_m0513,
+            R.drawable.dasangwan_5f_yoojinkyugyosuyeongusil_m0511, R.drawable.dasangwan_5f_yoochunghyungyosuyeongusil_m0505, R.drawable.dasangwan_5f_kwonjunbakgyosuyeongusil_m0503);
 
     public List<List<Integer>> Dspic = Arrays.asList(One_p, Two_p, Three_p, Four_p, Five_p);
 }
-
