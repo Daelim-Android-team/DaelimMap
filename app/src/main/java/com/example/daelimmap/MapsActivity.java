@@ -223,6 +223,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 adapter.addItem(Uh.Uhflooer.get(i).get(j)) ;
             }
         }for (int i = 0; i < Yg.Ygflooer.size(); i++){
+            for(int j = 0; j < Yg.Ygflooer.get(i).size(); j++){
+                adapter.addItem(Yg.Ygflooer.get(i).get(j)) ;
+            }
+        }for (int i = 0; i < Yg.Ygflooer.size(); i++){
             for(int j = 0; j <Yg.Ygflooer.get(i).size(); j++){
                 adapter.addItem(Yg.Ygflooer.get(i).get(j)) ;
             }
