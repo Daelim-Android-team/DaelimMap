@@ -13,4 +13,11 @@ public class Imgoggwan {
             "보건실", "취업처장", "국제교류지원팀");
     public List<List<String>> Igflooer = Arrays.asList(One_f, Two_f);
 
+    List<Integer> One_p = Arrays.asList(R.drawable.imgoggwan_1f_gongdonghunlyeonsenteojang_h0115, R.drawable.imgoggwan_1f_gongdonghunlyeonsenteohaengjeongsil_h0109,
+            R.drawable.imgoggwan_1f_dyueolgongdonghunlyeonsenteoganguisil_h0107_h0105, R.drawable.imgoggwan_1f_hoeuisil_h0105, R.drawable.imgoggwan_1f_nodongjohab_h0103,
+            R.drawable.imgoggwan_1f_hagsaengtonghabsangdamsenteo_h0114, R.drawable.imgoggwan_1f_jibdansangdamsil_h0112, R.drawable.imgoggwan_1f_programing3_h0102);
+    List<Integer> Two_p = Arrays.asList(R.drawable.imgoggwan_2f_seminarsil_h0202, R.drawable.imgoggwan_2f_jangaehagsaengjiwonsenteo_h0206, R.drawable.imgoggwan_2f_gugjegyolyuwonjang_h0208,
+            R.drawable.imgoggwan_2f_gyoyangganguisil_h0210, R.drawable.imgoggwan_2f_chwichangeobsangdamsil_h0291, R.drawable.imgoggwan_2f_chwieobkochingsil_h0203,
+            R.drawable.imgoggwan_2f_chwieobtim_h0205, R.drawable.imgoggwan_2f_bogeonsil_h0293, R.drawable.imgoggwan_2f_chwieobcheojang_h0207, R.drawable.imgoggwan_2f_gugjegyolyujiwontim_h0209);
+    public List<List<String>> Igpic = Arrays.asList(One_f, Two_f);
 }
