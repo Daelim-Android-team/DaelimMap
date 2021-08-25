@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.daelimmap.LV_Item.ListView_item;
 import com.example.daelimmap.LV_adapter.ListView_adapter;
+import com.example.daelimmap.bottomsheet.result;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -78,6 +79,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng dasangwan = new LatLng(37.40459345515532, 126.93140512848078); //다산관
     LatLng imgoggwan = new LatLng(37.40392495963885, 126.93109889545208); //임곡관
     LatLng hanlimgwan = new LatLng(37.402209544693086, 126.92890403822585); //한림관
+
+    public void  searchIntent() {
+        Intent intent = new Intent(getApplicationContext(), result.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+
+    }
 
 
 
