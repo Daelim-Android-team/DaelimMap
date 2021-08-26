@@ -11,14 +11,14 @@ import android.widget.TextView;
 import com.example.daelimmap.R;
 
 public class Suamgwanfloor extends AppCompatActivity implements View.OnClickListener{
-    TextView text;
-    ImageView Suamgwanfloor;
-    ImageButton left,right;
+
     int currentIndex =0;
     int [] imgs = {R.drawable.suamgwan_1f_map,
             R.drawable.saenghwalgwan_2f_map,R.drawable.suamgwan_3f_map,
             R.drawable.suamgwan_4f_map,R.drawable.suamgwan_5f_map};
-
+    TextView text;
+    ImageView Suamgwanfloor;
+    ImageButton left,right;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +34,6 @@ public class Suamgwanfloor extends AppCompatActivity implements View.OnClickList
 
         setImage();
     }
-
 
     @Override
     public void onClick(View v) {

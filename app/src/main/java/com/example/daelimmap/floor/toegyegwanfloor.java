@@ -17,7 +17,6 @@ public class toegyegwanfloor extends AppCompatActivity implements View.OnClickLi
             R.drawable.toegyegwan_2f_map,R.drawable.toegyegwan_3f_map,R.drawable.toegyegwan_4f_map,
             R.drawable.toegyegwan_5f_map,R.drawable.toegyegwan_6f_map};
     ImageView toegyegwanfloor;
-
     TextView text;
     ImageButton left,right;
     @Override
