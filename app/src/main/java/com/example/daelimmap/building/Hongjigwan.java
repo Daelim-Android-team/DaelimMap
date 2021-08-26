@@ -13,7 +13,7 @@ public class Hongjigwan {
             "김관식 교수님 연구실", "김재현 교수님 연구실", "김송죽 교수님 연구실", "장재호 교수님 연구실", "서정원 교수님 연구실", "호텔 관광학과 학과 사무실");
     List <String> Four_f = Arrays.asList("이인회 교수님 연구실", "임재훈 교수님 연구실", "한정혜 교수님 연구실", "배신영 교수님 연구실", "양근애 교수님 연구실",
             "강혜순 교수님 연구실", "항공 서비스 학과 학과 사무실", "항공안전실습실", "이미지 메이킹실", "영어 커뮤니케이션실", "어학 실습실 1", "어학 실습실 2",
-            "어학 실습실 3", "항공식음료실습실", "여성 환복실", "잉글리쉬 라운지 4", "모형 비행객실");
+            "어학 실습실 3", "항공식음료실습실", "여성 환복실", "잉글리쉬 라운지 4", "모형 비행객실", "남성 환복실", "상담실");
     List <String> Five_f = Arrays.asList("김수형 교수님 연구실", "신후남 교수님 연구실", "배희숙 교수님 연구실", "언어 재활과 학과 사무실", "상담실", "언어 치료 센터"
             , "잉글리쉬 라운지 5", "수업 행동 분석실", "모의 유치원 1", "자료실", "음성 분석실", "P0503 강의실", "P0504 강의실", "P0507 강의실",
             "P0508 강의실", "P0509 강의실", "교수 연구실");
@@ -30,7 +30,7 @@ public class Hongjigwan {
     List<Integer> Four_p = Arrays.asList(R.drawable.hongjigwan_4f_leeinheegyosuyeongusil_p0401, R.drawable.hongjigwan_4f_limjeonghungyosuyeongusil_p0402, R.drawable.hongjigwan_4f_hanjeonghyegyosuyeongusil_p0415, R.drawable.hongjigwan_4f_baeshinyounggyosuyeongusil_p0416, R.drawable.hongjigwan_4f_yanggeunaegyosuyeongusil_p0417,
                                         R.drawable.hongjigwan_4f_kanghyesungyosuyeongusil_p0418,R.drawable.hongjigwan_4f_hanggongseobiseugwasamusil_p0419,R.drawable.hongjigwan_4f_hanggonganjeonhunlyeonsilseubsil,R.drawable.hongjigwan_4f_imagemakingsil_p0411,
                                         R.drawable.hongjigwan_4f_yeongeocommunicationsil_p0403, R.drawable.hongjigwan_4f_eohagsilseubsil1_p0407,R.drawable.hongjigwan_4f_eohagsilseubsil2_p0405, R.drawable.hongjigwan_4f_eohagsilseubsil3_p0406, R.drawable.hongjigwan_4f_hanggongsigeumlyosilseubsil_p0408,
-                                        R.drawable.hongjigwan_4f_yeoseonghwanbogsil_p0409, R.drawable.hongjigwan_4f_englishlounge4, R.drawable.hongjigwan_4f_mohyeongbihaenggaegsil);
+                                        R.drawable.hongjigwan_4f_yeoseonghwanbogsil_p0409, R.drawable.hongjigwan_4f_englishlounge4, R.drawable.hongjigwan_4f_mohyeongbihaenggaegsil, R.drawable.hongjigwan_4f_namseonghwanbogsil, R.drawable.hongjigwan_4f_sangdamsil);
     List<Integer> Five_p = Arrays.asList(R.drawable.hongjigwan_5f_kimsuhyunggyosuyeongusil_p0516, R.drawable.hongjigwan_5f_shinhoonamgyosuyeongusil_p0517, R.drawable.hongjigwan_5f_baeheesukgyosuyeongusil_p0518, R.drawable.hongjigwan_5f_eoneochilyogwasamusil_p0519, R.drawable.hongjigwan_5f_sangdamsil_p0513,
                                         R.drawable.hongjigwan_5f_eoneochilyosenteo_p0512, R.drawable.hongjigwan_5f_englishlounge5, R.drawable.hongjigwan_5f_sueobhaengdongbunseogsil_p0506, R.drawable.hongjigwan_5f_mouiyuchiwon1_p0505, R.drawable.hongjigwan_5f_jaelyosil_p0501, R.drawable.hongjigwan_5f_eumseongbunseogsil_p0515,
                                         R.drawable.hongjigwan_5f_ganguisil_p0503, R.drawable.hongjigwan_5f_ganguisil_p0504, R.drawable.hongjigwan_5f_ganguisil_p0507,R.drawable.hongjigwan_5f_ganguisil_p0508, R.drawable.hongjigwan_5f_ganguisil_p0509, R.drawable.hongjigwan_5f_gyosuyeongusil_p0502);
