@@ -79,10 +79,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //    ListView_adapter adapterimg = new ListView_adapter
 //            (getApplicationContext(),R.layout.listview_adapter,listView_itemList);
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,7 +92,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
