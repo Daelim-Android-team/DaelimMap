@@ -30,7 +30,6 @@ public class Jadongchagwan {
             R.drawable.jadongchagwan_6f_ganguisil_l0605, R.drawable.jadongchagwan_6f_ganguisil_l0601);
     List<Integer> Seven_p = Arrays.asList(R.drawable.jadongchagwan_7f_sangdamsil_l0712, R.drawable.jadongchagwan_7f_pyeongsaenggyoyugjiwontim_l0708, R.drawable.jadongchagwan_7f_ganguisil_l0702,R.drawable.jadongchagwan_7f_hagseubjahyugesil_l0717,R.drawable.jadongchagwan_7f_pyeongsaenggyoyugwonjang_l0715,
             R.drawable.jadongchagwan_7f_gyogangsahyugesil_l0713, R.drawable.jadongchagwan_7f_ganguisil_l0709, R.drawable.jadongchagwan_7f_ganguisil_l0705, R.drawable.jadongchagwan_7f_ganguisil_l0701);
-
     public List<List<Integer>> jdpic = Arrays.asList(One_p, Two_p, Three_p, Four_p, Five_p,Six_p, Seven_p, Seven_p);
 }
 

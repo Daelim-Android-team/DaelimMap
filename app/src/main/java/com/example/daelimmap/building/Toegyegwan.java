@@ -22,7 +22,8 @@ public class Toegyegwan {
     List<String> Six_f = Arrays.asList("송지현 교수님 연구실", "권희경 교수님 연구실", "기초 디자인 3", "E0610 강의실", "E0614 강의실", "캐드실", "컴퓨터 디자인실 2", "모형 제작실", "이경화 교수님 연구실",
                                         "유수연 교수님 연구실", "권세훈 교수님 연구실", "양명근 교수님 연구실", "하승범 교수님 연구실", "기초 디자인실 2", "VR 영상 실습실", "의장실", "적산 강의실", "조지연 교수님 연구실");
     List<String> Seven_f = Arrays.asList("박민석 교수님 연구실","김찬주 교수님 연구실", "장명호 교수님 연구실", "박진숙 교수님 연구실", "김철환 교수님 연구실", "출력실", "기자재 보관실", "사진 촬영실", "Mock up실",
-                                        "E0730 강의실", "권오철 교수님 연구실","황민영 교수님 연구실", "서삼열 교수님 연구실", "신인중 교수님 연구실", "조광희 교수님 연구실", "프레젠테이션실", "건축학부 학과 사무실", "건축 설계 제도실 1", "건축 설계 제도실 2", "E0729 강의실");
+                                        "E0730 강의실", "권오철 교수님 연구실","황민영 교수님 연구실", "서삼열 교수님 연구실", "신인중 교수님 연구실", "조광희 교수님 연구실", "프레젠테이션실", "건축학부 학과 사무실",
+                                        "건축 설계 제도실 1", "건축 설계 제도실 2", "E0729 강의실", "컴퓨터 디자인1실");
     public List<List<String>> Tgflooer = Arrays.asList(One_f, Two_f, Three_f, Four_f, Five_f,Six_f,Seven_f);
 
     List<Integer> One_p = Arrays.asList(R.drawable.toegyegwan_1f_atm, R.drawable.toegyegwan_1f_gyoyangganguisil_e0101, R.drawable.toegyegwan_1f_habdongganguisil_e0107, R.drawable.toegyegwan_1f_habdongganguisil_e0111,
@@ -43,7 +44,6 @@ public class Toegyegwan {
                                         R.drawable.toegyegwan_6f_gichodesignsil2_e0613, R.drawable.toegyegwan_6f_vryeongsangsilseubsil_e0617, R.drawable.toegyegwan_6f_uijangsil_e0623, R.drawable.toegyegwan_6f_jeogsanganguisil_e0629, R.drawable.toegyegwan_6f_chojiyeongyosuyeongusil_e0607);
     List<Integer> Seven_p = Arrays.asList(R.drawable.toegyegwan_7f_parkminseokgyosuyeongusil_e0702, R.drawable.toegyegwan_7f_kimchanjugyosuyeongusil_e0704, R.drawable.toegyegwan_7f_jangmyunghogyosuyeongusil_e0706, R.drawable.toegyegwan_7f_parkjinsukgyosuyeongusil_e0708, R.drawable.toegyegwan_7f_kimchulhwangyosuyeongusil_e0710, R.drawable.toegyegwan_7f_chullyeogsil_e0712,
                                         R.drawable.toegyegwan_7f_gijajaebogwansil_e0714, R.drawable.toegyegwan_7f_sajinchwalyeongsil_e0716, R.drawable.toegyegwan_7f_mockupsil_e0724, R.drawable.toegyegwan_7f_ganguisil_e0730, R.drawable.toegyegwan_7f_kwonohchulgyosuyeongusil_e0701, R.drawable.toegyegwan_7f_hwangminyounggyosuyeongusil_e0703, R.drawable.toegyegwan_7f_seosangyeolgyosuyeongusil_e0705, R.drawable.toegyegwan_7f_shininjunggyosuyeongusil_e0707,
-                                        R.drawable.toegyegwan_7f_chogwangheegyosuyeongusil_e0709, R.drawable.toegyegwan_7f_presentationsil_e0711, R.drawable.toegyegwan_7f_geonchughagbusamusil_e0715, R.drawable.toegyegwan_7f_geonchugseolgyejedosil1_e0717, R.drawable.toegyegwan_7f_geonchugseolgyejedosil2_e0723, R.drawable.toegyegwan_7f_ganguisil_e0729);
-
+                                        R.drawable.toegyegwan_7f_chogwangheegyosuyeongusil_e0709, R.drawable.toegyegwan_7f_presentationsil_e0711, R.drawable.toegyegwan_7f_geonchughagbusamusil_e0715, R.drawable.toegyegwan_7f_geonchugseolgyejedosil1_e0717, R.drawable.toegyegwan_7f_geonchugseolgyejedosil2_e0723, R.drawable.toegyegwan_7f_ganguisil_e0729, R.drawable.toegyegwan_7f_computerdesignsil1_e0718);
     public List<List<Integer>> Tgpic = Arrays.asList(One_p, Two_p, Three_p, Four_p, Five_p,Six_p, Seven_p);
 }
