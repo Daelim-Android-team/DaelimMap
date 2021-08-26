@@ -37,6 +37,5 @@ public class Hongjigwan {
     List<Integer> Six_p = Arrays.asList(R.drawable.hongjigwan_6f_hakyungpyogyosuyeongusil_p0615, R.drawable.hongjigwan_6f_kimhyunjugyosuyeongusil_p0616, R.drawable.hongjigwan_6f_songkyungaegyosuyeongusil_p0617, R.drawable.hongjigwan_6f_ohyeonjugyosuyeongusil_p0618, R.drawable.hongjigwan_6f_yuagyoyuggwasamusil_p0619,
                                         R.drawable.hongjigwan_6f_meoltimidieojejagsil,R.drawable.hongjigwan_6f_ganguisil_p0611, R.drawable.hongjigwan_6f_ganguisil_p0612, R.drawable.hongjigwan_6f_ganguisil_p0609,R.drawable.hongjigwan_6f_dongjagsil_p0606, R.drawable.hongjigwan_6f_mouiyuchiwon2_p0605,
                                         R.drawable.hongjigwan_6f_yoohyoingyosuyeongusil_p0601, R.drawable.hongjigwan_6f_changgo_p0602, R.drawable.hongjigwan_6f_aggiyeonseubsil_p0603, R.drawable.hongjigwan_6f_pianosil_p0604,R.drawable.hongjigwan_6f_gongyesil_p0607, R.drawable.hongjigwan_6f_jaelyogwanlisil_p0610);
-
     public List<List<Integer>> Hjpic = Arrays.asList(B1_p, One_p, Two_p, Three_p, Four_p, Five_p,Six_p);
 }

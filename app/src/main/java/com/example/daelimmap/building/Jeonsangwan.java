@@ -31,5 +31,5 @@ public class Jeonsangwan {
             R.drawable.jeonsangwan_5f_kimjiyegyosuyeongusil_j0504, R.drawable.jeonsangwan_5f_parksangyoongyosuyeongusil_j0505, R.drawable.jeonsangwan_5f_mobilesilseubsil2_j0507,
             R.drawable.jeonsangwan_5f_mobliesilseubsil1_j0506, R.drawable.jeonsangwan_5f_digitalmediasilseubsil_j0508, R.drawable.jeonsangwan_5f_projectsilseubsil_j0509,
             R.drawable.jeonsangwan_5f_mobailinteonesgwagwanlisil_j0510);
-    public List<List<Integer>> Jbpic = Arrays.asList(One_p, Two_p, Twohalf_p, Three_p, Four_p, Five_p);
+    public List<List<Integer>> Jspic = Arrays.asList(One_p, Two_p, Twohalf_p, Three_p, Four_p, Five_p);
 }

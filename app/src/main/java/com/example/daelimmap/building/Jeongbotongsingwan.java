@@ -37,7 +37,6 @@ import java.util.List;
                 R.drawable.jeongbotongsingwan_4f_tongsingonghagsilseubsil_d0418, R.drawable.jeongbotongsingwan_4f_tongsineungyongsilheomsil_d0405, R.drawable.jeongbotongsingwan_4f_parkjeongilgyosuyeongusil_d0407,
                 R.drawable.jeongbotongsingwan_4f_kimeunwongyosuyeongusil_d0409, R.drawable.jeongbotongsingwan_4f_jeonjatongsingwasamusil_d0411, R.drawable.jeongbotongsingwan_4f_kimboyeongyosuyeongusil_d0413,
                 R.drawable.jeongbotongsingwan_4f_parkbyungkwongyosuyeongusil_d0415, R.drawable.jeongbotongsingwan_4f_antenasilheomsil_d0417);
-
         public List<List<Integer>> Jbpic = Arrays.asList(One_p, Two_p, Three_p, Four_p);
     }
 

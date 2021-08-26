@@ -39,7 +39,6 @@ public class Yulgoggwan {
                                         R.drawable.yulgoggwan_6f_ganguisil_f0621, R.drawable.yulgoggwan_6f_ganguisil_f0625,R.drawable.yulgoggwan_6f_walkin1_f0629, R.drawable.yulgoggwan_6f_namjataluisil1_f0626, R.drawable.yulgoggwan_6f_cafeace);
     List<Integer> Seven_p = Arrays.asList(R.drawable.yulgoggwan_7f_restaurantkitchen_f0702, R.drawable.yulgoggwan_7f_restauranthall_f0704, R.drawable.yulgoggwan_7f_kitchen5_f0708, R.drawable.yulgoggwan_7f_sungkihyubgyosuyeongusil_f0712,R.drawable.yulgoggwan_7f_geullobeoljolijegwahagbusamusil,
                                         R.drawable.yulgoggwan_7f_kitchen1_f0703,R.drawable.yulgoggwan_7f_kitchen2_f0707,R.drawable.yulgoggwan_7f_kitchen3_f0711, R.drawable.yulgoggwan_7f_kitchen4_f0715, R.drawable.yulgoggwan_7f_demoganguisil_f0718);
-
     public List<List<Integer>> Ygpic = Arrays.asList(One_p, Two_p, Three_p, Four_p, Five_p,Six_p, Seven_p);
 }
 

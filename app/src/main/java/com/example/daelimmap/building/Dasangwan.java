@@ -35,6 +35,5 @@ public class Dasangwan {
             R.drawable.dasangwan_4f_munjunghwangyosuyeongusil_m0411, R.drawable.dasangwan_4f_okkyungjaegyosuyeongusil_m0409, R.drawable.dasangwan_4f_ganguisil_m0417, R.drawable.dasangwan_4f_kimdongwoogyosuyeongusil_m0405, R.drawable.dasangwan_4f_ohbyunggilgyosuyeongusil_m0403, R.drawable.dasangwan_4f_sobanganjeonseolbigwasamusil_m0401);
     List<Integer> Five_p = Arrays.asList(R.drawable.dasangwan_5f_gyosuyeongusil_m0508, R.drawable.dasangwan_5f_dasangwan_5f_cadsil_m0510, R.drawable.dasangwan_5f_caesil_m0514, R.drawable.dasangwan_5f_ganguisil_m0517, R.drawable.dasangwan_5f_ganguisil_m0515, R.drawable.dasangwan_5f_leeyangchanggyosuyeongusil_m0513,
             R.drawable.dasangwan_5f_yoojinkyugyosuyeongusil_m0511, R.drawable.dasangwan_5f_yoochunghyungyosuyeongusil_m0505, R.drawable.dasangwan_5f_kwonjunbakgyosuyeongusil_m0503);
-
     public List<List<Integer>> Dspic = Arrays.asList(One_p, Two_p, Three_p, Four_p, Five_p);
 }

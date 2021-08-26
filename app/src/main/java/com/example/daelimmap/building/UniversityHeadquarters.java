@@ -19,6 +19,5 @@ public class UniversityHeadquarters {
                                                 R.drawable.daehagbonbu_3f_sinhaghyeoblyeogdan,R.drawable.daehagbonbu_3f_daehoeuisil_a0302, R.drawable.daehagbonbu_3f_sohoeuisil, R.drawable.daehagbonbu_3f_changuiyunghabusujagpumgwan );
       List<Integer> Four_p = Arrays.asList(R.drawable.daehagbonbu_4f_hyeogsinjiwonsaeobdan_a0412, R.drawable.daehagbonbu_4f_hyeogsinjiwonsaeobbudanjang_a0411, R.drawable.daehagbonbu_4f_maiseuteodaesaeobdan_a0410, R.drawable.daehagbonbu_4f_linc_a0408,
                                           R.drawable.daehagbonbu_4f_lincsaeobdanjangbudanjang_a0407, R.drawable.daehagbonbu_4f_jisigjeongbowonjang_a0405, R.drawable.daehagbonbu_4f_jisigjeongbowonjeongbojeonlyagunyeongtim);
-
       public  List<List<Integer>> Uhpic = Arrays.asList(One_p, Two_p, Three_p, Four_p);
 }

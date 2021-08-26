@@ -44,6 +44,5 @@ public class Toegyegwan {
     List<Integer> Seven_p = Arrays.asList(R.drawable.toegyegwan_7f_parkminseokgyosuyeongusil_e0702, R.drawable.toegyegwan_7f_kimchanjugyosuyeongusil_e0704, R.drawable.toegyegwan_7f_jangmyunghogyosuyeongusil_e0706, R.drawable.toegyegwan_7f_parkjinsukgyosuyeongusil_e0708, R.drawable.toegyegwan_7f_kimchulhwangyosuyeongusil_e0710, R.drawable.toegyegwan_7f_chullyeogsil_e0712,
                                         R.drawable.toegyegwan_7f_gijajaebogwansil_e0714, R.drawable.toegyegwan_7f_sajinchwalyeongsil_e0716, R.drawable.toegyegwan_7f_mockupsil_e0724, R.drawable.toegyegwan_7f_ganguisil_e0730, R.drawable.toegyegwan_7f_kwonohchulgyosuyeongusil_e0701, R.drawable.toegyegwan_7f_hwangminyounggyosuyeongusil_e0703, R.drawable.toegyegwan_7f_seosangyeolgyosuyeongusil_e0705, R.drawable.toegyegwan_7f_shininjunggyosuyeongusil_e0707,
                                         R.drawable.toegyegwan_7f_chogwangheegyosuyeongusil_e0709, R.drawable.toegyegwan_7f_presentationsil_e0711, R.drawable.toegyegwan_7f_geonchughagbusamusil_e0715, R.drawable.toegyegwan_7f_geonchugseolgyejedosil1_e0717, R.drawable.toegyegwan_7f_geonchugseolgyejedosil2_e0723, R.drawable.toegyegwan_7f_ganguisil_e0729);
-
     public List<List<Integer>> Tgpic = Arrays.asList(One_p, Two_p, Three_p, Four_p, Five_p,Six_p, Seven_p);
 }
