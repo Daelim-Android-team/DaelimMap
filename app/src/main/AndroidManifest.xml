@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.daelimmap">
+    package="com.example.vendersdaelimmap">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -16,102 +16,102 @@
         android:roundIcon="@mipmap/ic_launcher_koreanmark6_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DaelimMap">
-        <activity android:name=".bottomsheet.result"></activity>
+        <activity android:name="com.example.vendersdaelimmap.bottomsheet.result"></activity>
         <activity
-            android:name=".YulgoggwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.YulgoggwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".UniversityheadquatersDetailsActivity"
+            android:name="com.example.vendersdaelimmap.UniversityheadquatersDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".ToegyegwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.ToegyegwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".SuamgwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.SuamgwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".SaenghwalgwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.SaenghwalgwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".JeonsangwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.JeonsangwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".JeongbotongsingwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.JeongbotongsingwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".JadongchagwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.JadongchagwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".ImgoggwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.ImgoggwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".HongjigwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.HongjigwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".HanlimgwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.HanlimgwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".HagsaenghoegwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.HagsaenghoegwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".DasangwanDetailsActivity"
+            android:name="com.example.vendersdaelimmap.DasangwanDetailsActivity"
             android:exported="true" />
-        <activity android:name=".floor.Saenghwalgwanfloor" />
-        <activity android:name=".floor.Suamgwanfloor" />
-        <activity android:name=".floor.universityheadquatersfloor" />
-        <activity android:name=".floor.Jeonsangwanfloor" />
-        <activity android:name=".floor.jeongbotongsingwanfloor" />
-        <activity android:name=".floor.imgoggwanfloor" />
+        <activity android:name="com.example.vendersdaelimmap.floor.Saenghwalgwanfloor" />
+        <activity android:name="com.example.vendersdaelimmap.floor.Suamgwanfloor" />
+        <activity android:name="com.example.vendersdaelimmap.floor.universityheadquatersfloor" />
+        <activity android:name="com.example.vendersdaelimmap.floor.Jeonsangwanfloor" />
+        <activity android:name="com.example.vendersdaelimmap.floor.jeongbotongsingwanfloor" />
+        <activity android:name="com.example.vendersdaelimmap.floor.imgoggwanfloor" />
         <activity
-            android:name=".floor.hagsaenghoegwanfloor"
-            android:theme="@style/Transparent" />
-        <activity android:name=".floor.jadongchagwanfloor" />
-        <activity android:name=".floor.dasangwanfloor" />
-        <activity android:name=".floor.Hongjigwanfloor" />
-        <activity android:name=".floor.toegyegwanfloor" />
+            android:name="com.example.vendersdaelimmap.floor.hagsaenghoegwanfloor"/>
+<!--            바탕투명하게 android:theme="@style/Transparent" />-->
+        <activity android:name="com.example.vendersdaelimmap.floor.jadongchagwanfloor" />
+        <activity android:name="com.example.vendersdaelimmap.floor.dasangwanfloor" />
+        <activity android:name="com.example.vendersdaelimmap.floor.Hongjigwanfloor" />
+        <activity android:name="com.example.vendersdaelimmap.floor.toegyegwanfloor" />
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity android:name=".floor.yulgoggwan_floor" />
+        <activity android:name="com.example.vendersdaelimmap.floor.yulgoggwan_floor" />
         <activity
-            android:name=".SuamgwanActivity"
+            android:name="com.example.vendersdaelimmap.SuamgwanActivity"
             android:exported="true" />
         <activity
-            android:name=".ToegyegwanActivity"
+            android:name="com.example.vendersdaelimmap.ToegyegwanActivity"
             android:exported="true" />
         <activity
-            android:name=".YulgoggwanActivity"
+            android:name="com.example.vendersdaelimmap.YulgoggwanActivity"
             android:exported="true" />
         <activity
-            android:name=".JadongchagwanActivity"
+            android:name="com.example.vendersdaelimmap.JadongchagwanActivity"
             android:exported="true" />
         <activity
-            android:name=".UniversityheadquatersActivity"
+            android:name="com.example.vendersdaelimmap.UniversityheadquatersActivity"
             android:exported="true" />
         <activity
-            android:name=".HongjigwanActivity"
+            android:name="com.example.vendersdaelimmap.HongjigwanActivity"
             android:exported="true" />
         <activity
-            android:name=".SaenghwalgwanActivity"
+            android:name="com.example.vendersdaelimmap.SaenghwalgwanActivity"
             android:exported="true" />
         <activity
-            android:name=".JeonsangwanActivity"
+            android:name="com.example.vendersdaelimmap.JeonsangwanActivity"
             android:exported="true" />
         <activity
-            android:name=".JeongbotongsingwanActivity"
+            android:name="com.example.vendersdaelimmap.JeongbotongsingwanActivity"
             android:exported="true" />
         <activity
-            android:name=".ImgoggwanActivity"
+            android:name="com.example.vendersdaelimmap.ImgoggwanActivity"
             android:exported="true" />
         <activity
-            android:name=".HagsaenghoegwanActivity"
+            android:name="com.example.vendersdaelimmap.HagsaenghoegwanActivity"
             android:exported="true" />
         <activity
-            android:name=".DasangwanActivity"
+            android:name="com.example.vendersdaelimmap.DasangwanActivity"
             android:exported="true" />
-        <activity android:name=".LV_Item.hanlimgwan" />
+        <activity android:name="com.example.vendersdaelimmap.LV_Item.hanlimgwan" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -125,7 +125,7 @@
             android:value="AIzaSyB6xG3lhmkXeaFVat6RBI5TahSjdvIr_tU" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name="com.example.vendersdaelimmap.MapsActivity"
             android:label="@string/title_activity_maps">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
