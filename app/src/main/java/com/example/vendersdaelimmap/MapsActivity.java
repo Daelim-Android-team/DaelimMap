@@ -245,7 +245,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //                else                                                // item1이 큰 경우,
 //                    ret = 1;
 //                return ret;
-//            }
+//            } 테스트 텍스트
 //        };
 //        Collections.sort(ListView_item, textAsc);
 //        adapter.notifyDataSetChanged();
