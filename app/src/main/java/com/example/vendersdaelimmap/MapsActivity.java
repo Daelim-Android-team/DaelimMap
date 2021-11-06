@@ -230,6 +230,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
+
 //    public static Comparator<ListView_item> textAsc = new Comparator<ListView_item>(){
 //
 //            @Override
