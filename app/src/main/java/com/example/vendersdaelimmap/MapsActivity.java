@@ -44,7 +44,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public ArrayList<String> arraylist;
     private ArrayList<ListView_item> ListView_item = new ArrayList<ListView_item>();
 
-
     Dasangwan Ds = new Dasangwan();
     Hagsaenghoegwan Hs= new Hagsaenghoegwan();
     Hanlimgwan Hl = new Hanlimgwan();
