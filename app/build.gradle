@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.Venders.daelimmap"
-        minSdkVersion 30
+        minSdkVersion 29
         targetSdkVersion 30
         versionCode 3
         versionName "a0.02.1v"
@@ -20,13 +20,13 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            resValue "string", "google_maps_api_key", "AIzaSyDf9jSxs6ZboBBcwrfU-NS6S5k7OPJZHdQ"
+            resValue "string", "google_maps_key", "AIzaSyDQjI0ZBR01Y1y9pgmJVA1gqZe4nS3LvX0"
 
         }
 
         debug{
             // 개발용 KEY
-            resValue "string", "google_maps_api_key", "AIzaSyB6xG3lhmkXeaFVat6RBI5TahSjdvIr_tU"
+            resValue "string", "google_maps_key", "AIzaSyA9SIi3HGeh-AuTSniriJfuTmCF_HmjH8g"
 
 
         }
