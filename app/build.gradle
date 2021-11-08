@@ -26,7 +26,7 @@ android {
 
         debug{
             // 개발용 KEY
-            resValue "string", "google_maps_key", "AIzaSyA9SIi3HGeh-AuTSniriJfuTmCF_HmjH8g"
+            resValue "string", "google_maps_key", "AIzaSyB6xG3lhmkXeaFVat6RBI5TahSjdvIr_tU"
 
 
         }
