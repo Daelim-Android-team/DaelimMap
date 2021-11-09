@@ -11,9 +11,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_koreanmark6"
+        android:icon="@mipmap/ic_daelim_icon"
         android:label="대림대 캠퍼스맵"
-        android:roundIcon="@mipmap/ic_launcher_koreanmark6_round"
+        android:roundIcon="@mipmap/ic_daelim_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DaelimMap">
         <activity android:name="com.example.vendersdaelimmap.bottomsheet.result"></activity>
