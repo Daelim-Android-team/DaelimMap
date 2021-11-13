@@ -10,7 +10,7 @@ android {
         applicationId "com.Venders.daelimmap"
         minSdkVersion 29
         targetSdkVersion 30
-        versionCode 4
+        versionCode 5
         versionName "a0.03v"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -26,7 +26,6 @@ android {
         debug{
 
         }
-
 
     }
     compileOptions {
