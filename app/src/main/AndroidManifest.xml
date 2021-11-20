@@ -12,7 +12,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_koreanmark6"
-        android:label="대림대 캠퍼스맵 "
+        android:label="대림대 캠퍼스맵"
         android:roundIcon="@mipmap/ic_launcher_koreanmark6_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DaelimMap">
@@ -120,24 +120,10 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
-       <!-- <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB6xG3lhmkXeaFVat6RBI5TahSjdvIr_tU" />  -->
-
         <!-- 배포용 KEY -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDf9jSxs6ZboBBcwrfU-NS6S5k7OPJZHdQ" />
-
-
-
-
-
-
-
-
-
-
+            android:value="@string/google_maps_key" />
 
         <activity
             android:name="com.example.vendersdaelimmap.MapsActivity"
