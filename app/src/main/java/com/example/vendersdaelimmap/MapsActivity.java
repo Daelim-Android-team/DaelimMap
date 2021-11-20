@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.vendersdaelimmap.building.*;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
@@ -293,8 +294,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             Intent intent = new Intent(getApplicationContext(),JeongbotongsingwanActivity.class);
             startActivity(intent);
         }else if (marker.getTitle().equals("전산관")) {
-            Intent intent = new Intent(getApplicationContext(),JeonsangwanActivity.class);
-            startActivity(intent);
+            BottomSheetTestActivity bottomSheetTestActivity = new BottomSheetTestActivity();
+            bottomSheetTestActivity.show(getSupportFragmentManager(), "bottom");
         }else if (marker.getTitle().equals("생활관")) {
             Intent intent = new Intent(getApplicationContext(),SaenghwalgwanActivity.class);
             startActivity(intent);
