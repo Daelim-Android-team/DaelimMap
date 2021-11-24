@@ -4,28 +4,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.vendersdaelimmap.floor.toegyegwanfloor;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-public class ToegyegwanActivity extends AppCompatActivity {
+public class ToegyegwanActivity extends BottomSheetDialogFragment {
 
     Button toegyegwan_button1;
     Button toegyegwan_button2;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.toegyegwan);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        ViewGroup viewGroup = (ViewGroup) inflater.inflate(R.layout.toegyegwan, container, false);
 
-        toegyegwan_button1 = findViewById(R.id.toegyegwan_button1);
-        toegyegwan_button2 = findViewById(R.id.toegyegwan_button2);
+        toegyegwan_button1 = viewGroup.findViewById(R.id.toegyegwan_button1);
+        toegyegwan_button2 = viewGroup.findViewById(R.id.toegyegwan_button2);
 
         toegyegwan_button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), toegyegwanfloor.class);
+                Intent intent = new Intent(getContext(), toegyegwanfloor.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
@@ -34,10 +36,11 @@ public class ToegyegwanActivity extends AppCompatActivity {
         toegyegwan_button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ToegyegwanDetailsActivity.class);
+                Intent intent = new Intent(getContext(), ToegyegwanDetailsActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
+        return viewGroup;
     }
 }

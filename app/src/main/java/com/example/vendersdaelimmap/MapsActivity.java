@@ -285,44 +285,44 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public boolean onMarkerClick(final Marker marker) {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
         if (marker.getTitle().equals("퇴계관")) {
-            Intent intent = new Intent(getApplicationContext(),ToegyegwanActivity.class);
-            startActivity(intent);
+            ToegyegwanActivity toegyegwanActivity = new ToegyegwanActivity();
+            toegyegwanActivity.show(getSupportFragmentManager(), "toegyegwan");
         } else if (marker.getTitle().equals("대학본부")) {
-            Intent intent = new Intent(getApplicationContext(),UniversityheadquatersActivity.class);
-            startActivity(intent);
+            UniversityheadquatersActivity universityheadquatersActivity = new UniversityheadquatersActivity();
+            universityheadquatersActivity.show(getSupportFragmentManager(), "universityHeadquaters");
         }else if (marker.getTitle().equals("정보통신관")) {
-            Intent intent = new Intent(getApplicationContext(),JeongbotongsingwanActivity.class);
-            startActivity(intent);
+            JeongbotongsingwanActivity jeongbotongsingwanActivity = new JeongbotongsingwanActivity();
+            jeongbotongsingwanActivity.show(getSupportFragmentManager(), "jeongbotongsingwan");
         }else if (marker.getTitle().equals("전산관")) {
-            BottomSheetTestActivity bottomSheetTestActivity = new BottomSheetTestActivity();
-            bottomSheetTestActivity.show(getSupportFragmentManager(), "bottom");
+            JeonsangwanActivity jeonsangwanActivity = new JeonsangwanActivity();
+            jeonsangwanActivity.show(getSupportFragmentManager(), "jeonsangwan");
         }else if (marker.getTitle().equals("생활관")) {
-            Intent intent = new Intent(getApplicationContext(),SaenghwalgwanActivity.class);
-            startActivity(intent);
+            SaenghwalgwanActivity saenghwalgwanActivity = new SaenghwalgwanActivity();
+            saenghwalgwanActivity.show(getSupportFragmentManager(), "sanghwalgwan");
         }else if (marker.getTitle().equals("홍지관")) {
-            Intent intent = new Intent(getApplicationContext(),HongjigwanActivity.class);
-            startActivity(intent);
+            HongjigwanActivity hongjigwanActivity = new HongjigwanActivity();
+            hongjigwanActivity.show(getSupportFragmentManager(), "hongjigwan");
         }else if (marker.getTitle().equals("학생회관")) {
-            Intent intent = new Intent(getApplicationContext(),HagsaenghoegwanActivity.class);
-            startActivity(intent);
+            HagsaenghoegwanActivity hagsaenghoegwanActivity = new HagsaenghoegwanActivity();
+            hagsaenghoegwanActivity.show(getSupportFragmentManager(), "hagsaenghoegwan");
         }else if (marker.getTitle().equals("자동차관")) {
-            Intent intent = new Intent(getApplicationContext(),JadongchagwanActivity.class);
-            startActivity(intent);
+            JadongchagwanActivity jadongchagwanActivity = new JadongchagwanActivity();
+            jadongchagwanActivity.show(getSupportFragmentManager(), "jadongchagwan");
         }else if (marker.getTitle().equals("수암관")) {
-            Intent intent = new Intent(getApplicationContext(),SuamgwanActivity.class);
-            startActivity(intent);
+            SuamgwanActivity suamgwanActivity = new SuamgwanActivity();
+            suamgwanActivity.show(getSupportFragmentManager(), "suamgwan");
         }else if (marker.getTitle().equals("다산관")) {
-            Intent intent = new Intent(getApplicationContext(),DasangwanActivity.class);
-            startActivity(intent);
+            DasangwanActivity dasangwanActivity = new DasangwanActivity();
+            dasangwanActivity.show(getSupportFragmentManager(), "dasangwan");
         }else if (marker.getTitle().equals("임곡관")) {
-            Intent intent = new Intent(getApplicationContext(),ImgoggwanActivity.class);
-            startActivity(intent);
+            ImgoggwanActivity imgoggwanActivity = new ImgoggwanActivity();
+            imgoggwanActivity.show(getSupportFragmentManager(), "imgoggwan");
         }else if (marker.getTitle().equals("한림관")) {
-            Intent intent = new Intent(getApplicationContext(), com.example.vendersdaelimmap.LV_Item.hanlimgwan.class);
-            startActivity(intent);
+            HanlimgwanActivity hanlimgwanActivity = new HanlimgwanActivity();
+            hanlimgwanActivity.show(getSupportFragmentManager(), "hanlimgwan");
         }else if (marker.getTitle().equals("율곡관")) {
-            Intent intent = new Intent(getApplicationContext(),YulgoggwanActivity.class);
-            startActivity(intent);
+            YulgoggwanActivity yulgoggwanActivity = new YulgoggwanActivity();
+            yulgoggwanActivity.show(getSupportFragmentManager(), "yulgoggwan");
         }
 
 //            bottomSheetDialog.show();
