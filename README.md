@@ -8,12 +8,8 @@ https://play.google.com/store/apps/details?id=com.Venders.daelimmap
 
 
 ## 앱 스크린 샷
-
-
 ![1212](https://user-images.githubusercontent.com/88638556/143684911-4313f29d-8281-43e7-8fcf-695947ca09f1.jpg)
-
-
-![KakaoTalk_20211127_224321195_01](https://user-images.githubusercontent.com/88638556/143684136-dc5bf277-0ab2-443e-ab73-875d5f3622e5.jpg){: width="50" height="50"}
+![3434](https://user-images.githubusercontent.com/88638556/143684966-e3a24345-ccc2-46f1-bed3-61cb3b7475c8.jpg)
 
 ## 버전 정보  
 __a0.01v : 각 건물들 설명 및 단면도 추가, 검색기능 추가__  
