@@ -8,8 +8,9 @@ https://play.google.com/store/apps/details?id=com.Venders.daelimmap
 
 
 ## 앱 스크린 샷
-![1](https://user-images.githubusercontent.com/88638556/143684785-dae418a6-9c08-4caf-ad1e-f2e5b95b955f.jpg){: width="50%"}
 
+
+![1212](https://user-images.githubusercontent.com/88638556/143684911-4313f29d-8281-43e7-8fcf-695947ca09f1.jpg)
 
 
 ![KakaoTalk_20211127_224321195_01](https://user-images.githubusercontent.com/88638556/143684136-dc5bf277-0ab2-443e-ab73-875d5f3622e5.jpg){: width="50" height="50"}
