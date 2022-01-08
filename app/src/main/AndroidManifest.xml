@@ -77,40 +77,52 @@
         <activity android:name="com.example.vendersdaelimmap.floor.yulgoggwan_floor" />
         <activity
             android:name="com.example.vendersdaelimmap.SuamgwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.vendersdaelimmap.ToegyegwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.vendersdaelimmap.YulgoggwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.vendersdaelimmap.JadongchagwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.vendersdaelimmap.UniversityheadquatersActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.vendersdaelimmap.HongjigwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.vendersdaelimmap.SaenghwalgwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.vendersdaelimmap.JeonsangwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.vendersdaelimmap.JeongbotongsingwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.vendersdaelimmap.ImgoggwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.vendersdaelimmap.HagsaenghoegwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.example.vendersdaelimmap.DasangwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity android:name="com.example.vendersdaelimmap.LV_Item.hanlimgwan" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
