@@ -8,10 +8,10 @@ android {
 
     defaultConfig {
         applicationId "com.Venders.daelimmap"
-        minSdkVersion 29
+        minSdkVersion 28
         targetSdkVersion 30
-        versionCode 6
-        versionName "a0.04v"
+        versionCode 7
+        versionName 'a0.05v'
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
