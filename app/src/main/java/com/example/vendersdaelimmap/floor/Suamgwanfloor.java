@@ -3,6 +3,7 @@ package com.example.vendersdaelimmap.floor;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -36,14 +37,22 @@ public class Suamgwanfloor extends AppCompatActivity implements View.OnClickList
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("CheckLog", "Suamgwanfloor : onStart");
+    }
+
+    @Override
     public void onClick(View v) {
         if(v.getId()==R.id.right){
             if(currentIndex == (imgs.length-1)) return;
             else currentIndex++;
+            Log.d("CheckLog", "Suamgwanfloor : 오른쪽 버튼 누름");
 
         } else if (v.getId() == R.id.left){
             if(currentIndex==0) return;
             else currentIndex--;
+            Log.d("CheckLog", "Suamgwanfloor : 왼쪽 버튼 누름");
         }
         setImage();
 

@@ -2,6 +2,7 @@ package com.example.vendersdaelimmap;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -90,6 +91,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         ListView_adapter adapter = new ListView_adapter(getApplicationContext(), R.layout.listview_adapter, listView_itemList);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("CheckLog", "MapsActivity : onStart");
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -268,12 +275,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(imgoggwan).title("임곡관").alpha(0));
         mMap.addMarker(new MarkerOptions().position(hanlimgwan).title("한림관").alpha(0));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(saenghwalgwan));                 // 초기 위치
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(17));                         // 줌의 정도
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(yulgoggwan, 17));                 // 초기 위치 + 줌의 정도
+        // mMap.animateCamera(CameraUpdateFactory.zoomTo(17));                         // 줌의 정도
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         // 지도 유형 설정
         mMap.setOnMarkerClickListener(this);
-
     }
 
 
@@ -323,7 +329,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 //            bottomSheetDialog.show();
 
-            marker.setAlpha(1);
+        marker.setAlpha(1);
+        Log.d("CheckLog", "MainActivity-onMapReady : 마커 누름");
 
 
             return false;

@@ -16,102 +16,103 @@
         android:roundIcon="@mipmap/ic_launcher_koreanmark6_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DaelimMap">
-        <activity android:name="com.example.vendersdaelimmap.bottomsheet.result"></activity>
         <activity
-            android:name="com.example.vendersdaelimmap.YulgoggwanDetailsActivity"
+            android:name=".MapsActivity"
+            android:exported="false" />
+        <activity android:name=".bottomsheet.result" />
+        <activity
+            android:name=".YulgoggwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.UniversityheadquatersDetailsActivity"
+            android:name=".UniversityheadquatersDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.ToegyegwanDetailsActivity"
+            android:name=".ToegyegwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.SuamgwanDetailsActivity"
+            android:name=".SuamgwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.SaenghwalgwanDetailsActivity"
+            android:name=".SaenghwalgwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.JeonsangwanDetailsActivity"
+            android:name=".JeonsangwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.JeongbotongsingwanDetailsActivity"
+            android:name=".JeongbotongsingwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.JadongchagwanDetailsActivity"
+            android:name=".JadongchagwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.ImgoggwanDetailsActivity"
+            android:name=".ImgoggwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.HongjigwanDetailsActivity"
+            android:name=".HongjigwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.HanlimgwanDetailsActivity"
+            android:name=".HanlimgwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.HagsaenghoegwanDetailsActivity"
+            android:name=".HagsaenghoegwanDetailsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.DasangwanDetailsActivity"
+            android:name=".DasangwanDetailsActivity"
             android:exported="true" />
-        <activity android:name="com.example.vendersdaelimmap.floor.Saenghwalgwanfloor" />
-        <activity android:name="com.example.vendersdaelimmap.floor.Suamgwanfloor" />
-        <activity android:name="com.example.vendersdaelimmap.floor.universityheadquatersfloor" />
-        <activity android:name="com.example.vendersdaelimmap.floor.Jeonsangwanfloor" />
-        <activity android:name="com.example.vendersdaelimmap.floor.jeongbotongsingwanfloor" />
-        <activity android:name="com.example.vendersdaelimmap.floor.imgoggwanfloor" />
-        <activity
-            android:name="com.example.vendersdaelimmap.floor.hagsaenghoegwanfloor"/>
-<!--            바탕투명하게 android:theme="@style/Transparent" />-->
-        <activity android:name="com.example.vendersdaelimmap.floor.jadongchagwanfloor" />
-        <activity android:name="com.example.vendersdaelimmap.floor.dasangwanfloor" />
-        <activity android:name="com.example.vendersdaelimmap.floor.Hongjigwanfloor" />
-        <activity android:name="com.example.vendersdaelimmap.floor.toegyegwanfloor" />
+        <activity android:name=".floor.Saenghwalgwanfloor" />
+        <activity android:name=".floor.Suamgwanfloor" />
+        <activity android:name=".floor.universityheadquatersfloor" />
+        <activity android:name=".floor.Jeonsangwanfloor" />
+        <activity android:name=".floor.jeongbotongsingwanfloor" />
+        <activity android:name=".floor.imgoggwanfloor" />
+        <activity android:name=".floor.hagsaenghoegwanfloor" /> <!-- 바탕투명하게 android:theme="@style/Transparent" /> -->
+        <activity android:name=".floor.jadongchagwanfloor" />
+        <activity android:name=".floor.dasangwanfloor" />
+        <activity android:name=".floor.Hongjigwanfloor" />
+        <activity android:name=".floor.toegyegwanfloor" />
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity android:name="com.example.vendersdaelimmap.floor.yulgoggwan_floor" />
+        <activity android:name=".floor.yulgoggwan_floor" />
         <activity
-            android:name="com.example.vendersdaelimmap.SuamgwanActivity"
+            android:name=".SuamgwanActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.ToegyegwanActivity"
+            android:name=".ToegyegwanActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.YulgoggwanActivity"
+            android:name=".YulgoggwanActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.JadongchagwanActivity"
+            android:name=".JadongchagwanActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.UniversityheadquatersActivity"
+            android:name=".UniversityheadquatersActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.HongjigwanActivity"
+            android:name=".HongjigwanActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.SaenghwalgwanActivity"
+            android:name=".SaenghwalgwanActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.JeonsangwanActivity"
+            android:name=".JeonsangwanActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.JeongbotongsingwanActivity"
+            android:name=".JeongbotongsingwanActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.ImgoggwanActivity"
+            android:name=".ImgoggwanActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.HagsaenghoegwanActivity"
+            android:name=".HagsaenghoegwanActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.vendersdaelimmap.DasangwanActivity"
+            android:name=".DasangwanActivity"
             android:exported="true" />
-        <activity android:name="com.example.vendersdaelimmap.LV_Item.hanlimgwan" />
+        <activity android:name=".LV_Item.hanlimgwan" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -126,7 +127,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.example.vendersdaelimmap.MapsActivity"
+            android:name=".IntroActivity"
             android:label="@string/title_activity_maps">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

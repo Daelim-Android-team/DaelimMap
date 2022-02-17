@@ -3,6 +3,7 @@ package com.example.vendersdaelimmap.floor;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -39,22 +40,30 @@ public class dasangwanfloor extends AppCompatActivity  implements View.OnClickLi
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("CheckLog", "dasangwanfloor : onStart");
+    }
+
+    @Override
     public void onClick(View v) {
         if(v.getId()==R.id.right){
             if(currentIndex == (imgs.length-1))
                 return;
             else currentIndex++;
+            Log.d("CheckLog", "dasangwanfloor : 오른쪽 버튼 누름");
 
         } else if (v.getId() == R.id.left){
             if(currentIndex==0) return;
             else currentIndex--;
+            Log.d("CheckLog", "dasangwanfloor : 왼쪽 버튼 누름");
         }
         setImage();
     }
 
     public void setImage() {
 
-        text.setText(String.format("%d층",currentIndex+1));
+        text.setText(String.format("%d층", currentIndex+1));
         dasangwanfloor.setImageResource(imgs[currentIndex]);
     }
 }
