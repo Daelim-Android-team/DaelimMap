@@ -10,6 +10,6 @@
         android:layout_width="130sp"
         android:layout_height="130sp"
         android:layout_centerInParent="true"
-        android:src="@drawable/daelim_logo1"/>
+        android:src="@drawable/ic_daelim_logo"/>
 
 </RelativeLayout>

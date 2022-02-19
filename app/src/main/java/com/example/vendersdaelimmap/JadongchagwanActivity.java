@@ -48,7 +48,7 @@ public class JadongchagwanActivity extends BottomSheetDialogFragment {
     }
 
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
         Log.d("CheckLog", "JadongchagwanActivity : onStart");
     }

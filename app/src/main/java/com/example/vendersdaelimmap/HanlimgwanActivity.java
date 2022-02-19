@@ -2,6 +2,7 @@ package com.example.vendersdaelimmap;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,7 @@ public class HanlimgwanActivity extends BottomSheetDialogFragment {
                 Intent intent = new Intent(getContext(), Hanlimgwanfloor.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                Log.d("CheckLog", "HanlimgwanActivity : 평면도보기 버튼 누름");
             }
         }); */
 
@@ -40,8 +42,15 @@ public class HanlimgwanActivity extends BottomSheetDialogFragment {
                 Intent intent = new Intent(getContext(), HanlimgwanDetailsActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                Log.d("CheckLog", "HanlimgwanActivity : 상세보기 버튼 누름");
             }
         });
         return viewGroup;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d("CheckLog", "HagsaenghoegwanActivity : onStart");
     }
 }

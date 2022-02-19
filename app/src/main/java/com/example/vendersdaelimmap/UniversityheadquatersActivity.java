@@ -47,7 +47,7 @@ public class UniversityheadquatersActivity extends BottomSheetDialogFragment {
     }
 
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
         Log.d("CheckLog", "UniversityheadquatersActivity : onStart");
     }

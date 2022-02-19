@@ -50,7 +50,7 @@ public class HongjigwanActivity extends BottomSheetDialogFragment {
     }
 
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
         Log.d("CheckLog", "HongjigwanActivity : onStart");
     }

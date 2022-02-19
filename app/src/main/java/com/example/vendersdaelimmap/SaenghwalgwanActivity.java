@@ -48,7 +48,7 @@ public class SaenghwalgwanActivity extends BottomSheetDialogFragment {
     }
 
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
         Log.d("CheckLog", "SaenghwalgwanActivity : onStart");
     }
