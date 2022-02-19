@@ -11,9 +11,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_koreanmark6"
+        android:icon="@mipmap/ic_daelim_icon"
         android:label="대림대 캠퍼스맵"
-        android:roundIcon="@mipmap/ic_launcher_koreanmark6_round"
+        android:roundIcon="@mipmap/ic_daelim_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DaelimMap">
         <activity
@@ -78,40 +78,52 @@
         <activity android:name=".floor.yulgoggwan_floor" />
         <activity
             android:name=".SuamgwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".ToegyegwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".YulgoggwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".JadongchagwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".UniversityheadquatersActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".HongjigwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".SaenghwalgwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".JeonsangwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".JeongbotongsingwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".ImgoggwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".HagsaenghoegwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity
             android:name=".DasangwanActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable"/>
         <activity android:name=".LV_Item.hanlimgwan" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

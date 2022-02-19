@@ -5,29 +5,31 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.vendersdaelimmap.R;
 import com.example.vendersdaelimmap.floor.hagsaenghoegwanfloor;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-public class HagsaenghoegwanActivity extends AppCompatActivity {
+public class HagsaenghoegwanActivity extends BottomSheetDialogFragment {
 
     Button hagsaenghoegwan_button1;
     Button hagsaenghoegwan_button2;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.hagsaenghoegwan);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        ViewGroup viewGroup = (ViewGroup) inflater.inflate(R.layout.hagsaenghoegwan, container, false);
 
-        hagsaenghoegwan_button1 = findViewById(R.id.hagsaenghoegwan_button1);
-        hagsaenghoegwan_button2 = findViewById(R.id.hagsaenghoegwan_button2);
+        hagsaenghoegwan_button1 = viewGroup.findViewById(R.id.hagsaenghoegwan_button1);
+        hagsaenghoegwan_button2 = viewGroup.findViewById(R.id.hagsaenghoegwan_button2);
 
         hagsaenghoegwan_button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), hagsaenghoegwanfloor.class );
+                Intent intent = new Intent(getContext(), hagsaenghoegwanfloor.class );
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 Log.d("CheckLog", "HagsaenghoegwanActivity : 평면도보기 버튼 누름");
@@ -37,12 +39,13 @@ public class HagsaenghoegwanActivity extends AppCompatActivity {
         hagsaenghoegwan_button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), HagsaenghoegwanDetailsActivity.class );
+                Intent intent = new Intent(getContext(), HagsaenghoegwanDetailsActivity.class );
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 Log.d("CheckLog", "HagsaenghoegwanActivity : 상세보기 버튼 누름");
             }
         });
+        return viewGroup;
     }
 
     @Override

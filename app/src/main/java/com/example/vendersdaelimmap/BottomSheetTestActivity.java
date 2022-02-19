@@ -2,7 +2,6 @@ package com.example.vendersdaelimmap;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,7 @@ import android.widget.Button;
 import com.example.vendersdaelimmap.floor.Jeonsangwanfloor;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-public class JeonsangwanActivity extends BottomSheetDialogFragment {
+public class BottomSheetTestActivity extends BottomSheetDialogFragment {
 
     Button jeonsangwan_button1;
     Button jeonsangwan_button2;
@@ -29,7 +28,6 @@ public class JeonsangwanActivity extends BottomSheetDialogFragment {
                 Intent intent = new Intent(getContext(), Jeonsangwanfloor.class );
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
-                Log.d("CheckLog", "JeonsangwanActivity : 평면도보기 버튼 누름");
             }
         });
 
@@ -39,16 +37,9 @@ public class JeonsangwanActivity extends BottomSheetDialogFragment {
                 Intent intent = new Intent(getContext(), JeonsangwanDetailsActivity.class );
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
-                Log.d("CheckLog", "JeonsangwanActivity : 상세보기 버튼 누름");
             }
         });
 
         return viewGroup;
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d("CheckLog", "JeonsangwanActivity : onStart");
     }
 }
