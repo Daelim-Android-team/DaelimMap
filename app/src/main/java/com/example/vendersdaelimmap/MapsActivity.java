@@ -78,8 +78,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng hanlimgwan = new LatLng(37.402209544693086, 126.92890403822585); //한림관
 
 
-//    ListView_adapter adapterimg = new ListView_adapter
-//            (getApplicationContext(),R.layout.listview_adapter,listView_itemList);
+    ListView_adapter adapterimg = new ListView_adapter
+            (getApplicationContext(),R.layout.listview_adapter,listView_itemList);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

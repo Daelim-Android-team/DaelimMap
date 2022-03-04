@@ -23,5 +23,14 @@
         android:divider="#000000"
         android:dividerHeight="1dp">
     </ListView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/SearchRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:textFilterEnabled="true"
+        android:visibility="invisible"
+        android:divider="#000000"
+        android:dividerHeight="1dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
