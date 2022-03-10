@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/daelim_toolbaraaaa"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:style="http://schemas.android.com/apk/res-auto">
-   <androidx.viewpager.widget.ViewPager
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_weight="1"/>
-   <android.widget.ImageButton
-       style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/daelim_main">
+
+   <ImageView
+       android:id="@+id/imageView3"
        android:layout_width="35dp"
        android:layout_height="35dp"
        android:layout_gravity="center"
-       android:background="@color/transparent100"
-       android:scaleType="fitCenter"
        android:src="@drawable/ic_daelim_logo" />
-   <androidx.viewpager.widget.ViewPager
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_weight="1.25"/>
 
-</LinearLayout>
+</androidx.appcompat.widget.Toolbar>

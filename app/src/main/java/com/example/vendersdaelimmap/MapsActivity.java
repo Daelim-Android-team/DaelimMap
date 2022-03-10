@@ -2,6 +2,7 @@ package com.example.vendersdaelimmap;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -10,10 +11,13 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.AppBarConfiguration;
 
 import com.example.vendersdaelimmap.LV_Item.ListView_item;
 import com.example.vendersdaelimmap.LV_adapter.ListView_adapter;
@@ -21,6 +25,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -86,14 +91,25 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.daelimmap);
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.actionbar_layout);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.daelim_toolbaraaaa);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        // actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_navigation);
+        // getSupportActionBar().setIcon(R.drawable.ic_daelim_logo);
+        // getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        // getSupportActionBar().setCustomView(R.layout.actionbar_layout);
 
         ListView_adapter adapter = new ListView_adapter(getApplicationContext(), R.layout.listview_adapter, listView_itemList);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("CheckLog", "MapsActivity : onStart");
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -258,76 +274,75 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
 
-        mMap.addMarker(new MarkerOptions().position(Toegyegwan).title("퇴계관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(yulgoggwan).title("율곡관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(UniversityHeadquarters).title("대학본부").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(jeongbotongsingwan).title("정보통신관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(jeonsangwan).title("전산관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(saenghwalgwan).title("생활관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(hongjigwan).title("홍지관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(hagsaenghoegwan).title("학생회관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(jadongchagwan).title("자동차관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(suamgwan).title("수암관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(dasangwan).title("다산관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(imgoggwan).title("임곡관").alpha(0));
-        mMap.addMarker(new MarkerOptions().position(hanlimgwan).title("한림관").alpha(0));
+        mMap.addMarker(new MarkerOptions().position(Toegyegwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(yulgoggwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(UniversityHeadquarters).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(jeongbotongsingwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(jeonsangwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(saenghwalgwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(hongjigwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(hagsaenghoegwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(jadongchagwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(suamgwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(dasangwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(imgoggwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(hanlimgwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(saenghwalgwan));                 // 초기 위치
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(17));                         // 줌의 정도
-        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(yulgoggwan, 17.2f)); // 초기 위치 + 줌의 정도
+        // mMap.animateCamera(CameraUpdateFactory.zoomTo(17)); // 줌의 정도
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         // 지도 유형 설정
         mMap.setOnMarkerClickListener(this);
-
     }
 
 
     @Override
     public boolean onMarkerClick(final Marker marker) {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
-        if (marker.getTitle().equals("퇴계관")) {
+        if (marker.getPosition().equals(Toegyegwan)) {
             ToegyegwanActivity toegyegwanActivity = new ToegyegwanActivity();
             toegyegwanActivity.show(getSupportFragmentManager(), "toegyegwan");
-        } else if (marker.getTitle().equals("대학본부")) {
+        } else if (marker.getPosition().equals(UniversityHeadquarters)) {
             UniversityheadquatersActivity universityheadquatersActivity = new UniversityheadquatersActivity();
             universityheadquatersActivity.show(getSupportFragmentManager(), "universityHeadquaters");
-        }else if (marker.getTitle().equals("정보통신관")) {
+        }else if (marker.getPosition().equals(jeongbotongsingwan)) {
             JeongbotongsingwanActivity jeongbotongsingwanActivity = new JeongbotongsingwanActivity();
             jeongbotongsingwanActivity.show(getSupportFragmentManager(), "jeongbotongsingwan");
-        }else if (marker.getTitle().equals("전산관")) {
+        }else if (marker.getPosition().equals(jeonsangwan)) {
             JeonsangwanActivity jeonsangwanActivity = new JeonsangwanActivity();
             jeonsangwanActivity.show(getSupportFragmentManager(), "jeonsangwan");
-        }else if (marker.getTitle().equals("생활관")) {
+        }else if (marker.getPosition().equals(saenghwalgwan)) {
             SaenghwalgwanActivity saenghwalgwanActivity = new SaenghwalgwanActivity();
             saenghwalgwanActivity.show(getSupportFragmentManager(), "sanghwalgwan");
-        }else if (marker.getTitle().equals("홍지관")) {
+        }else if (marker.getPosition().equals(hongjigwan)) {
             HongjigwanActivity hongjigwanActivity = new HongjigwanActivity();
             hongjigwanActivity.show(getSupportFragmentManager(), "hongjigwan");
-        }else if (marker.getTitle().equals("학생회관")) {
+        }else if (marker.getPosition().equals(hagsaenghoegwan)) {
             HagsaenghoegwanActivity hagsaenghoegwanActivity = new HagsaenghoegwanActivity();
             hagsaenghoegwanActivity.show(getSupportFragmentManager(), "hagsaenghoegwan");
-        }else if (marker.getTitle().equals("자동차관")) {
+        }else if (marker.getPosition().equals(jadongchagwan)) {
             JadongchagwanActivity jadongchagwanActivity = new JadongchagwanActivity();
             jadongchagwanActivity.show(getSupportFragmentManager(), "jadongchagwan");
-        }else if (marker.getTitle().equals("수암관")) {
+        }else if (marker.getPosition().equals(suamgwan)) {
             SuamgwanActivity suamgwanActivity = new SuamgwanActivity();
             suamgwanActivity.show(getSupportFragmentManager(), "suamgwan");
-        }else if (marker.getTitle().equals("다산관")) {
+        }else if (marker.getPosition().equals(dasangwan)) {
             DasangwanActivity dasangwanActivity = new DasangwanActivity();
             dasangwanActivity.show(getSupportFragmentManager(), "dasangwan");
-        }else if (marker.getTitle().equals("임곡관")) {
+        }else if (marker.getPosition().equals(imgoggwan)) {
             ImgoggwanActivity imgoggwanActivity = new ImgoggwanActivity();
             imgoggwanActivity.show(getSupportFragmentManager(), "imgoggwan");
-        }else if (marker.getTitle().equals("한림관")) {
+        }else if (marker.getPosition().equals(hanlimgwan)) {
             HanlimgwanActivity hanlimgwanActivity = new HanlimgwanActivity();
             hanlimgwanActivity.show(getSupportFragmentManager(), "hanlimgwan");
-        }else if (marker.getTitle().equals("율곡관")) {
+        }else if (marker.getPosition().equals(yulgoggwan)) {
             YulgoggwanActivity yulgoggwanActivity = new YulgoggwanActivity();
             yulgoggwanActivity.show(getSupportFragmentManager(), "yulgoggwan");
         }
 
-//            bottomSheetDialog.show();
-
-            marker.setAlpha(1);
+            // bottomSheetDialog.show();
+        // marker.setAlpha(1);
+        Log.d("CheckLog", "MainActivity-onMapReady : 마커 누름");
 
 
             return false;
