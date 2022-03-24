@@ -8,9 +8,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.vendersdaelimmap.BaseActivity;
 import com.example.vendersdaelimmap.R;
 
-public class jeongbotongsingwanfloor extends AppCompatActivity implements View.OnClickListener{
+public class jeongbotongsingwanfloor extends BaseActivity implements View.OnClickListener{
 
     int currentIndex =0;
     TextView text;
@@ -34,10 +35,8 @@ public class jeongbotongsingwanfloor extends AppCompatActivity implements View.O
         right.setOnClickListener(this);
 
         setImage();
-
-
-
     }
+
 
     @Override
     public void onClick(View v) {

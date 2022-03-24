@@ -8,9 +8,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.vendersdaelimmap.BaseActivity;
 import com.example.vendersdaelimmap.R;
 
-public class toegyegwanfloor extends AppCompatActivity implements View.OnClickListener {
+public class toegyegwanfloor extends BaseActivity implements View.OnClickListener {
 
     int currentIndex =0;
     int [] imgs = {R.drawable.toegyegwan_1f_map,

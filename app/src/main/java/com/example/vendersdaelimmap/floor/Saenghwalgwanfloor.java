@@ -8,9 +8,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.vendersdaelimmap.BaseActivity;
 import com.example.vendersdaelimmap.R;
 
-public class Saenghwalgwanfloor extends AppCompatActivity implements View.OnClickListener {
+public class Saenghwalgwanfloor extends BaseActivity implements View.OnClickListener {
     int currentIndex =0;
     int [] imgs = {R.drawable.saenghwalgwan_1f_map,
             R.drawable.saenghwalgwan_2f_map};
@@ -23,7 +24,6 @@ public class Saenghwalgwanfloor extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saenghwalgwanfloor);
-
 
         saenghwalgwanfloor = findViewById(R.id.saenghwalgwanfloor);
         left = findViewById(R.id.left);

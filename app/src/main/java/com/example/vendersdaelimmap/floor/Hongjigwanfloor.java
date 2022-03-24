@@ -8,9 +8,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.vendersdaelimmap.BaseActivity;
 import com.example.vendersdaelimmap.R;
 
-public class Hongjigwanfloor extends AppCompatActivity  implements View.OnClickListener{
+public class Hongjigwanfloor extends BaseActivity implements View.OnClickListener{
 
     TextView text;
     int currentIndex =0;

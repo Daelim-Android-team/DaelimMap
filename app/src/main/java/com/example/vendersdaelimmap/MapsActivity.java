@@ -11,11 +11,16 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 
@@ -37,9 +42,10 @@ import java.util.List;
 
 import com.example.vendersdaelimmap.building.*;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.android.material.navigation.NavigationView;
 
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
+public class MapsActivity extends BaseActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
     MenuItem MapSearch;
 
     View v;
@@ -85,26 +91,57 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //    ListView_adapter adapterimg = new ListView_adapter
 //            (getApplicationContext(),R.layout.listview_adapter,listView_itemList);
 
+    // private DrawerLayout drawerLayout;
+    // private ActionBarDrawerToggle drawerToggle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.daelimmap);
 
+
+        /*
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.daelim_toolbaraaaa);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.daelim_toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        // actionBar.setDisplayHomeAsUpEnabled(true);
         // actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_navigation);
-        // getSupportActionBar().setIcon(R.drawable.ic_daelim_logo);
-        // getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        // getSupportActionBar().setCustomView(R.layout.actionbar_layout);
 
+
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
+        drawerToggle.syncState();
+        drawerLayout.addDrawerListener(drawerToggle);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                item.setChecked(true);
+                drawerLayout.closeDrawers();
+
+                int id = item.getItemId();
+                String title = item.getTitle().toString();
+                return true;
+            }
+        }); */
         ListView_adapter adapter = new ListView_adapter(getApplicationContext(), R.layout.listview_adapter, listView_itemList);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
+
+    /*
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.home: {
+                drawerLayout.openDrawer(GravityCompat.START);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    } */
 
     @Override
     protected void onStart() {

@@ -8,9 +8,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.vendersdaelimmap.BaseActivity;
 import com.example.vendersdaelimmap.R;
 
-public class Suamgwanfloor extends AppCompatActivity implements View.OnClickListener{
+public class Suamgwanfloor extends BaseActivity implements View.OnClickListener{
 
     int currentIndex =0;
     int [] imgs = {R.drawable.suamgwan_1f_map,

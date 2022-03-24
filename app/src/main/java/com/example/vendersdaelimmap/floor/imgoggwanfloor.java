@@ -8,9 +8,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.vendersdaelimmap.BaseActivity;
 import com.example.vendersdaelimmap.R;
 
-public class imgoggwanfloor extends AppCompatActivity implements View.OnClickListener{
+public class imgoggwanfloor extends BaseActivity implements View.OnClickListener{
     int currentIndex =0;
     int [] imgs = {R.drawable.imgoggwan_1f_map,
             R.drawable.imgoggwan_2f_map};
@@ -35,6 +36,7 @@ public class imgoggwanfloor extends AppCompatActivity implements View.OnClickLis
         setImage();
 
     }
+
 
     @Override
     public void onClick(View v) {

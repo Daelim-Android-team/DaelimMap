@@ -8,9 +8,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.vendersdaelimmap.BaseActivity;
 import com.example.vendersdaelimmap.R;
 
-public class Jeonsangwanfloor extends AppCompatActivity implements View.OnClickListener {
+public class Jeonsangwanfloor extends BaseActivity implements View.OnClickListener {
 
 
     TextView text;
