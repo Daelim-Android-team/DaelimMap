@@ -78,10 +78,10 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
     LatLng UniversityHeadquarters = new LatLng(37.40362517255369, 126.9295991200578); //대학본부
     LatLng jeongbotongsingwan = new LatLng(37.40304502369558, 126.92952239412062); //정보통신관
     LatLng jeonsangwan = new LatLng(37.40408341926637, 126.93066191636484); //전산관
-    LatLng saenghwalgwan = new LatLng(37.40452120987672, 126.93075649706715); //생활관
-    LatLng hongjigwan = new LatLng(37.40231736619865, 126.9298564574061); //홍지관
+    LatLng saenghwalgwan = new LatLng(37.4043451099, 126.930766490); //생활관
+    LatLng hongjigwan = new LatLng(37.40243236619865, 126.9297704574061); //홍지관
     LatLng hagsaenghoegwan = new LatLng(37.403712438306705, 126.93131140849653); //학생회관
-    LatLng jadongchagwan = new LatLng(37.403369316189355, 126.93177744753491); //자동차관
+    LatLng jadongchagwan = new LatLng(37.403350316189355, 126.93185744753491); //자동차관
     LatLng suamgwan = new LatLng(37.40484959771984, 126.93069305218717); //수암관
     LatLng dasangwan = new LatLng(37.40459345515532, 126.93140512848078); //다산관
     LatLng imgoggwan = new LatLng(37.40392495963885, 126.93109889545208); //임곡관
@@ -311,18 +311,18 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
 
-        mMap.addMarker(new MarkerOptions().position(Toegyegwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
-        mMap.addMarker(new MarkerOptions().position(yulgoggwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
-        mMap.addMarker(new MarkerOptions().position(UniversityHeadquarters).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
-        mMap.addMarker(new MarkerOptions().position(jeongbotongsingwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
-        mMap.addMarker(new MarkerOptions().position(jeonsangwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
-        mMap.addMarker(new MarkerOptions().position(saenghwalgwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
-        mMap.addMarker(new MarkerOptions().position(hongjigwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
-        mMap.addMarker(new MarkerOptions().position(hagsaenghoegwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
-        mMap.addMarker(new MarkerOptions().position(jadongchagwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
-        mMap.addMarker(new MarkerOptions().position(suamgwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
-        mMap.addMarker(new MarkerOptions().position(dasangwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
-        mMap.addMarker(new MarkerOptions().position(imgoggwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(Toegyegwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.toegyegwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(yulgoggwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.yulgoggwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(UniversityHeadquarters).icon(BitmapDescriptorFactory.fromResource(R.drawable.universityheadquater_marker)));
+        mMap.addMarker(new MarkerOptions().position(jeongbotongsingwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.jeongbotongsingwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(jeonsangwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.jeonsangwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(saenghwalgwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.saenghwalgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(hongjigwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hongjigwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(hagsaenghoegwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hagsaenghoegwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(jadongchagwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.jadongchagwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(suamgwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.suamgwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(dasangwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.dasangwan_marker)));
+        mMap.addMarker(new MarkerOptions().position(imgoggwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.imgoggwan_marker)));
         mMap.addMarker(new MarkerOptions().position(hanlimgwan).icon(BitmapDescriptorFactory.fromResource(R.drawable.hanlimgwan_marker)));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(yulgoggwan, 17.2f)); // 초기 위치 + 줌의 정도
