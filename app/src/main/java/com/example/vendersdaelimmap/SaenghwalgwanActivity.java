@@ -11,13 +11,17 @@ import com.example.vendersdaelimmap.floor.Saenghwalgwanfloor;
 
 public class SaenghwalgwanActivity extends AppCompatActivity {
 
-    Button saenghwalgwan_button1;
-    Button saenghwalgwan_button2;
+    private Button saenghwalgwan_button1;
+    private Button saenghwalgwan_button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.saenghwalgwan);
+
+    }
+    @Override
+    protected void onStart() {
 
         saenghwalgwan_button1 = findViewById(R.id.saenghwalgwan_button1);
         saenghwalgwan_button2 = findViewById(R.id.saenghwalgwan_button2);
@@ -40,5 +44,6 @@ public class SaenghwalgwanActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        super.onStart();
     }
 }

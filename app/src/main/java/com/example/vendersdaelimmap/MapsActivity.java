@@ -2,6 +2,7 @@ package com.example.vendersdaelimmap;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -23,7 +24,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-//import com.example.daelimmap.Intenttt.*;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
@@ -31,12 +31,11 @@ import java.util.List;
 
 import com.example.vendersdaelimmap.building.*;
 
-
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
     MenuItem MapSearch;
 
-    View v;
-    ImageView imageView;
+    private View v;
+    private ImageView imageView;
     private GoogleMap mMap;
     private ListView_adapter adapter;
     private ListView SLV;
@@ -44,36 +43,35 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public ArrayList<String> arraylist;
     private ArrayList<ListView_item> ListView_item = new ArrayList<ListView_item>();
 
-    Dasangwan Ds = new Dasangwan();
-    Hagsaenghoegwan Hs= new Hagsaenghoegwan();
-    Hanlimgwan Hl = new Hanlimgwan();
-    Hongjigwan Hj = new Hongjigwan();
-    Imgoggwan Ig = new Imgoggwan();
-    Jadongchagwan Jd = new Jadongchagwan();
-    Jeongbotongsingwan Jb = new Jeongbotongsingwan();
-    Jeonsangwan Js = new Jeonsangwan();
-    Saenghwalgwan Sh = new Saenghwalgwan();
-    Suamgwan Sa = new Suamgwan(); //공사중
-    Toegyegwan Tg = new Toegyegwan();
-    UniversityHeadquarters Uh = new UniversityHeadquarters();
-    Yulgoggwan Yg = new Yulgoggwan();
+    private Dasangwan Ds = new Dasangwan();
+    private Hagsaenghoegwan Hs= new Hagsaenghoegwan();
+    private Hanlimgwan Hl = new Hanlimgwan();
+    private Hongjigwan Hj = new Hongjigwan();
+    private Imgoggwan Ig = new Imgoggwan();
+    private Jadongchagwan Jd = new Jadongchagwan();
+    private Jeongbotongsingwan Jb = new Jeongbotongsingwan();
+    private Jeonsangwan Js = new Jeonsangwan();
+    private Saenghwalgwan Sh = new Saenghwalgwan();
+    private Suamgwan Sa = new Suamgwan(); //공사중
+    private Toegyegwan Tg = new Toegyegwan();
+    private UniversityHeadquarters Uh = new UniversityHeadquarters();
+    private Yulgoggwan Yg = new Yulgoggwan();
 
-    ArrayList<Marker> markers = new ArrayList<>();
+    private ArrayList<Marker> markers = new ArrayList<>();
 
-    LatLng Toegyegwan = new LatLng(37.403268056034186, 126.9306871521674); //퇴계관
-    LatLng yulgoggwan = new LatLng(37.40350624040486, 126.93045325700982); //율곡관
-    LatLng UniversityHeadquarters = new LatLng(37.40362517255369, 126.9295991200578); //대학본부
-    LatLng jeongbotongsingwan = new LatLng(37.40304502369558, 126.92952239412062); //정보통신관
-    LatLng jeonsangwan = new LatLng(37.40408341926637, 126.93066191636484); //전산관
-    LatLng saenghwalgwan = new LatLng(37.40452120987672, 126.93075649706715); //생활관
-    LatLng hongjigwan = new LatLng(37.40231736619865, 126.9298564574061); //홍지관
-    LatLng hagsaenghoegwan = new LatLng(37.403712438306705, 126.93131140849653); //학생회관
-    LatLng jadongchagwan = new LatLng(37.403369316189355, 126.93177744753491); //자동차관
-    LatLng suamgwan = new LatLng(37.40484959771984, 126.93069305218717); //수암관
-    LatLng dasangwan = new LatLng(37.40459345515532, 126.93140512848078); //다산관
-    LatLng imgoggwan = new LatLng(37.40392495963885, 126.93109889545208); //임곡관
-    LatLng hanlimgwan = new LatLng(37.402209544693086, 126.92890403822585); //한림관
-
+    private LatLng Toegyegwan = new LatLng(37.403268056034186, 126.9306871521674); //퇴계관
+    private LatLng yulgoggwan = new LatLng(37.40350624040486, 126.93045325700982); //율곡관
+    private LatLng UniversityHeadquarters = new LatLng(37.40362517255369, 126.9295991200578); //대학본부
+    private LatLng jeongbotongsingwan = new LatLng(37.40304502369558, 126.92952239412062); //정보통신관
+    private LatLng jeonsangwan = new LatLng(37.40408341926637, 126.93066191636484); //전산관
+    private LatLng saenghwalgwan = new LatLng(37.40452120987672, 126.93075649706715); //생활관
+    private LatLng hongjigwan = new LatLng(37.40231736619865, 126.9298564574061); //홍지관
+    private LatLng hagsaenghoegwan = new LatLng(37.403712438306705, 126.93131140849653); //학생회관
+    private LatLng jadongchagwan = new LatLng(37.403369316189355, 126.93177744753491); //자동차관
+    private LatLng suamgwan = new LatLng(37.40484959771984, 126.93069305218717); //수암관
+    private LatLng dasangwan = new LatLng(37.40459345515532, 126.93140512848078); //다산관
+    private LatLng imgoggwan = new LatLng(37.40392495963885, 126.93109889545208); //임곡관
+    private LatLng hanlimgwan = new LatLng(37.402209544693086, 126.92890403822585); //한림관
 
 //    ListView_adapter adapterimg = new ListView_adapter
 //            (getApplicationContext(),R.layout.listview_adapter,listView_itemList);
@@ -100,9 +98,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         adapter.notifyDataSetChanged();
         listView_itemList = new ArrayList<>();
         TextView listView_item = findViewById(R.id.content);
-
-//        settingList();
-
 
         arraylist = new ArrayList<String>();
         arraylist.addAll(listView_itemList);
@@ -142,15 +137,34 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             //텍스트가 바뀔때마다 호출
             @Override
             public boolean onQueryTextChange(String newText) {
-//                listView_item.setText(search(newText));
                 return true;
             }
         });
         return true;
-
-
     }
-//    public String search(String query){
+
+
+    @Override
+    protected void onStart() {
+//        settingList();
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+    //    public String search(String query){
 //        //검색기능
 //        listView_itemList.clear();
 //        if(query.length() == 0) {
@@ -230,26 +244,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 //    }
 
 
-//    public static Comparator<ListView_item> textAsc = new Comparator<ListView_item>(){
-//
-//            @Override
-//            public int compare(ListView_item item1, ListView_item item2) {
-//                    return item1.getContent().compareTo(item2.getContent());
-//                return item1.getContent().compareTo(item2.getContent());
-//                int ret;
-//
-//                if (item1.getContent().compareTo(item2.getContent()) < 0)     // item1이 작은 경우,
-//                    ret = -1;
-//                else if (item1.getContent().compareTo(item2.getContent()) == 0)
-//                    ret = 0;
-//                else                                                // item1이 큰 경우,
-//                    ret = 1;
-//                return ret;
-//            }
-//        };
-//        Collections.sort(ListView_item, textAsc);
-//        adapter.notifyDataSetChanged();
-//    }
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
@@ -273,9 +267,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         // 지도 유형 설정
         mMap.setOnMarkerClickListener(this);
-
     }
-
 
     @Override
     public boolean onMarkerClick(final Marker marker) {
@@ -320,11 +312,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             Intent intent = new Intent(getApplicationContext(),YulgoggwanActivity.class);
             startActivity(intent);
         }
-
 //            bottomSheetDialog.show();
 
             marker.setAlpha(1);
-
+            Log.v("map","maker on");
 
             return false;
         }
